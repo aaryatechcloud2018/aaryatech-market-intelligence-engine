@@ -29,17 +29,18 @@ two products later.
 | 5. Bronze → Silver → Gold transformation | 🟡 Bronze + Silver done. Gold/Power BI export not started. |
 | 6. Metric normalization & entity resolution | ✅ Done — `scripts/run_phase2_normalization.py` (rule-based table classification, metric extraction, unit/period normalization, entity resolution, QC) |
 | 6b. Low-confidence review + analysis-ready export | ✅ Done — `scripts/run_phase3_review.py` (status classification, candidate metric naming, review priority, CSV exports) |
-| 7. Analytical calculations | ⏳ Not started |
-| 8. Hypothesis testing | ⏳ Not started |
+| 7. Analytical calculations (KPIs, trends, hypothesis tests) | ✅ Done — `scripts/run_phase4_analytics.py` |
+| 8. Hypothesis testing | ✅ Done (part of Phase 4 — inspects data suitability, does not force tests) |
 | 9. Insight & market gap generation | ⏳ Not started |
-| 10. Power BI-ready output generation | ⏳ Not started |
-| 11. End-to-end testing | 🟡 28 unit/integration tests exist; full `run_pipeline.py` not built |
+| 10. Power BI-ready output generation | ✅ Done — `data/gold/powerbi/*.csv` (6 files) |
+| 11. End-to-end testing | 🟡 42 unit/integration tests exist; full `run_pipeline.py` not built |
 
 The full `python run_pipeline.py` command described below is the target
-end state and does not exist yet. Today, use
-`python scripts/run_phase1_pdf_pipeline.py` then
-`python scripts/run_phase2_normalization.py` (see the Phase sections
-below).
+end state and does not exist yet. Today, run in order:
+`scripts/run_phase1_pdf_pipeline.py` →
+`scripts/run_phase2_normalization.py` →
+`scripts/run_phase3_review.py` → `scripts/run_phase4_analytics.py`
+(see the Phase sections below).
 
 ---
 
@@ -364,9 +365,53 @@ modified. 26 distinct metrics were named with zero `UNKNOWN_METRIC`
 records, since Phase 2's keyword-based extraction already resolves a
 metric_id for every observation it creates.
 
+## Phase 4: Market Intelligence analytics MVP
+
+```
+python scripts/run_phase4_analytics.py
+```
+
+A pure CSV-in, CSV-out analytical layer: reads ONLY
+`data/silver/analysis_ready_observations.csv` (never the low-confidence
+records, never the SQLite database directly) and writes six Power
+BI-ready CSVs to `data/gold/powerbi/`:
+
+- **`market_kpis.csv`** - every analysis-ready observation as a KPI
+  row, plus derived "X Growth" rows (percentage change from earliest to
+  latest period) for non-percentage metrics with a valid 2+ period
+  trend. Growth is not computed for percentage-type metrics (e.g.
+  EBITDA Margin) since "growth of a margin" is a different, more
+  ambiguous statistic than growth of an absolute figure.
+- **`metric_trends.csv`** - absolute/percentage change and trend
+  direction (INCREASING/DECREASING/STABLE/INSUFFICIENT_DATA) per
+  (metric, entity) pair, comparing only the same metric for the same
+  entity across periods (never mixing entities or metric definitions).
+- **`business_performance.csv`** - a wide (entity x year) pivot of the
+  strongest available metrics; missing metrics are left blank (`NULL`),
+  never fabricated. `revenue`/`revenue_growth` are blank throughout for
+  this document because no ANALYSIS_READY revenue observation exists -
+  itself an honest finding, not a bug.
+- **`hypothesis_results.csv`** - one row per candidate test type
+  (two-group Welch's t-test, Pearson correlation, chi-square), each
+  genuinely inspected against the real data before deciding whether to
+  run it.
+- **`data_quality_summary.csv`** / **`analytics_catalog.csv`** - Power
+  BI-facing summaries of confidence/coverage and full provenance
+  (source observation IDs, document, page) for every output metric.
+
+**Verified against the real Smartworks dataset**: 60 analysis-ready
+observations produced 77 KPI rows and 23 valid trend analyses. All 3
+attempted hypothesis tests came back `INSUFFICIENT_DATA` - the largest
+possible two-group comparison was n=3 vs n=5 (need >= 5 per group), the
+best correlation candidate had only 3 overlapping periods (need >= 5
+pairs), and no categorical count data exists in the dataset at all for
+a chi-square test. This is the correct, honest answer for a
+583-page-but-mostly-legal-text document that yielded only 60 clean
+numeric data points - not a defect.
+
 ## Next development phase
 
-Phase 4 (analytical calculations): compute descriptive statistics,
-growth rates, and comparisons across the analysis-ready Silver-layer
-observations. Also extend document ingestion to CSV/Excel/JSON/text
-file types.
+Phase 5 (insight generation and market gap analysis): building on the
+Gold-layer KPIs/trends, generate evidence-classified insights and
+market gaps - without fabricating conclusions the data doesn't support.
+Also extend document ingestion to CSV/Excel/JSON/text file types.
