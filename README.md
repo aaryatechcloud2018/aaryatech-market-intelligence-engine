@@ -28,6 +28,7 @@ two products later.
 | 4. PDF text/table extraction | ✅ Done for PDF (text: PyMuPDF, tables: pdfplumber). CSV/Excel/JSON/text extraction not started. |
 | 5. Bronze → Silver → Gold transformation | 🟡 Bronze + Silver done. Gold/Power BI export not started. |
 | 6. Metric normalization & entity resolution | ✅ Done — `scripts/run_phase2_normalization.py` (rule-based table classification, metric extraction, unit/period normalization, entity resolution, QC) |
+| 6b. Low-confidence review + analysis-ready export | ✅ Done — `scripts/run_phase3_review.py` (status classification, candidate metric naming, review priority, CSV exports) |
 | 7. Analytical calculations | ⏳ Not started |
 | 8. Hypothesis testing | ⏳ Not started |
 | 9. Insight & market gap generation | ⏳ Not started |
@@ -331,9 +332,41 @@ Key design decisions:
   *outside* the table's own cells is not parsed — figures are preserved
   at face value as they appear in the cell.
 
+## Phase 3: low-confidence review and analysis-ready export
+
+```
+python scripts/run_phase3_review.py
+```
+
+A thin, read-only export layer on top of the existing Silver database
+(no schema changes, nothing written back to `fact_observation`). For
+every observation, it derives:
+
+- A **status** (`ANALYSIS_READY`, `NEEDS_REVIEW`, `DUPLICATE`,
+  `CONFLICT`, `INSUFFICIENT_CONTEXT`), from the `needs_review` flag and
+  `review_reason` text Phase 2's QC already recorded.
+- A **candidate metric name** (e.g. "EBITDA Margin", "Competitor Total
+  Revenue"), from the existing metric_id -> `dim_metric.display_name`
+  lookup, falling back to `UNKNOWN_METRIC` only if an observation has no
+  metric_id at all.
+- A **review priority** (P1/P2/P3) from a small fixed lookup table (core
+  financials/operational metrics = P1, competitor/geographic/pricing/
+  customer metrics = P2, everything else = P3).
+
+Outputs to `data/silver/`: `analysis_ready_observations.csv`,
+`low_confidence_review.csv`, `low_confidence_metric_summary.csv`,
+`data_quality_summary.csv`.
+
+**Verified against the real Smartworks dataset**: of 417 observations,
+60 are analysis-ready, 357 need review (5 generic low-confidence, 26
+duplicates, 187 conflicts, 139 missing context) - none deleted or
+modified. 26 distinct metrics were named with zero `UNKNOWN_METRIC`
+records, since Phase 2's keyword-based extraction already resolves a
+metric_id for every observation it creates.
+
 ## Next development phase
 
-Phase 3 (analytical calculations): compute descriptive statistics,
-growth rates, and comparisons across the Silver-layer observations
-produced by Phase 2. Also extend document ingestion to CSV/Excel/JSON/
-text file types.
+Phase 4 (analytical calculations): compute descriptive statistics,
+growth rates, and comparisons across the analysis-ready Silver-layer
+observations. Also extend document ingestion to CSV/Excel/JSON/text
+file types.
