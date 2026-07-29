@@ -254,6 +254,14 @@ class FactExtractedTable(Base):
     review_reason = Column(Text, nullable=True)
     ingestion_timestamp = Column(DateTime, default=_utcnow, nullable=False)
 
+    # --- table classification (Phase 2) ---
+    table_category = Column(String, nullable=True)
+    # MARKET / COMPANY / COMPETITOR / FINANCIAL / OPERATIONAL / GEOGRAPHIC /
+    # CUSTOMER / PRICING / INDUSTRY / RISK / LEGAL / GOVERNANCE / OTHER / IRRELEVANT
+    relevance_score = Column(Float, nullable=True)  # 0.0 - 1.0
+    classification_confidence = Column(Float, nullable=True)  # 0.0 - 1.0
+    classification_basis = Column(Text, nullable=True)  # matched keywords, for auditability
+
 
 class FactObservation(Base):
     """
@@ -272,6 +280,7 @@ class FactObservation(Base):
     document_id = Column(
         Integer, ForeignKey("dim_document.document_id"), nullable=False
     )
+    table_id = Column(Integer, ForeignKey("fact_extracted_table.table_id"), nullable=True)
     page_number = Column(Integer, nullable=True)
     table_reference = Column(String, nullable=True)
     extraction_method = Column(String, nullable=True)  # text/table/manual/ocr
@@ -287,6 +296,11 @@ class FactObservation(Base):
     standardized_unit = Column(String, nullable=True)
 
     # --- dimensions ---
+    entity_id = Column(Integer, ForeignKey("dim_entity.entity_id"), nullable=True)
+    # Generic resolved entity (company / competitor / market / industry).
+    # company_id / competitor_id below are populated only when entity_type
+    # is specifically company/competitor, for convenient joins to those
+    # dimension tables; entity_id is the single source of truth.
     geography_id = Column(Integer, ForeignKey("dim_geography.geography_id"), nullable=True)
     company_id = Column(Integer, ForeignKey("dim_company.company_id"), nullable=True)
     competitor_id = Column(Integer, ForeignKey("dim_competitor.competitor_id"), nullable=True)
@@ -294,9 +308,11 @@ class FactObservation(Base):
     period_label_raw = Column(String, nullable=True)  # as-reported period text
 
     # --- quality ---
-    confidence = Column(Float, nullable=True)  # 0.0 - 1.0
-    evidence_grade = Column(String, nullable=True)  # A/B/C or high/medium/low
+    confidence = Column(Float, nullable=True)  # 0.0-1.0, confidence of the value extraction itself
+    classification_confidence = Column(Float, nullable=True)  # 0.0-1.0, inherited from parent table's classification
+    evidence_grade = Column(String, nullable=True)  # A/B/C
     needs_review = Column(Boolean, nullable=False, default=False)
+    review_reason = Column(Text, nullable=True)
 
     ingestion_timestamp = Column(DateTime, default=_utcnow, nullable=False)
 

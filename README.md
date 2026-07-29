@@ -11,10 +11,10 @@ suite (Market Intelligence, Investment Intelligence, Audience & Growth
 Intelligence). The data architecture is built to be reused by the other
 two products later.
 
-> **Status: project structure, database schema, and PDF ingestion +
-> extraction (Phase 1) are working end-to-end against a real PDF.**
-> Normalization, analytics, hypothesis testing, insights, and Power BI
-> export have not been built yet. See "Current status" below.
+> **Status: Phases 1-2 are working end-to-end against a real 583-page
+> PDF** (a Red Herring Prospectus). Analytics, hypothesis testing,
+> insights, and Power BI export have not been built yet. See "Current
+> status" below.
 
 ---
 
@@ -26,18 +26,19 @@ two products later.
 | 2. Database schema | ✅ Done (19 tables, verified with automated tests) |
 | 3. Document ingestion (PDF) | ✅ Done — `scripts/run_phase1_pdf_pipeline.py` |
 | 4. PDF text/table extraction | ✅ Done for PDF (text: PyMuPDF, tables: pdfplumber). CSV/Excel/JSON/text extraction not started. |
-| 5. Bronze → Silver → Gold transformation | 🟡 Bronze only (raw text/table files + DB rows). Silver/Gold not started. |
-| 6. Metric normalization & entity resolution | ⏳ Not started |
+| 5. Bronze → Silver → Gold transformation | 🟡 Bronze + Silver done. Gold/Power BI export not started. |
+| 6. Metric normalization & entity resolution | ✅ Done — `scripts/run_phase2_normalization.py` (rule-based table classification, metric extraction, unit/period normalization, entity resolution, QC) |
 | 7. Analytical calculations | ⏳ Not started |
 | 8. Hypothesis testing | ⏳ Not started |
 | 9. Insight & market gap generation | ⏳ Not started |
 | 10. Power BI-ready output generation | ⏳ Not started |
-| 11. End-to-end testing | 🟡 Unit tests exist; full `run_pipeline.py` not built |
+| 11. End-to-end testing | 🟡 28 unit/integration tests exist; full `run_pipeline.py` not built |
 
 The full `python run_pipeline.py` command described below is the target
 end state and does not exist yet. Today, use
-`python scripts/run_phase1_pdf_pipeline.py` (see "Phase 1: PDF ingestion
-and extraction" below).
+`python scripts/run_phase1_pdf_pipeline.py` then
+`python scripts/run_phase2_normalization.py` (see the Phase sections
+below).
 
 ---
 
@@ -181,6 +182,64 @@ below.
 
 ---
 
+## Phase 2: table classification and normalization
+
+```
+python scripts/run_phase2_normalization.py
+```
+
+Reads the Bronze-layer tables loaded by Phase 1 and, for every document:
+
+1. **Classifies** every extracted table into one of 14 categories
+   (MARKET, COMPANY, COMPETITOR, FINANCIAL, OPERATIONAL, GEOGRAPHIC,
+   CUSTOMER, PRICING, INDUSTRY, RISK, LEGAL, GOVERNANCE, OTHER,
+   IRRELEVANT) using a deterministic, auditable keyword-matching
+   classifier (`src/normalization/table_classifier.py`) - no LLM
+   required, consistent with the MVP's offline-first constraint.
+2. **Scores relevance** (0-1) and **classification confidence** (0-1)
+   per table, prioritizing categories useful for Market Intelligence.
+3. **Extracts metrics**: for tables not classified IRRELEVANT, scans
+   row labels against a keyword-based metric registry
+   (`src/normalization/metric_definitions.py` - revenue, EBITDA,
+   margins, occupancy, seating capacity, number of centers, client
+   concentration, market size/growth, etc.) and pulls out every numeric
+   cell that matches, handling multi-row AND multi-column headers
+   (e.g. a company name spanning several columns with year sub-headers
+   beneath it, as in peer-comparison tables).
+4. **Normalizes** numbers, percentages, currency (with crore/lakh/
+   million/billion scale detection), and reporting periods, while
+   always preserving the original as-reported value and unit alongside
+   the standardized ones.
+5. **Resolves entities**: known competitor brand names (Awfis, WeWork,
+   Table Space, IndiQube, etc.) are matched from table/column text;
+   company-context tables default to the document's own subject company
+   (detected from an ALL-CAPS "... LIMITED" pattern in the source text
+   itself, never fabricated); anything else is left unresolved rather
+   than guessed.
+6. **Runs quality control**: percentage-range checks, unit-retention
+   checks, and cross-page duplicate/conflict detection (flags cases
+   where the same metric/entity/period is reported with different
+   values on different pages).
+7. **Loads the Silver database**: `fact_observation` (one row per
+   normalized metric value, with full provenance back to
+   document/page/table), plus `dim_metric`, `dim_entity`,
+   `dim_geography`, `dim_date`.
+8. **Exports CSVs and reports** to `data/silver/observations/` and
+   `data/silver/reports/` (all observations, high-confidence only,
+   needs-review only, table classification report, metric registry,
+   entity registry, data quality report).
+
+**Verified against the real 583-page Smartworks RHP**: 527/529 tables
+classified as relevant, 417 observations extracted, spanning 15
+distinct metrics and 5 entities (the filing company plus 4 named
+competitors - Awfis, WeWork, Table Space, IndiQube - correctly
+identified from a peer-comparison table). Core financial figures
+(revenue, EBITDA, net profit, net worth) were spot-checked and found
+consistent across the 6+ separate pages that repeat them in the source
+document.
+
+---
+
 ## Where to put your files
 
 - **PDF reports** → `data/input/pdf/`
@@ -227,11 +286,13 @@ Key design decisions:
 
 ## Known limitations (current stage)
 
-- Only PDF ingestion/extraction is built. CSV/Excel/JSON/text ingestion,
-  normalization, entity resolution, analytics, hypothesis testing,
-  insight generation, and Power BI export do not exist yet.
+- Only PDF ingestion/extraction/normalization is built. CSV/Excel/JSON/
+  text ingestion, analytics, hypothesis testing, insight generation,
+  market gap analysis, recommendations, and Power BI export do not
+  exist yet.
 - `run_pipeline.py` (the unified end-to-end command) does not exist yet
-  — use `scripts/run_phase1_pdf_pipeline.py` directly for now.
+  — run `scripts/run_phase1_pdf_pipeline.py` then
+  `scripts/run_phase2_normalization.py` for now.
 - Camelot-based table extraction is optional/deferred due to its
   Ghostscript dependency; pdfplumber is used instead and flags weak
   extractions as `needs_review` rather than silently trusting them.
@@ -241,16 +302,38 @@ Key design decisions:
 - `dim_source` (the publisher/source registry, e.g. "CBRE") is not yet
   auto-populated from PDFs — the MVP does not guess a source
   organization from a filename or Word-document author metadata, since
-  that would risk misattributing the report's publisher. Raw PDF
-  metadata (title/author/creator/dates) is preserved as-is in each
-  document's extraction log for later manual or LLM-assisted
-  classification.
+  that would risk misattributing the report's publisher.
+- **Table classification is keyword-based, not ML/LLM-based**: it is
+  auditable (every decision records which keywords matched) but not
+  highly precise. In particular, the GEOGRAPHIC category catches any
+  table that merely mentions a known city name (e.g. a registered-office
+  address on the cover page), not only genuine city-wise breakdown
+  tables — the downstream metric extractor's strict requirement for a
+  matching KPI row-label correctly prevents fabricating geography-tagged
+  metrics from these false positives, which is why 0 geography-tagged
+  observations were extracted from this document even though 37 tables
+  were classified GEOGRAPHIC.
+- **Multi-row/multi-column header parsing is heuristic**: tables with
+  a company name spanning several columns AND a year sub-header beneath
+  it (peer-comparison tables) are handled via forward-fill +
+  concatenation, which works well but can occasionally bleed a label
+  one column past its true boundary in complex nested headers. Observed
+  in a small number of flagged (`needs_review`) observations.
+- **Entity attribution defaults to the filing company** for
+  company/financial tables where no more specific entity is detected.
+  This is usually correct but is a known source of false "conflicts" in
+  QC when a table actually reports a subsidiary's smaller figures under
+  a similar row label (e.g. "Net worth: (9.57)" vs. the parent's
+  "Net worth: 500.07") — the system correctly flags these as conflicting
+  rather than silently picking one, but does not (yet) recognize the
+  subsidiary as a distinct entity.
+- Currency scale (e.g. "₹ in Million") stated in a table's caption
+  *outside* the table's own cells is not parsed — figures are preserved
+  at face value as they appear in the cell.
 
 ## Next development phase
 
-Phase 2 (data normalization): parse the raw Bronze-layer text/tables to
-identify metric names, values, units, geography, company/competitor
-names, and time periods, standardize them where confidence is
-sufficient, and load the results into `fact_observation` with full
-provenance. Also extend document ingestion to CSV/Excel/JSON/text file
-types.
+Phase 3 (analytical calculations): compute descriptive statistics,
+growth rates, and comparisons across the Silver-layer observations
+produced by Phase 2. Also extend document ingestion to CSV/Excel/JSON/
+text file types.

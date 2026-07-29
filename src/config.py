@@ -36,6 +36,8 @@ BRONZE_TABLES_DIR = BRONZE_DIR / "tables"         # raw extracted tables
 BRONZE_STRUCTURED_DIR = BRONZE_DIR / "structured"  # raw CSV/Excel/JSON copies
 
 SILVER_DIR = DATA_DIR / "silver"                  # cleaned/standardized data
+SILVER_OBSERVATIONS_DIR = SILVER_DIR / "observations"  # normalized observation CSV exports
+SILVER_REPORTS_DIR = SILVER_DIR / "reports"            # classification/registry/quality reports
 
 GOLD_DIR = DATA_DIR / "gold"
 GOLD_POWERBI_DIR = GOLD_DIR / "powerbi"           # Power BI-ready CSV exports
@@ -72,6 +74,8 @@ ALL_DIRS = [
     BRONZE_TABLES_DIR,
     BRONZE_STRUCTURED_DIR,
     SILVER_DIR,
+    SILVER_OBSERVATIONS_DIR,
+    SILVER_REPORTS_DIR,
     GOLD_DIR,
     GOLD_POWERBI_DIR,
     DATABASE_DIR,
