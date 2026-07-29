@@ -11,9 +11,10 @@ suite (Market Intelligence, Investment Intelligence, Audience & Growth
 Intelligence). The data architecture is built to be reused by the other
 two products later.
 
-> **Status: project structure + database schema only.**
-> The ingestion/extraction/analytics pipeline has not been built yet.
-> See "Current status" below for exactly what works today.
+> **Status: project structure, database schema, and PDF ingestion +
+> extraction (Phase 1) are working end-to-end against a real PDF.**
+> Normalization, analytics, hypothesis testing, insights, and Power BI
+> export have not been built yet. See "Current status" below.
 
 ---
 
@@ -23,18 +24,20 @@ two products later.
 |---|---|
 | 1. Project structure | ✅ Done |
 | 2. Database schema | ✅ Done (19 tables, verified with automated tests) |
-| 3. Document ingestion | ⏳ Not started |
-| 4. PDF/Excel/CSV/JSON/text extraction | ⏳ Not started |
-| 5. Bronze → Silver → Gold transformation | ⏳ Not started |
+| 3. Document ingestion (PDF) | ✅ Done — `scripts/run_phase1_pdf_pipeline.py` |
+| 4. PDF text/table extraction | ✅ Done for PDF (text: PyMuPDF, tables: pdfplumber). CSV/Excel/JSON/text extraction not started. |
+| 5. Bronze → Silver → Gold transformation | 🟡 Bronze only (raw text/table files + DB rows). Silver/Gold not started. |
 | 6. Metric normalization & entity resolution | ⏳ Not started |
 | 7. Analytical calculations | ⏳ Not started |
 | 8. Hypothesis testing | ⏳ Not started |
 | 9. Insight & market gap generation | ⏳ Not started |
 | 10. Power BI-ready output generation | ⏳ Not started |
-| 11. End-to-end testing | ⏳ Not started |
+| 11. End-to-end testing | 🟡 Unit tests exist; full `run_pipeline.py` not built |
 
 The full `python run_pipeline.py` command described below is the target
-end state and does not exist yet.
+end state and does not exist yet. Today, use
+`python scripts/run_phase1_pdf_pipeline.py` (see "Phase 1: PDF ingestion
+and extraction" below).
 
 ---
 
@@ -133,8 +136,48 @@ existing data.
 pytest
 ```
 
-This verifies the schema creates correctly and contains every expected
-table.
+Verifies the schema creates correctly, and that PDF text/table
+extraction and document registration work correctly against a small
+synthetic PDF generated during the test run.
+
+---
+
+## Phase 1: PDF ingestion and extraction
+
+```
+python scripts/run_phase1_pdf_pipeline.py
+```
+
+This scans `data/input/pdf/`, and for every PDF found there:
+
+1. Computes a SHA-256 hash and registers the file in `dim_document`
+   (re-running on the same file reuses the existing document_id instead
+   of duplicating it).
+2. Extracts text page-by-page using **PyMuPDF**.
+3. Extracts tables page-by-page using **pdfplumber**.
+4. Writes raw page text to
+   `data/bronze/documents/doc_<id>_<name>/page_NNNN.txt`.
+5. Writes raw extracted tables to
+   `data/bronze/tables/doc_<id>_<name>/page_NNNN_table_NN.json`.
+6. Loads page and table metadata into `fact_document_text` and
+   `fact_extracted_table` in SQLite.
+7. Writes an extraction log (`_extraction_log.json` in the bronze
+   documents folder, and a timestamped copy under `logs/`).
+
+**Nothing is fabricated or silently dropped.** Pages with little/no
+extractable text are flagged `needs_review` (or OCR'd, if Tesseract-OCR
+is installed and on PATH). Tables with mostly empty/unreadable cells are
+flagged `needs_review` rather than trusted automatically. This phase
+does **not** summarize the document, generate insights, resolve
+entities, or run any statistics — it only proves the engine can reliably
+read a real PDF and preserve everything it extracted with full
+provenance.
+
+Advanced table extraction via **Camelot** is not used in this MVP
+because it requires a separate Ghostscript installation; pdfplumber
+(pure Python, no extra system dependency) is used instead. This is a
+documented limitation, not a silent gap — see "Known limitations"
+below.
 
 ---
 
@@ -184,16 +227,30 @@ Key design decisions:
 
 ## Known limitations (current stage)
 
-- No ingestion, extraction, normalization, analytics, hypothesis
-  testing, insight generation, or Power BI export code exists yet — only
-  the project skeleton and database schema.
-- `run_pipeline.py` does not exist yet.
+- Only PDF ingestion/extraction is built. CSV/Excel/JSON/text ingestion,
+  normalization, entity resolution, analytics, hypothesis testing,
+  insight generation, and Power BI export do not exist yet.
+- `run_pipeline.py` (the unified end-to-end command) does not exist yet
+  — use `scripts/run_phase1_pdf_pipeline.py` directly for now.
 - Camelot-based table extraction is optional/deferred due to its
-  Ghostscript dependency.
+  Ghostscript dependency; pdfplumber is used instead and flags weak
+  extractions as `needs_review` rather than silently trusting them.
+- OCR fallback requires Tesseract-OCR installed separately; if it is
+  not present, scanned/image-only pages are flagged `needs_review`
+  instead of being OCR'd (never fabricated).
+- `dim_source` (the publisher/source registry, e.g. "CBRE") is not yet
+  auto-populated from PDFs — the MVP does not guess a source
+  organization from a filename or Word-document author metadata, since
+  that would risk misattributing the report's publisher. Raw PDF
+  metadata (title/author/creator/dates) is preserved as-is in each
+  document's extraction log for later manual or LLM-assisted
+  classification.
 
 ## Next development phase
 
-Phase 3 (document ingestion): recursively scan `data/input/`, register
-each file in `dim_document` with a unique ID, hash, and ingestion
-timestamp, and log every file (including failures) without silently
-discarding any of them.
+Phase 2 (data normalization): parse the raw Bronze-layer text/tables to
+identify metric names, values, units, geography, company/competitor
+names, and time periods, standardize them where confidence is
+sufficient, and load the results into `fact_observation` with full
+provenance. Also extend document ingestion to CSV/Excel/JSON/text file
+types.

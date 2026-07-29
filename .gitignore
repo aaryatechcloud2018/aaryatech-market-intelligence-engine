@@ -19,6 +19,8 @@ database/*.sqlite3
 
 # --- Logs ---
 logs/*.log
+logs/*.json
+!logs/.gitkeep
 
 # --- Generated data layers (keep folder structure via .gitkeep) ---
 data/bronze/**

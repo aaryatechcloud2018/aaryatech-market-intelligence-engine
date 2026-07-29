@@ -226,6 +226,9 @@ class FactDocumentText(Base):
     text_content = Column(Text, nullable=True)
     char_count = Column(Integer, nullable=True)
     extraction_method = Column(String, nullable=True)
+    extraction_status = Column(String, nullable=False, default="success")
+    # success / needs_review / failed
+    error_message = Column(Text, nullable=True)
     ingestion_timestamp = Column(DateTime, default=_utcnow, nullable=False)
 
 
@@ -244,6 +247,11 @@ class FactExtractedTable(Base):
     row_count = Column(Integer, nullable=True)
     column_count = Column(Integer, nullable=True)
     extraction_method = Column(String, nullable=True)
+    extraction_status = Column(String, nullable=False, default="success")
+    # success / needs_review - flags tables extracted with low confidence
+    # (e.g. mostly empty cells) so they are never silently trusted.
+    confidence = Column(Float, nullable=True)  # 0.0 - 1.0, fraction of filled cells
+    review_reason = Column(Text, nullable=True)
     ingestion_timestamp = Column(DateTime, default=_utcnow, nullable=False)
 
 
