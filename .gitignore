@@ -1,0 +1,52 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# --- Environment / secrets ---
+.env
+
+# --- Database ---
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+
+# --- Logs ---
+logs/*.log
+
+# --- Generated data layers (keep folder structure via .gitkeep) ---
+data/bronze/**
+!data/bronze/**/
+!data/bronze/**/.gitkeep
+
+data/silver/**
+!data/silver/**/
+!data/silver/**/.gitkeep
+
+data/gold/**
+!data/gold/**/
+!data/gold/**/.gitkeep
+
+# --- User-provided input documents (do not commit real client data) ---
+data/input/pdf/*
+!data/input/pdf/.gitkeep
+data/input/csv/*
+!data/input/csv/.gitkeep
+data/input/excel/*
+!data/input/excel/.gitkeep
+data/input/json/*
+!data/input/json/.gitkeep
+data/input/text/*
+!data/input/text/.gitkeep
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

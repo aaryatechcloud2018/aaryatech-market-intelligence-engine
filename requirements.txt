@@ -1,0 +1,35 @@
+# Aaryatech Market Intelligence Engine - Python dependencies
+# Tested with Python 3.11
+
+# --- Core data handling ---
+pandas>=2.1,<3.0
+numpy>=1.26,<2.0
+SQLAlchemy>=2.0,<3.0
+pydantic>=2.5,<3.0
+python-dotenv>=1.0,<2.0
+
+# --- Document extraction ---
+PyMuPDF>=1.23,<2.0        # fitz - PDF text/page extraction
+pdfplumber>=0.10,<1.0     # PDF text + table extraction
+openpyxl>=3.1,<4.0        # Excel (.xlsx) read/write
+
+# OCR fallback for scanned PDFs (optional at runtime; core pipeline
+# degrades gracefully if these are not installed / Tesseract binary
+# is not on PATH). Requires the Tesseract-OCR system binary on Windows:
+# https://github.com/UB-Mannheim/tesseract/wiki
+pytesseract>=0.3.10,<1.0
+Pillow>=10.0,<11.0
+
+# --- Analytics / statistics ---
+scipy>=1.11,<2.0
+scikit-learn>=1.3,<2.0
+matplotlib>=3.8,<4.0
+
+# --- Testing ---
+pytest>=7.4,<8.0
+
+# --- Optional: advanced table extraction ---
+# Camelot requires Ghostscript to be installed separately on Windows
+# (https://www.ghostscript.com/releases/gsdnld.html). It is optional
+# for the MVP; pdfplumber is used as the primary table extractor.
+# camelot-py[cv]>=0.11,<1.0
