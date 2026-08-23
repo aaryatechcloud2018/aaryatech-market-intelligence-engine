@@ -5,9 +5,9 @@ Uses Apple's public customer-reviews RSS feed (JSON format) -- no
 credentials required:
   https://itunes.apple.com/{country}/rss/customerreviews/id={app_id}/page={n}/sortby=mostrecent/json
 
-Collects, per RAW_FIELDS: review title + body (combined into comment_text),
-rating (prefixed onto comment_text like the Google Play collector, for the
-same reason -- no dedicated rating column in the shared schema), date,
+Collects, per RAW_FIELDS: review title + body (combined into comment_text --
+still the original text, just title and body concatenated, never prefixed
+with synthetic metadata), star rating (its own `rating` field), date,
 reviewer name, and app version (folded into thread_or_page_title).
 
 Note: this feed only exposes roughly the most recent ~500 reviews (10 pages
@@ -78,11 +78,15 @@ def collect(window_start: date, window_end: date) -> list[dict]:
             row.update(
                 {
                     "comment_id": make_comment_id(PLATFORM, review_id),
+                    "record_type": "REVIEW",
                     "platform": PLATFORM,
+                    "subreddit": "",
+                    "post_id": "",
                     "source_url": SOURCE_URL,
                     "thread_or_page_title": f"App Store review (app version: {app_version})",
                     "public_username": author,
-                    "comment_text": f"[Rating: {rating}/5] {title}: {body}",
+                    "comment_text": f"{title}: {body}" if title else body,
+                    "rating": rating,
                     "comment_date": review_date.isoformat(),
                     "collected_at": now_iso(),
                     "likes_or_upvotes": "",  # not exposed by this feed
