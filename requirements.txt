@@ -28,6 +28,16 @@ matplotlib>=3.8,<4.0
 # --- Testing ---
 pytest>=7.4,<8.0
 
+# --- Stage 2: audience data collection (src/audience_collection/) ---
+# Separate from the core pipeline above; only used by this module.
+requests>=2.31,<3.0
+google-play-scraper>=1.2,<2.0     # Google Play reviews, no auth required
+youtube-comment-downloader>=0.1.70,<1.0  # YouTube comment scraping fallback (no API key)
+praw>=7.7,<9.0                     # optional: Reddit OAuth, used only if REDDIT_CLIENT_ID/SECRET are set
+# google-api-python-client is only needed if YOUTUBE_API_KEY is set (official
+# YouTube Data API path); install separately if you use that path:
+# google-api-python-client>=2.100,<3.0
+
 # --- Optional: advanced table extraction ---
 # Camelot requires Ghostscript to be installed separately on Windows
 # (https://www.ghostscript.com/releases/gsdnld.html). It is optional
