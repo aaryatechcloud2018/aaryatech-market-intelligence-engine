@@ -1,0 +1,69 @@
+file,field,type,description
+01_candidate_applications.csv,candidate_id,ID,Unique candidate identifier. May repeat across applications for reapply cases (~3% of rows).
+01_candidate_applications.csv,application_id,ID,Unique identifier for one candidate's journey through one requisition. Primary analysis unit.
+01_candidate_applications.csv,requisition_id,ID (FK),Links to 06_requisitions.csv.
+01_candidate_applications.csv,client_account_id,ID (FK),Links to 04_clients.csv.
+01_candidate_applications.csv,recruiter_id,ID (FK),Links to 05_recruiters.csv.
+01_candidate_applications.csv,job_title,Categorical,Job title for the requisition.
+01_candidate_applications.csv,job_family,Categorical,"One of 6 staffing categories (IT/Technology, Healthcare, Engineering, Finance/Accounting, Light Industrial, Administrative/Professional)."
+01_candidate_applications.csv,location_city,Categorical,Work location city.
+01_candidate_applications.csv,location_state,Categorical,Work location state (2-letter).
+01_candidate_applications.csv,work_arrangement,Categorical,onsite / hybrid / remote.
+01_candidate_applications.csv,contract_type,Categorical,W2 Contract / Contract-to-Hire / Direct Hire / 1099.
+01_candidate_applications.csv,years_experience,Numeric,Candidate's years of relevant experience at application time.
+01_candidate_applications.csv,application_source,Categorical,job_board / recruiter_sourced / referral / reapply / career_site / staffing_event.
+01_candidate_applications.csv,pay_rate_prior,"Numeric, nullable",Candidate's stated prior pay rate (hourly-equivalent). May be missing (not always disclosed).
+01_candidate_applications.csv,pay_rate_offered,Numeric,Offered pay rate (hourly-equivalent).
+01_candidate_applications.csv,application_date,Date,Date candidate applied / was submitted.
+01_candidate_applications.csv,interview_date,Date,Date of (first) client interview.
+01_candidate_applications.csv,offer_date,Date,Date offer was extended.
+01_candidate_applications.csv,offer_response_date,Date,Date candidate responded to the offer (accept or decline).
+01_candidate_applications.csv,expected_start_date,Date,Target/agreed start date established at offer stage.
+01_candidate_applications.csv,actual_start_date,"Date, nullable",Actual date candidate started. Empty if candidate never started.
+01_candidate_applications.csv,offer_extended,Boolean,Always TRUE in this dataset (all records reached offer stage by design).
+01_candidate_applications.csv,offer_accepted,Boolean,Whether candidate accepted the offer. FALSE only for declined_offer.
+01_candidate_applications.csv,final_disposition,Categorical (outcome),joined_on_time / joined_late / accepted_no_show / withdrew_post_acceptance / declined_offer / rejected_by_client.
+01_candidate_applications.csv,disposition_date,Date,Date the final disposition was recorded/effective.
+01_candidate_applications.csv,notice_period_days,Numeric,"Notice period candidate needed to give current employer, in days."
+01_candidate_applications.csv,research_split,Categorical,"discovery (60%) / hypothesis_generation (20%) / held_out_test (20%), stratified by final_disposition."
+02_communication_log.csv,log_id,ID,Unique communication record identifier.
+02_communication_log.csv,application_id,ID (FK),Links to 01_candidate_applications.csv.
+02_communication_log.csv,timestamp,Date,Date of the communication.
+02_communication_log.csv,source_type,Categorical,candidate_message / recruiter_note / interview_note / withdrawal_statement / decline_statement / client_feedback.
+02_communication_log.csv,direction,Categorical,candidate_facing (recruiter<->candidate) or internal (recruiter/client notes).
+02_communication_log.csv,text,Free text,Synthetic communication content. Deliberately varied in tone/completeness/typos. Not labeled with any mechanism or outcome.
+02_communication_log.csv,word_count,Numeric,Word count of text field.
+02_communication_log.csv,response_latency_hours,Numeric,Hours since the prior communication on this application's thread.
+03_stage_events.csv,event_id,ID,Unique stage-event identifier.
+03_stage_events.csv,application_id,ID (FK),Links to 01_candidate_applications.csv.
+03_stage_events.csv,stage_name,Categorical,screened / submitted / client_interview_1 / client_interview_2 / offer_extended / offer_accepted / background_check / onboarding_docs_sent / start_date.
+03_stage_events.csv,stage_timestamp,Date,Date the stage event occurred.
+03_stage_events.csv,days_in_prior_stage,Numeric,Days elapsed since the previous stage event for this application.
+04_clients.csv,client_account_id,ID,Unique anonymized client identifier.
+04_clients.csv,client_name,Text,"Anonymized client account name (fictional, not a real company)."
+04_clients.csv,primary_job_families,Categorical list,Job families this client typically hires for (semicolon-separated).
+04_clients.csv,hiring_speed_tier,Categorical,"fast / medium / slow — client's typical process speed. Operational metadata, not a quality judgment."
+04_clients.csv,pay_band_tier,Categorical,"below_market / market / above_market, relative to the job family's typical range."
+04_clients.csv,preferred_work_arrangement,Categorical,onsite / hybrid / remote.
+05_recruiters.csv,recruiter_id,ID,Unique anonymized recruiter identifier.
+05_recruiters.csv,recruiter_first_name,Text,"Anonymized/fictional first name only, for readability."
+05_recruiters.csv,team,Categorical,Team_Commercial / Team_Technical / Team_Healthcare.
+05_recruiters.csv,tenure_months,Numeric,Recruiter's tenure at time of dataset snapshot.
+05_recruiters.csv,typical_followup_speed_tier,Categorical,fast / medium / slow. Operational descriptor used to generate response_latency_hours patterns — NOT a performance label.
+05_recruiters.csv,typical_communication_frequency_tier,Categorical,low / medium / high. Operational descriptor used to generate communication volume — NOT a performance label.
+06_requisitions.csv,requisition_id,ID,Unique requisition identifier.
+06_requisitions.csv,client_account_id,ID (FK),Links to 04_clients.csv.
+06_requisitions.csv,job_title,Categorical,Job title for this requisition.
+06_requisitions.csv,job_family,Categorical,One of 6 staffing categories.
+06_requisitions.csv,location_city,Categorical,Requisition work location city.
+06_requisitions.csv,location_state,Categorical,Requisition work location state.
+06_requisitions.csv,work_arrangement,Categorical,onsite / hybrid / remote.
+06_requisitions.csv,contract_type,Categorical,W2 Contract / Contract-to-Hire / Direct Hire / 1099.
+06_requisitions.csv,requisition_open_date,Date,Date requisition was opened.
+08_scenario_ground_truth.csv [PRIVATE],application_id,ID (FK),Links to 01_candidate_applications.csv.
+08_scenario_ground_truth.csv [PRIVATE],scenario_id,ID,Internal generator scenario code (S01-S50). NOT a behavioral mechanism.
+08_scenario_ground_truth.csv [PRIVATE],scenario_family,Categorical,One of 25 underlying real-life staffing scenario families used only to generate diverse evidence.
+08_scenario_ground_truth.csv [PRIVATE],scenario_variant,Categorical,"Sub-variant of the scenario family (e.g., mild/strong)."
+08_scenario_ground_truth.csv [PRIVATE],scenario_description,Text,Internal description of the generation scenario.
+08_scenario_ground_truth.csv [PRIVATE],generation_variables,Text,Semicolon-separated record of which recruiter/client operational tiers were in effect for this application.
+08_scenario_ground_truth.csv [PRIVATE],intended_noise_level,Categorical,low / medium / high — how much random jitter was applied to this scenario's outcome distribution at generation time.

@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Aaryatech Behavioral Mechanism",
+  "description": "Structural definition for one entry in behavioral_mechanisms.json. A mechanism explains WHY a consumer behavior may occur. It must NOT contain behavioral outcomes/signals, emotions, contextual triggers, or marketing/branding recommendations — those belong to separate future libraries and modules.",
+  "type": "object",
+  "required": [
+    "Pattern_ID",
+    "Pattern_Name",
+    "Category",
+    "Simple_Definition",
+    "Behavioral_Mechanism",
+    "Typical_Trigger",
+    "Observable_Behavior",
+    "Possible_Linguistic_Signals",
+    "Possible_Contradictory_Signals",
+    "Related_Patterns",
+    "Distinguishing_Features",
+    "Research_Relevance",
+    "Evidence_Requirements",
+    "Confidence_Notes",
+    "Source_References",
+    "Version",
+    "Status"
+  ],
+  "properties": {
+    "Pattern_ID": {
+      "type": "string",
+      "pattern": "^BM-[0-9]{3}$",
+      "description": "Unique ID for this mechanism. 'BM' prefix distinguishes this library from future outcome (BO-), emotion (EM-), and context (CX-) libraries."
+    },
+    "Pattern_Name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Category": {
+      "type": "string",
+      "enum": [
+        "Decision-Making & Cognitive Biases",
+        "Motivation & Goals",
+        "Friction & Effort",
+        "Habit & Behavioral Persistence",
+        "Social Influence",
+        "Trust, Risk & Uncertainty",
+        "Identity & Self-Concept",
+        "Value & Reference Evaluation",
+        "Adoption & Resistance to Change"
+      ]
+    },
+    "Simple_Definition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Behavioral_Mechanism": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The causal explanation of why this mechanism produces the described effect."
+    },
+    "Typical_Trigger": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Observable_Behavior": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Possible_Linguistic_Signals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Illustrative example phrasings only. NOT a classification rule — comment-to-pattern mapping is a future module."
+    },
+    "Possible_Contradictory_Signals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Example phrasings that would argue AGAINST this mechanism being present, to prevent overconfident pattern-matching later."
+    },
+    "Related_Patterns": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^BM-[0-9]{3}$" },
+      "description": "Pattern_IDs of other mechanisms this one is commonly confused with or co-occurs with. May be empty."
+    },
+    "Distinguishing_Features": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Required explanation of how this mechanism differs from its nearest neighbor(s). This is the anti-duplication mechanism for the library."
+    },
+    "Research_Relevance": {
+      "type": "string",
+      "enum": ["High", "Medium", "Low"]
+    },
+    "Evidence_Requirements": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What kind of evidence a future module would need to reasonably infer this mechanism, rather than merely guess it."
+    },
+    "Confidence_Notes": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Caveats about how easily this mechanism can be confused with others or misapplied."
+    },
+    "Source_References": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Academic/authoritative citations, or the literal string 'SOURCE_REVIEW_REQUIRED' if a source could not be confidently verified."
+    },
+    "Version": {
+      "type": "string",
+      "description": "Version of this individual entry, e.g. '1.0'."
+    },
+    "Status": {
+      "type": "string",
+      "enum": ["Approved", "Draft", "Needs Review"]
+    }
+  },
+  "additionalProperties": false
+}

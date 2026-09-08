@@ -1,0 +1,231 @@
+requisition_id,client_account_id,job_title,job_family,location_city,location_state,work_arrangement,contract_type,requisition_open_date
+REQ-00001,CLI-004,Software Engineer,IT/Technology,Atlanta,GA,remote,W2 Contract,2024-04-19
+REQ-00002,CLI-002,Medical Coder,Healthcare,Austin,TX,onsite,W2 Contract,2025-06-06
+REQ-00003,CLI-002,Physical Therapist Asst.,Healthcare,St. Louis,MO,hybrid,W2 Contract,2024-10-16
+REQ-00004,CLI-003,AR Specialist,Finance/Accounting,Tampa,FL,hybrid,W2 Contract,2024-06-13
+REQ-00005,CLI-002,Certified Nursing Assistant,Healthcare,Columbus,OH,onsite,W2 Contract,2024-12-23
+REQ-00006,CLI-007,Registered Nurse,Healthcare,Philadelphia,PA,onsite,1099,2025-01-27
+REQ-00007,CLI-009,Manufacturing Engineer,Engineering,Charlotte,NC,remote,Direct Hire,2025-01-10
+REQ-00008,CLI-001,Shipping/Receiving Clerk,Light Industrial,Houston,TX,onsite,W2 Contract,2024-10-28
+REQ-00009,CLI-001,General Laborer,Light Industrial,Jacksonville,FL,hybrid,W2 Contract,2025-01-13
+REQ-00010,CLI-002,Certified Nursing Assistant,Healthcare,Phoenix,AZ,onsite,W2 Contract,2024-03-19
+REQ-00011,CLI-005,Manufacturing Engineer,Engineering,Jacksonville,FL,onsite,W2 Contract,2024-08-17
+REQ-00012,CLI-009,Project Engineer,Engineering,Austin,TX,onsite,W2 Contract,2024-11-24
+REQ-00013,CLI-007,Pharmacy Technician,Healthcare,Houston,TX,onsite,1099,2024-11-23
+REQ-00014,CLI-007,Phlebotomist,Healthcare,Tucson,AZ,remote,Contract-to-Hire,2024-10-03
+REQ-00015,CLI-001,Forklift Operator,Light Industrial,Nashville,TN,onsite,Direct Hire,2025-03-19
+REQ-00016,CLI-003,Financial Analyst,Finance/Accounting,Jacksonville,FL,onsite,Contract-to-Hire,2024-04-08
+REQ-00017,CLI-011,General Laborer,Light Industrial,Columbus,OH,onsite,W2 Contract,2025-03-13
+REQ-00018,CLI-008,DevOps Engineer,IT/Technology,Tucson,AZ,hybrid,Contract-to-Hire,2024-09-19
+REQ-00019,CLI-011,Shipping/Receiving Clerk,Light Industrial,Columbus,OH,onsite,Contract-to-Hire,2024-10-05
+REQ-00020,CLI-011,Administrative Assistant,Administrative/Professional,Charlotte,NC,onsite,Contract-to-Hire,2024-10-01
+REQ-00021,CLI-009,Manufacturing Engineer,Engineering,Columbus,OH,hybrid,Direct Hire,2025-06-08
+REQ-00022,CLI-009,Civil Engineer,Engineering,Phoenix,AZ,remote,1099,2024-01-06
+REQ-00023,CLI-007,Phlebotomist,Healthcare,Dallas,TX,onsite,W2 Contract,2024-11-15
+REQ-00024,CLI-009,Mechanical Engineer,Engineering,Jacksonville,FL,onsite,W2 Contract,2025-05-17
+REQ-00025,CLI-006,AR Specialist,Finance/Accounting,Nashville,TN,onsite,Direct Hire,2024-06-23
+REQ-00026,CLI-001,Material Handler,Light Industrial,Kansas City,MO,onsite,W2 Contract,2024-07-29
+REQ-00027,CLI-003,Payroll Specialist,Finance/Accounting,Milwaukee,WI,hybrid,Contract-to-Hire,2025-06-18
+REQ-00028,CLI-009,Mechanical Engineer,Engineering,Jacksonville,FL,onsite,W2 Contract,2024-08-28
+REQ-00029,CLI-009,Mechanical Engineer,Engineering,Houston,TX,onsite,W2 Contract,2024-02-07
+REQ-00030,CLI-006,Administrative Assistant,Administrative/Professional,Indianapolis,IN,hybrid,Direct Hire,2024-08-12
+REQ-00031,CLI-001,Shipping/Receiving Clerk,Light Industrial,Memphis,TN,onsite,W2 Contract,2025-05-04
+REQ-00032,CLI-005,Forklift Operator,Light Industrial,Columbus,OH,onsite,Contract-to-Hire,2025-03-14
+REQ-00033,CLI-009,Quality Engineer,Engineering,Austin,TX,onsite,1099,2024-04-15
+REQ-00034,CLI-011,Machine Operator,Light Industrial,Raleigh,NC,onsite,W2 Contract,2024-07-18
+REQ-00035,CLI-005,Forklift Operator,Light Industrial,Chicago,IL,onsite,Contract-to-Hire,2024-03-23
+REQ-00036,CLI-009,Project Engineer,Engineering,Nashville,TN,onsite,Direct Hire,2024-01-21
+REQ-00037,CLI-003,AR Specialist,Finance/Accounting,Jacksonville,FL,hybrid,Contract-to-Hire,2024-08-11
+REQ-00038,CLI-011,Administrative Assistant,Administrative/Professional,Tampa,FL,onsite,1099,2024-10-03
+REQ-00039,CLI-009,Electrical Engineer,Engineering,Chicago,IL,onsite,Direct Hire,2025-05-18
+REQ-00040,CLI-010,Executive Assistant,Administrative/Professional,Charlotte,NC,hybrid,W2 Contract,2024-03-08
+REQ-00041,CLI-002,Registered Nurse,Healthcare,Austin,TX,onsite,Contract-to-Hire,2024-06-15
+REQ-00042,CLI-008,Data Analyst,IT/Technology,Tampa,FL,hybrid,W2 Contract,2024-09-02
+REQ-00043,CLI-008,Data Analyst,IT/Technology,Memphis,TN,hybrid,Contract-to-Hire,2024-03-29
+REQ-00044,CLI-010,Receptionist,Administrative/Professional,Memphis,TN,hybrid,W2 Contract,2024-09-29
+REQ-00045,CLI-007,Certified Nursing Assistant,Healthcare,Jacksonville,FL,onsite,W2 Contract,2024-11-08
+REQ-00046,CLI-007,Certified Nursing Assistant,Healthcare,Houston,TX,onsite,Contract-to-Hire,2024-04-17
+REQ-00047,CLI-006,Bookkeeper,Finance/Accounting,Orlando,FL,hybrid,W2 Contract,2024-12-28
+REQ-00048,CLI-008,QA Tester,IT/Technology,Phoenix,AZ,hybrid,Contract-to-Hire,2024-11-10
+REQ-00049,CLI-008,Systems Administrator,IT/Technology,Milwaukee,WI,hybrid,Direct Hire,2024-10-02
+REQ-00050,CLI-003,Staff Accountant,Finance/Accounting,Nashville,TN,hybrid,W2 Contract,2024-08-08
+REQ-00051,CLI-006,Executive Assistant,Administrative/Professional,Milwaukee,WI,hybrid,W2 Contract,2025-05-20
+REQ-00052,CLI-011,Data Entry Clerk,Administrative/Professional,Austin,TX,onsite,Contract-to-Hire,2024-10-15
+REQ-00053,CLI-002,Registered Nurse,Healthcare,Raleigh,NC,remote,1099,2024-06-19
+REQ-00054,CLI-005,Material Handler,Light Industrial,Chicago,IL,onsite,W2 Contract,2024-06-06
+REQ-00055,CLI-002,Certified Nursing Assistant,Healthcare,Memphis,TN,onsite,Contract-to-Hire,2024-02-17
+REQ-00056,CLI-011,Office Coordinator,Administrative/Professional,Austin,TX,onsite,Direct Hire,2024-04-20
+REQ-00057,CLI-003,AR Specialist,Finance/Accounting,Nashville,TN,hybrid,1099,2024-06-12
+REQ-00058,CLI-005,Project Engineer,Engineering,Tampa,FL,onsite,Direct Hire,2024-01-31
+REQ-00059,CLI-002,Certified Nursing Assistant,Healthcare,Chicago,IL,remote,Direct Hire,2024-10-05
+REQ-00060,CLI-008,Data Analyst,IT/Technology,Tucson,AZ,hybrid,W2 Contract,2025-04-21
+REQ-00061,CLI-004,Systems Administrator,IT/Technology,Jacksonville,FL,remote,Direct Hire,2025-02-17
+REQ-00062,CLI-011,Office Coordinator,Administrative/Professional,Houston,TX,hybrid,W2 Contract,2025-06-10
+REQ-00063,CLI-007,Certified Nursing Assistant,Healthcare,Dallas,TX,onsite,1099,2024-07-06
+REQ-00064,CLI-001,Warehouse Associate,Light Industrial,Columbus,OH,onsite,W2 Contract,2024-11-22
+REQ-00065,CLI-003,Bookkeeper,Finance/Accounting,Indianapolis,IN,hybrid,Direct Hire,2024-07-18
+REQ-00066,CLI-001,Warehouse Associate,Light Industrial,Chicago,IL,onsite,1099,2024-07-25
+REQ-00067,CLI-006,Customer Service Representative,Administrative/Professional,Houston,TX,hybrid,Contract-to-Hire,2024-05-12
+REQ-00068,CLI-002,Pharmacy Technician,Healthcare,Milwaukee,WI,onsite,Contract-to-Hire,2024-11-03
+REQ-00069,CLI-010,Executive Assistant,Administrative/Professional,Chicago,IL,hybrid,W2 Contract,2024-07-02
+REQ-00070,CLI-004,DevOps Engineer,IT/Technology,Nashville,TN,hybrid,W2 Contract,2025-03-21
+REQ-00071,CLI-008,Business Systems Analyst,IT/Technology,Philadelphia,PA,hybrid,W2 Contract,2025-05-04
+REQ-00072,CLI-002,Medical Assistant,Healthcare,Charlotte,NC,onsite,Contract-to-Hire,2024-12-14
+REQ-00073,CLI-004,QA Tester,IT/Technology,Milwaukee,WI,remote,Direct Hire,2024-06-04
+REQ-00074,CLI-002,Registered Nurse,Healthcare,Jacksonville,FL,remote,Direct Hire,2024-03-20
+REQ-00075,CLI-009,Quality Engineer,Engineering,St. Louis,MO,onsite,Direct Hire,2025-02-02
+REQ-00076,CLI-005,Machine Operator,Light Industrial,Jacksonville,FL,onsite,Direct Hire,2024-04-24
+REQ-00077,CLI-003,Accounts Payable Clerk,Finance/Accounting,Tampa,FL,remote,Contract-to-Hire,2024-02-26
+REQ-00078,CLI-001,General Laborer,Light Industrial,Columbus,OH,onsite,Direct Hire,2024-11-25
+REQ-00079,CLI-005,Material Handler,Light Industrial,Indianapolis,IN,onsite,1099,2025-04-06
+REQ-00080,CLI-009,Process Engineer,Engineering,Pittsburgh,PA,onsite,Direct Hire,2024-10-15
+REQ-00081,CLI-003,Senior Accountant,Finance/Accounting,Jacksonville,FL,hybrid,W2 Contract,2024-10-24
+REQ-00082,CLI-002,Pharmacy Technician,Healthcare,Raleigh,NC,onsite,Contract-to-Hire,2024-05-26
+REQ-00083,CLI-008,QA Tester,IT/Technology,Tucson,AZ,hybrid,Direct Hire,2024-03-11
+REQ-00084,CLI-009,Quality Engineer,Engineering,Raleigh,NC,onsite,Contract-to-Hire,2024-08-04
+REQ-00085,CLI-008,DevOps Engineer,IT/Technology,Memphis,TN,onsite,Direct Hire,2025-01-29
+REQ-00086,CLI-002,Registered Nurse,Healthcare,Phoenix,AZ,onsite,W2 Contract,2025-03-10
+REQ-00087,CLI-001,Machine Operator,Light Industrial,Jacksonville,FL,onsite,Contract-to-Hire,2025-02-07
+REQ-00088,CLI-004,DevOps Engineer,IT/Technology,Tampa,FL,onsite,1099,2024-02-02
+REQ-00089,CLI-008,Software Engineer,IT/Technology,Houston,TX,hybrid,W2 Contract,2025-04-22
+REQ-00090,CLI-011,Warehouse Associate,Light Industrial,Atlanta,GA,onsite,W2 Contract,2024-12-05
+REQ-00091,CLI-006,Data Entry Clerk,Administrative/Professional,Tucson,AZ,hybrid,1099,2025-03-12
+REQ-00092,CLI-011,Data Entry Clerk,Administrative/Professional,Houston,TX,onsite,Direct Hire,2024-02-28
+REQ-00093,CLI-009,Civil Engineer,Engineering,St. Louis,MO,onsite,1099,2024-02-16
+REQ-00094,CLI-001,Forklift Operator,Light Industrial,Orlando,FL,remote,W2 Contract,2024-05-14
+REQ-00095,CLI-001,Shipping/Receiving Clerk,Light Industrial,Columbus,OH,onsite,W2 Contract,2024-09-24
+REQ-00096,CLI-003,Accounts Payable Clerk,Finance/Accounting,Kansas City,MO,hybrid,Direct Hire,2024-05-02
+REQ-00097,CLI-006,Financial Analyst,Finance/Accounting,Columbus,OH,hybrid,1099,2025-01-24
+REQ-00098,CLI-002,Physical Therapist Asst.,Healthcare,Houston,TX,onsite,Direct Hire,2024-09-10
+REQ-00099,CLI-002,Pharmacy Technician,Healthcare,Milwaukee,WI,onsite,W2 Contract,2024-02-17
+REQ-00100,CLI-003,Bookkeeper,Finance/Accounting,Chicago,IL,hybrid,W2 Contract,2024-12-20
+REQ-00101,CLI-011,General Laborer,Light Industrial,Chicago,IL,onsite,Contract-to-Hire,2025-01-10
+REQ-00102,CLI-009,Process Engineer,Engineering,Cincinnati,OH,onsite,Direct Hire,2024-10-08
+REQ-00103,CLI-007,Phlebotomist,Healthcare,Chicago,IL,remote,W2 Contract,2024-09-13
+REQ-00104,CLI-002,Pharmacy Technician,Healthcare,Philadelphia,PA,onsite,Contract-to-Hire,2025-01-28
+REQ-00105,CLI-007,Registered Nurse,Healthcare,Pittsburgh,PA,onsite,Contract-to-Hire,2025-01-03
+REQ-00106,CLI-002,Certified Nursing Assistant,Healthcare,Atlanta,GA,remote,Direct Hire,2024-01-16
+REQ-00107,CLI-001,Warehouse Associate,Light Industrial,Jacksonville,FL,hybrid,Contract-to-Hire,2024-09-08
+REQ-00108,CLI-007,Phlebotomist,Healthcare,Philadelphia,PA,onsite,W2 Contract,2025-02-23
+REQ-00109,CLI-009,Electrical Engineer,Engineering,Milwaukee,WI,onsite,Contract-to-Hire,2024-12-23
+REQ-00110,CLI-002,Certified Nursing Assistant,Healthcare,Phoenix,AZ,hybrid,W2 Contract,2024-08-29
+REQ-00111,CLI-006,Senior Accountant,Finance/Accounting,Orlando,FL,hybrid,Direct Hire,2024-07-13
+REQ-00112,CLI-001,Forklift Operator,Light Industrial,Pittsburgh,PA,onsite,Contract-to-Hire,2025-06-26
+REQ-00113,CLI-005,Warehouse Associate,Light Industrial,Orlando,FL,onsite,W2 Contract,2024-11-10
+REQ-00114,CLI-007,Radiology Technician,Healthcare,Atlanta,GA,onsite,W2 Contract,2024-10-31
+REQ-00115,CLI-004,Business Systems Analyst,IT/Technology,Columbus,OH,remote,W2 Contract,2025-05-10
+REQ-00116,CLI-009,Electrical Engineer,Engineering,Tampa,FL,hybrid,1099,2025-05-09
+REQ-00117,CLI-004,Data Analyst,IT/Technology,Tucson,AZ,remote,Contract-to-Hire,2024-02-29
+REQ-00118,CLI-006,Accounts Payable Clerk,Finance/Accounting,Memphis,TN,onsite,1099,2024-05-06
+REQ-00119,CLI-009,Manufacturing Engineer,Engineering,Kansas City,MO,onsite,Direct Hire,2025-01-29
+REQ-00120,CLI-002,Phlebotomist,Healthcare,Charlotte,NC,hybrid,W2 Contract,2024-03-07
+REQ-00121,CLI-003,AR Specialist,Finance/Accounting,Orlando,FL,hybrid,W2 Contract,2024-03-29
+REQ-00122,CLI-004,QA Tester,IT/Technology,Tampa,FL,remote,W2 Contract,2025-02-27
+REQ-00123,CLI-009,Process Engineer,Engineering,Kansas City,MO,onsite,W2 Contract,2024-10-27
+REQ-00124,CLI-011,Receptionist,Administrative/Professional,Philadelphia,PA,onsite,W2 Contract,2024-10-02
+REQ-00125,CLI-010,Customer Service Representative,Administrative/Professional,Columbus,OH,hybrid,Contract-to-Hire,2024-10-04
+REQ-00126,CLI-005,Mechanical Engineer,Engineering,Austin,TX,onsite,W2 Contract,2024-10-27
+REQ-00127,CLI-004,Data Analyst,IT/Technology,Philadelphia,PA,remote,Direct Hire,2024-10-10
+REQ-00128,CLI-010,Customer Service Representative,Administrative/Professional,Houston,TX,hybrid,Direct Hire,2024-12-01
+REQ-00129,CLI-010,Administrative Assistant,Administrative/Professional,Houston,TX,hybrid,Direct Hire,2024-01-27
+REQ-00130,CLI-011,HR Coordinator,Administrative/Professional,Austin,TX,onsite,Contract-to-Hire,2025-04-02
+REQ-00131,CLI-006,Executive Assistant,Administrative/Professional,Memphis,TN,hybrid,Direct Hire,2024-04-08
+REQ-00132,CLI-006,Office Coordinator,Administrative/Professional,Chicago,IL,hybrid,Direct Hire,2024-06-18
+REQ-00133,CLI-007,Medical Coder,Healthcare,Pittsburgh,PA,onsite,1099,2024-02-12
+REQ-00134,CLI-010,Administrative Assistant,Administrative/Professional,Raleigh,NC,hybrid,W2 Contract,2025-02-22
+REQ-00135,CLI-010,Receptionist,Administrative/Professional,Nashville,TN,hybrid,W2 Contract,2025-06-19
+REQ-00136,CLI-008,Business Systems Analyst,IT/Technology,St. Louis,MO,hybrid,W2 Contract,2024-10-05
+REQ-00137,CLI-009,Electrical Engineer,Engineering,Philadelphia,PA,hybrid,W2 Contract,2024-09-07
+REQ-00138,CLI-010,Office Coordinator,Administrative/Professional,Nashville,TN,hybrid,Contract-to-Hire,2024-08-23
+REQ-00139,CLI-009,Quality Engineer,Engineering,Columbus,OH,onsite,W2 Contract,2024-10-30
+REQ-00140,CLI-008,DevOps Engineer,IT/Technology,Pittsburgh,PA,onsite,Contract-to-Hire,2024-06-02
+REQ-00141,CLI-009,Civil Engineer,Engineering,Kansas City,MO,onsite,Direct Hire,2024-03-17
+REQ-00142,CLI-010,Data Entry Clerk,Administrative/Professional,Chicago,IL,hybrid,Direct Hire,2024-10-05
+REQ-00143,CLI-003,Financial Analyst,Finance/Accounting,Charlotte,NC,remote,1099,2025-05-21
+REQ-00144,CLI-006,Payroll Specialist,Finance/Accounting,Nashville,TN,hybrid,W2 Contract,2025-01-26
+REQ-00145,CLI-010,Office Coordinator,Administrative/Professional,Orlando,FL,onsite,Contract-to-Hire,2024-09-01
+REQ-00146,CLI-006,Administrative Assistant,Administrative/Professional,Raleigh,NC,remote,1099,2025-01-30
+REQ-00147,CLI-003,Senior Accountant,Finance/Accounting,St. Louis,MO,hybrid,1099,2024-05-14
+REQ-00148,CLI-004,Data Analyst,IT/Technology,Philadelphia,PA,remote,1099,2024-01-21
+REQ-00149,CLI-004,DevOps Engineer,IT/Technology,St. Louis,MO,onsite,Contract-to-Hire,2024-10-03
+REQ-00150,CLI-009,Manufacturing Engineer,Engineering,Tucson,AZ,onsite,Direct Hire,2025-01-29
+REQ-00151,CLI-001,Shipping/Receiving Clerk,Light Industrial,Pittsburgh,PA,onsite,Contract-to-Hire,2024-09-02
+REQ-00152,CLI-003,Accounts Payable Clerk,Finance/Accounting,Houston,TX,hybrid,W2 Contract,2024-04-17
+REQ-00153,CLI-006,Executive Assistant,Administrative/Professional,Charlotte,NC,onsite,W2 Contract,2024-03-03
+REQ-00154,CLI-010,Office Coordinator,Administrative/Professional,Phoenix,AZ,hybrid,W2 Contract,2025-03-02
+REQ-00155,CLI-003,Accounts Payable Clerk,Finance/Accounting,Tampa,FL,hybrid,Direct Hire,2024-09-08
+REQ-00156,CLI-009,Manufacturing Engineer,Engineering,Cincinnati,OH,onsite,Contract-to-Hire,2025-04-20
+REQ-00157,CLI-006,Receptionist,Administrative/Professional,Dallas,TX,hybrid,1099,2024-06-15
+REQ-00158,CLI-010,Customer Service Representative,Administrative/Professional,Phoenix,AZ,hybrid,Contract-to-Hire,2025-03-15
+REQ-00159,CLI-006,Customer Service Representative,Administrative/Professional,Charlotte,NC,hybrid,W2 Contract,2025-05-14
+REQ-00160,CLI-005,Civil Engineer,Engineering,Tucson,AZ,onsite,Contract-to-Hire,2024-11-03
+REQ-00161,CLI-004,DevOps Engineer,IT/Technology,Atlanta,GA,remote,Direct Hire,2024-02-25
+REQ-00162,CLI-005,General Laborer,Light Industrial,Charlotte,NC,onsite,Contract-to-Hire,2024-12-31
+REQ-00163,CLI-011,Shipping/Receiving Clerk,Light Industrial,Orlando,FL,onsite,Direct Hire,2024-05-25
+REQ-00164,CLI-011,Shipping/Receiving Clerk,Light Industrial,St. Louis,MO,onsite,Direct Hire,2024-02-09
+REQ-00165,CLI-008,Network Administrator,IT/Technology,Houston,TX,hybrid,Direct Hire,2024-07-03
+REQ-00166,CLI-003,Accounts Payable Clerk,Finance/Accounting,Nashville,TN,hybrid,Contract-to-Hire,2024-10-11
+REQ-00167,CLI-004,Systems Administrator,IT/Technology,Pittsburgh,PA,hybrid,Direct Hire,2024-12-17
+REQ-00168,CLI-004,Business Systems Analyst,IT/Technology,Houston,TX,remote,1099,2025-02-15
+REQ-00169,CLI-002,Medical Assistant,Healthcare,Tucson,AZ,onsite,Contract-to-Hire,2025-04-15
+REQ-00170,CLI-002,Pharmacy Technician,Healthcare,Memphis,TN,onsite,Contract-to-Hire,2025-01-20
+REQ-00171,CLI-005,Process Engineer,Engineering,Jacksonville,FL,onsite,Contract-to-Hire,2024-12-06
+REQ-00172,CLI-001,Shipping/Receiving Clerk,Light Industrial,Houston,TX,onsite,Contract-to-Hire,2024-11-10
+REQ-00173,CLI-006,Administrative Assistant,Administrative/Professional,Cincinnati,OH,hybrid,W2 Contract,2025-05-24
+REQ-00174,CLI-009,Mechanical Engineer,Engineering,Jacksonville,FL,onsite,W2 Contract,2025-01-19
+REQ-00175,CLI-011,HR Coordinator,Administrative/Professional,Cincinnati,OH,remote,W2 Contract,2025-05-21
+REQ-00176,CLI-008,Systems Administrator,IT/Technology,Austin,TX,hybrid,W2 Contract,2025-04-05
+REQ-00177,CLI-006,AR Specialist,Finance/Accounting,Phoenix,AZ,hybrid,Direct Hire,2025-01-07
+REQ-00178,CLI-005,Quality Engineer,Engineering,Atlanta,GA,onsite,W2 Contract,2025-04-15
+REQ-00179,CLI-006,Senior Accountant,Finance/Accounting,Orlando,FL,hybrid,Contract-to-Hire,2024-01-27
+REQ-00180,CLI-002,Certified Nursing Assistant,Healthcare,Jacksonville,FL,remote,W2 Contract,2024-08-05
+REQ-00181,CLI-010,Data Entry Clerk,Administrative/Professional,Jacksonville,FL,hybrid,W2 Contract,2024-01-08
+REQ-00182,CLI-011,Data Entry Clerk,Administrative/Professional,Cincinnati,OH,remote,W2 Contract,2024-07-02
+REQ-00183,CLI-010,Receptionist,Administrative/Professional,Dallas,TX,hybrid,W2 Contract,2024-09-05
+REQ-00184,CLI-009,Mechanical Engineer,Engineering,Tampa,FL,onsite,W2 Contract,2025-03-12
+REQ-00185,CLI-005,Process Engineer,Engineering,Houston,TX,onsite,Direct Hire,2025-06-14
+REQ-00186,CLI-011,Machine Operator,Light Industrial,Indianapolis,IN,onsite,Contract-to-Hire,2025-06-22
+REQ-00187,CLI-007,Phlebotomist,Healthcare,St. Louis,MO,onsite,1099,2025-02-20
+REQ-00188,CLI-007,Medical Assistant,Healthcare,Pittsburgh,PA,hybrid,W2 Contract,2024-03-28
+REQ-00189,CLI-003,Bookkeeper,Finance/Accounting,Cincinnati,OH,hybrid,W2 Contract,2024-12-03
+REQ-00190,CLI-010,HR Coordinator,Administrative/Professional,Indianapolis,IN,hybrid,Contract-to-Hire,2025-03-21
+REQ-00191,CLI-008,Data Analyst,IT/Technology,St. Louis,MO,hybrid,Direct Hire,2024-08-13
+REQ-00192,CLI-008,Business Systems Analyst,IT/Technology,Jacksonville,FL,hybrid,Direct Hire,2025-02-17
+REQ-00193,CLI-003,Senior Accountant,Finance/Accounting,Columbus,OH,hybrid,W2 Contract,2024-09-23
+REQ-00194,CLI-010,Executive Assistant,Administrative/Professional,Milwaukee,WI,onsite,W2 Contract,2024-04-02
+REQ-00195,CLI-002,Medical Coder,Healthcare,Columbus,OH,hybrid,Direct Hire,2024-03-07
+REQ-00196,CLI-008,Data Analyst,IT/Technology,Chicago,IL,hybrid,Direct Hire,2025-03-14
+REQ-00197,CLI-004,Systems Administrator,IT/Technology,Kansas City,MO,remote,W2 Contract,2025-06-08
+REQ-00198,CLI-001,Forklift Operator,Light Industrial,Milwaukee,WI,onsite,Direct Hire,2024-12-29
+REQ-00199,CLI-006,Administrative Assistant,Administrative/Professional,Atlanta,GA,hybrid,Direct Hire,2024-02-01
+REQ-00200,CLI-001,Warehouse Associate,Light Industrial,Tampa,FL,onsite,Direct Hire,2024-12-18
+REQ-00201,CLI-009,Mechanical Engineer,Engineering,Tampa,FL,remote,Direct Hire,2024-03-17
+REQ-00202,CLI-004,Software Engineer,IT/Technology,Houston,TX,onsite,W2 Contract,2025-04-14
+REQ-00203,CLI-010,Executive Assistant,Administrative/Professional,Phoenix,AZ,hybrid,W2 Contract,2024-04-01
+REQ-00204,CLI-011,Forklift Operator,Light Industrial,Tampa,FL,onsite,Direct Hire,2024-10-10
+REQ-00205,CLI-009,Process Engineer,Engineering,Chicago,IL,onsite,Contract-to-Hire,2024-10-11
+REQ-00206,CLI-006,AR Specialist,Finance/Accounting,Indianapolis,IN,hybrid,Contract-to-Hire,2024-10-22
+REQ-00207,CLI-002,Pharmacy Technician,Healthcare,Austin,TX,onsite,1099,2024-03-02
+REQ-00208,CLI-003,Accounts Payable Clerk,Finance/Accounting,Charlotte,NC,onsite,Direct Hire,2024-10-28
+REQ-00209,CLI-002,Medical Assistant,Healthcare,Dallas,TX,onsite,Contract-to-Hire,2024-05-17
+REQ-00210,CLI-008,QA Tester,IT/Technology,Indianapolis,IN,hybrid,Direct Hire,2025-01-02
+REQ-00211,CLI-001,Machine Operator,Light Industrial,Austin,TX,onsite,Contract-to-Hire,2024-03-25
+REQ-00212,CLI-011,HR Coordinator,Administrative/Professional,Chicago,IL,onsite,Direct Hire,2025-03-08
+REQ-00213,CLI-009,Mechanical Engineer,Engineering,Tucson,AZ,onsite,W2 Contract,2025-04-21
+REQ-00214,CLI-005,Warehouse Associate,Light Industrial,Chicago,IL,onsite,Contract-to-Hire,2025-02-19
+REQ-00215,CLI-002,Medical Coder,Healthcare,Charlotte,NC,onsite,W2 Contract,2024-06-26
+REQ-00216,CLI-003,Bookkeeper,Finance/Accounting,St. Louis,MO,hybrid,Contract-to-Hire,2024-12-28
+REQ-00217,CLI-001,Shipping/Receiving Clerk,Light Industrial,St. Louis,MO,onsite,W2 Contract,2024-09-24
+REQ-00218,CLI-007,Radiology Technician,Healthcare,Kansas City,MO,onsite,Direct Hire,2024-03-23
+REQ-00219,CLI-004,Business Systems Analyst,IT/Technology,Philadelphia,PA,remote,Contract-to-Hire,2024-12-01
+REQ-00220,CLI-008,Network Administrator,IT/Technology,Philadelphia,PA,hybrid,Contract-to-Hire,2024-11-11
+REQ-00221,CLI-009,Manufacturing Engineer,Engineering,Austin,TX,onsite,W2 Contract,2025-04-22
+REQ-00222,CLI-011,Administrative Assistant,Administrative/Professional,Austin,TX,onsite,W2 Contract,2024-04-07
+REQ-00223,CLI-001,Machine Operator,Light Industrial,Memphis,TN,onsite,Direct Hire,2024-02-17
+REQ-00224,CLI-009,Project Engineer,Engineering,Memphis,TN,onsite,W2 Contract,2025-05-07
+REQ-00225,CLI-006,Staff Accountant,Finance/Accounting,Philadelphia,PA,hybrid,Direct Hire,2024-12-22
+REQ-00226,CLI-006,Bookkeeper,Finance/Accounting,St. Louis,MO,hybrid,W2 Contract,2025-03-29
+REQ-00227,CLI-011,HR Coordinator,Administrative/Professional,Indianapolis,IN,onsite,W2 Contract,2024-10-21
+REQ-00228,CLI-004,DevOps Engineer,IT/Technology,Raleigh,NC,remote,W2 Contract,2024-12-13
+REQ-00229,CLI-003,Financial Analyst,Finance/Accounting,Columbus,OH,hybrid,W2 Contract,2024-09-20
+REQ-00230,CLI-003,Financial Analyst,Finance/Accounting,Houston,TX,hybrid,W2 Contract,2024-12-29

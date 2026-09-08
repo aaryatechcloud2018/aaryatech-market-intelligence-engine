@@ -1,0 +1,12 @@
+client_account_id,client_name,primary_job_families,hiring_speed_tier,pay_band_tier,preferred_work_arrangement
+CLI-001,Client_Alpha_Logistics,Light Industrial,fast,market,onsite
+CLI-002,Client_Beta_HealthSystem,Healthcare,slow,market,onsite
+CLI-003,Client_Gamma_FinServ,Finance/Accounting,medium,above_market,hybrid
+CLI-004,Client_Delta_SoftwareCo,IT/Technology,medium,above_market,remote
+CLI-005,Client_Epsilon_Manufacturing,Engineering;Light Industrial,slow,below_market,onsite
+CLI-006,Client_Zeta_InsuranceGroup,Finance/Accounting;Administrative/Professional,slow,market,hybrid
+CLI-007,Client_Eta_RegionalClinics,Healthcare,medium,below_market,onsite
+CLI-008,Client_Theta_TechScaleup,IT/Technology,fast,market,hybrid
+CLI-009,Client_Iota_Industrial,Engineering,medium,market,onsite
+CLI-010,Client_Kappa_CorpServices,Administrative/Professional,fast,below_market,hybrid
+CLI-011,Client_Lambda_Distribution,Light Industrial;Administrative/Professional,fast,below_market,onsite

@@ -1,0 +1,970 @@
+{
+  "library_name": "Aaryatech Behavioral Mechanism Library",
+  "library_version": "1.0",
+  "description": "Stage 1 V1 dictionary of behavioral-science mechanisms relevant to consumer decision-making, branding, and audience intelligence. Contains ONLY mechanisms (explanations of WHY behavior may occur). Behavioral outcomes/signals, emotions, and contextual triggers are deliberately excluded and reserved for separate future libraries (behavioral_outcomes, emotion_library, context_library).",
+  "last_updated": "2026-08-22",
+  "mechanisms": [
+    {
+      "Pattern_ID": "BM-001",
+      "Pattern_Name": "Status Quo Bias",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "A preference for keeping things as they currently are, even when switching to an alternative may be objectively neutral or better.",
+      "Behavioral_Mechanism": "Change is evaluated as a loss relative to the current state, and the current state is treated as the default reference point requiring no justification, while any alternative requires active justification.",
+      "Typical_Trigger": "Being presented with an alternative option, a forced choice to re-select, or a comparison to a competitor.",
+      "Observable_Behavior": "Continued use of an existing product/process, reluctance to explore alternatives, resistance when the default is challenged.",
+      "Possible_Linguistic_Signals": [
+        "I've always used this.",
+        "Why would I change?",
+        "I don't see the point of switching."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I've been meaning to switch for a while.",
+        "I finally decided to try something new."
+      ],
+      "Related_Patterns": ["BM-002", "BM-007", "BM-010"],
+      "Distinguishing_Features": "Unlike Habit (BM-007), Status Quo Bias is an evaluative preference (a deliberate comparison that favors the current option) rather than an automatic, low-thought action. Unlike Loss Aversion (BM-002), which is the general asymmetry between gains and losses, Status Quo Bias specifically anchors the reference point to 'what I currently have/do'.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "A stated or implied comparison between the current option and an alternative, where the current option is favored for being current rather than for a specific performance reason.",
+      "Confidence_Notes": "Easy to over-apply; must be distinguished from a legitimate, performance-based preference for the old option.",
+      "Source_References": [
+        "Samuelson, W. & Zeckhauser, R. (1988). Status Quo Bias in Decision Making. Journal of Risk and Uncertainty."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-002",
+      "Pattern_Name": "Loss Aversion",
+      "Category": "Value & Reference Evaluation",
+      "Simple_Definition": "Losses feel psychologically heavier than equivalent gains feel positive.",
+      "Behavioral_Mechanism": "Outcomes are evaluated relative to a reference point as gains or losses, and the pain of a loss is felt more strongly than the pleasure of an equivalent gain (prospect theory value function).",
+      "Typical_Trigger": "A price increase, removal of a feature/benefit, or a threat of losing access to something already held.",
+      "Observable_Behavior": "Disproportionate complaints about removed features/benefits relative to praise for equivalent added features/benefits; avoidance of choices framed as risking a loss.",
+      "Possible_Linguistic_Signals": [
+        "Now I'm losing the feature I relied on.",
+        "They took away X and I'm furious.",
+        "I don't want to risk losing what I already have."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I don't mind losing that feature, it wasn't useful anyway.",
+        "The new benefits are worth more than what I gave up."
+      ],
+      "Related_Patterns": ["BM-001", "BM-010", "BM-034"],
+      "Distinguishing_Features": "Loss Aversion is the general asymmetric value function; Endowment Effect (BM-010) is the specific case where this asymmetry applies to something already owned/possessed. Sunk Cost Fallacy (BM-034) is a different downstream effect (continuing a course of action) rather than a valuation asymmetry itself.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "Evidence of stronger reaction to a loss/removal than to an equivalent gain/addition, ideally with an explicit before/after comparison.",
+      "Confidence_Notes": "Foundational and well-replicated, but requires a genuine loss framing, not just general dissatisfaction.",
+      "Source_References": [
+        "Kahneman, D. & Tversky, A. (1979). Prospect Theory: An Analysis of Decision under Risk. Econometrica.",
+        "Tversky, A. & Kahneman, D. (1991). Loss Aversion in Riskless Choice: A Reference-Dependent Model. Quarterly Journal of Economics."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-003",
+      "Pattern_Name": "Social Proof",
+      "Category": "Social Influence",
+      "Simple_Definition": "People treat the visible behavior or choices of others as evidence of what is correct or desirable, especially under uncertainty.",
+      "Behavioral_Mechanism": "When a person is uncertain about the right choice, the observed behavior of others (peers, crowds, or growing popularity) is used as an informational shortcut for what is likely correct or safe.",
+      "Typical_Trigger": "Visible popularity signals (review counts, 'most bought', trending status), uncertainty about product quality, or peer recommendations.",
+      "Observable_Behavior": "Referencing others' choices/reviews when explaining a decision, following a trend, citing user counts or ratings as justification.",
+      "Possible_Linguistic_Signals": [
+        "Everyone is using this now.",
+        "It has thousands of good reviews so it must be good.",
+        "My friends all switched, so I did too."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I don't care what everyone else does, I make up my own mind.",
+        "Even though it's popular, it doesn't work for me."
+      ],
+      "Related_Patterns": ["BM-004", "BM-011"],
+      "Distinguishing_Features": "This entry deliberately merges Bandwagon Effect and Herd Behavior, which describe the same observable phenomenon (following the crowd) and cannot be reliably told apart from comment text alone; treat 'everyone's doing it' style phrasing as a Social Proof signal rather than a separate mechanism. Distinguish from Authority Bias (BM-004), which is deference to a specific expert/authority rather than to the crowd.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "Explicit reference to other people's behavior, counts, ratings, or popularity as a reason for a decision.",
+      "Confidence_Notes": "One of the most linguistically visible mechanisms in consumer comments; comparatively low ambiguity.",
+      "Source_References": [
+        "Cialdini, R. B. (1984). Influence: The Psychology of Persuasion. William Morrow.",
+        "Bikhchandani, S., Hirshleifer, D. & Welch, I. (1992). A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades. Journal of Political Economy."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-004",
+      "Pattern_Name": "Authority Bias",
+      "Category": "Social Influence",
+      "Simple_Definition": "People give extra weight to the opinions, endorsements, or claims of perceived experts or authority figures.",
+      "Behavioral_Mechanism": "Perceived expertise or authority is used as a mental shortcut for credibility, reducing the need for independent evaluation.",
+      "Typical_Trigger": "Endorsement by an expert, official body, certification, or authority figure/brand.",
+      "Observable_Behavior": "Citing an expert, professional, or official source as the reason for trusting or choosing a product.",
+      "Possible_Linguistic_Signals": [
+        "My doctor/advisor recommended it.",
+        "It's certified/approved by X.",
+        "The experts say this is the best option."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I don't trust the so-called experts on this.",
+        "Just because it's official doesn't mean it's right."
+      ],
+      "Related_Patterns": ["BM-003", "BM-031"],
+      "Distinguishing_Features": "Distinguish from Social Proof (BM-003): Authority Bias is deference to a specific credentialed source, not to the aggregate behavior of many ordinary peers.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Explicit reference to an expert, credential, certification, or official endorsement as a reason for a belief or choice.",
+      "Confidence_Notes": "Clear when present, but appears less frequently in everyday consumer comments than Social Proof.",
+      "Source_References": [
+        "Cialdini, R. B. (1984). Influence: The Psychology of Persuasion. William Morrow.",
+        "Milgram, S. (1963). Behavioral Study of Obedience. Journal of Abnormal and Social Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-005",
+      "Pattern_Name": "Choice Overload",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "Too many options can make deciding harder and less satisfying, sometimes leading to avoidance of the decision altogether.",
+      "Behavioral_Mechanism": "As the number and complexity of options increases, the cognitive effort required to compare them grows, which can increase decision anxiety, delay, or abandonment.",
+      "Typical_Trigger": "A large or complex set of plans/products/settings/features presented at once.",
+      "Observable_Behavior": "Expressed overwhelm, decision delay, requests for simplification, abandoning the decision, or defaulting to a familiar/default option.",
+      "Possible_Linguistic_Signals": [
+        "There are too many options, I don't know which to pick.",
+        "It's overwhelming, I just want something simple.",
+        "I gave up trying to compare all the plans."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I love having so many choices.",
+        "More options let me find exactly what I need."
+      ],
+      "Related_Patterns": ["BM-025", "BM-006"],
+      "Distinguishing_Features": "Distinguish from Friction (BM-006): Choice Overload is specifically about the volume/complexity of options during a decision, whereas Friction is a broader category of effort/difficulty that can occur at any step, not only during option comparison.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Evidence that the complaint or hesitation is about the number/complexity of options itself, not about the quality of any single option.",
+      "Confidence_Notes": "Effect size in the original research has been debated in later replications; treat as a plausible explanation, not a certainty, when volume of options is mentioned.",
+      "Source_References": [
+        "Iyengar, S. S. & Lepper, M. R. (2000). When Choice is Demotivating: Can One Desire Too Much of a Good Thing? Journal of Personality and Social Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-006",
+      "Pattern_Name": "Friction",
+      "Category": "Friction & Effort",
+      "Simple_Definition": "Any practical or cognitive effort that makes it harder to complete an action, discouraging follow-through.",
+      "Behavioral_Mechanism": "Every additional step, delay, or point of confusion increases the effort cost of completing a task, which reduces the likelihood the task is finished, especially when motivation is only moderate.",
+      "Typical_Trigger": "A complicated process, extra steps, confusing interface, slow response time, or unclear instructions.",
+      "Observable_Behavior": "Task abandonment mid-process, complaints about difficulty/complexity, requests for a simpler way to do something.",
+      "Possible_Linguistic_Signals": [
+        "It takes too many steps.",
+        "I couldn't figure out how to do it.",
+        "This is way more complicated than it needs to be."
+      ],
+      "Possible_Contradictory_Signals": [
+        "It was so easy and quick.",
+        "I finished it in seconds."
+      ],
+      "Related_Patterns": ["BM-005", "BM-008", "BM-001"],
+      "Distinguishing_Features": "Friction is about the effort/difficulty of an action itself, independent of whether it is a new or old action. This distinguishes it from Habit Disruption (BM-008), which is specifically about the breaking of an automatic routine, and from Status Quo Bias (BM-001), which is an evaluative preference rather than a report of difficulty.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "A specific description of a step, delay, or point of confusion that made completing a task harder.",
+      "Confidence_Notes": "One of the most directly observable mechanisms in product/UX-related comments.",
+      "Source_References": [
+        "Thaler, R. H. & Sunstein, C. R. (2008). Nudge: Improving Decisions About Health, Wealth, and Happiness. Yale University Press."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-007",
+      "Pattern_Name": "Habit",
+      "Category": "Habit & Behavioral Persistence",
+      "Simple_Definition": "A behavior that has become automatic through repetition, triggered by a cue with little conscious deliberation.",
+      "Behavioral_Mechanism": "Repeated pairing of a context/cue with an action strengthens a cue-response association in memory, so the action is triggered with minimal conscious evaluation once the cue appears.",
+      "Typical_Trigger": "A recurring context or cue (time of day, location, prior step in a routine) that has previously preceded the behavior.",
+      "Observable_Behavior": "Repeated, low-effort, low-deliberation use of the same product/process; automatic-sounding descriptions of use ('I just do it without thinking').",
+      "Possible_Linguistic_Signals": [
+        "I just automatically open this app every morning.",
+        "It's part of my routine now.",
+        "I don't even think about it, I just do it."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I have to consciously remember to use it.",
+        "I keep forgetting to do this."
+      ],
+      "Related_Patterns": ["BM-001", "BM-008", "BM-033"],
+      "Distinguishing_Features": "Habit describes the automatic action itself; Status Quo Bias (BM-001) describes a deliberate evaluative preference for the current option. A comment can show one without the other. Variable Reward (BM-033) is a mechanism that can strengthen habit formation, not the habit itself.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "Description of repeated, low-effort, cue-triggered behavior, ideally described as automatic or unconscious rather than deliberated.",
+      "Confidence_Notes": "Hard to confirm from a single comment; stronger when the same person's automatic language is observed repeatedly.",
+      "Source_References": [
+        "Wood, W. & Neal, D. T. (2007). A New Look at Habits and the Habit-Goal Interface. Psychological Review.",
+        "Verplanken, B. & Aarts, H. (1999). Habit, Attitude, and Planned Behaviour: Is Habit an Empty Construct or an Interesting Case of Goal-Directed Automaticity? European Review of Social Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-008",
+      "Pattern_Name": "Habit Disruption",
+      "Category": "Habit & Behavioral Persistence",
+      "Simple_Definition": "The state that occurs when an established habit's cue-response link is broken, forcing conscious re-evaluation of the behavior.",
+      "Behavioral_Mechanism": "A change to the interface, process, or context removes or alters the cue an automatic habit depended on, forcing the person out of automatic execution and into effortful, conscious re-learning.",
+      "Typical_Trigger": "A redesign, relocation of a familiar control/feature, or a forced change to a previously automatic process.",
+      "Observable_Behavior": "Expressed disorientation or frustration specifically tied to a recent change, searching for a previously automatic action, temporary drop in usage after a change.",
+      "Possible_Linguistic_Signals": [
+        "I can't find the button I used to use automatically.",
+        "Now I have to think about how to do this.",
+        "My routine is completely thrown off since the update."
+      ],
+      "Possible_Contradictory_Signals": [
+        "The change didn't affect how I use it at all.",
+        "I adapted instantly."
+      ],
+      "Related_Patterns": ["BM-007", "BM-001", "BM-006"],
+      "Distinguishing_Features": "Habit Disruption is the event/state of a broken automatic routine, distinct from Status Quo Bias (an evaluative preference for the old option) and from generic Friction (effort/difficulty that need not involve a previously automatic behavior). A single comment can plausibly show all three at once — evidence for each should be assessed separately.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "Evidence that a previously automatic action is now described as effortful or confusing specifically because of a recent change.",
+      "Confidence_Notes": "Requires knowledge that the behavior was previously habitual; without that context this can be mistaken for ordinary Friction.",
+      "Source_References": [
+        "Wood, W., Tam, L. & Witt, M. G. (2005). Changing Circumstances, Disrupting Habits. Journal of Personality and Social Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-009",
+      "Pattern_Name": "Mere Exposure Effect (Familiarity Effect)",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "Repeated exposure to something tends to increase liking or trust toward it, even without conscious recognition of the exposure.",
+      "Behavioral_Mechanism": "Repeated encounters make a stimulus easier to process (processing fluency), and this ease of processing is misattributed as positive affect or familiarity-based trust.",
+      "Typical_Trigger": "Repeated advertising, repeated use, or repeated visibility of a brand/product/name.",
+      "Observable_Behavior": "Preference expressed in terms of familiarity/recognition rather than a specific evaluated benefit.",
+      "Possible_Linguistic_Signals": [
+        "I've heard of this brand for years, so I trust it.",
+        "It just feels familiar to me.",
+        "I recognize the name so I went with it."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I'd never heard of it before but tried it anyway and loved it.",
+        "Familiarity doesn't mean much to me, I care about performance."
+      ],
+      "Related_Patterns": ["BM-031"],
+      "Distinguishing_Features": "This entry merges Mere Exposure Effect and Familiarity Effect/Familiarity Heuristic, treating them as the same observable phenomenon (repeated exposure driving preference) for consumer-comment purposes. Distinguish from Halo Effect (BM-031): Mere Exposure is about liking increasing from repetition alone; Halo Effect is about one positive impression transferring to unrelated attributes.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Preference explicitly attributed to familiarity/recognition rather than to a specific evaluated feature.",
+      "Confidence_Notes": "Often invisible in text unless the commenter explicitly names familiarity as the reason.",
+      "Source_References": [
+        "Zajonc, R. B. (1968). Attitudinal Effects of Mere Exposure. Journal of Personality and Social Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-010",
+      "Pattern_Name": "Endowment Effect",
+      "Category": "Value & Reference Evaluation",
+      "Simple_Definition": "People tend to value something more highly simply because they already own or possess it.",
+      "Behavioral_Mechanism": "Once something is possessed, it becomes part of the reference point, and giving it up is coded as a loss, which (per Loss Aversion) is weighted more heavily than an equivalent gain would be.",
+      "Typical_Trigger": "Being asked to give up, replace, or pay again for something already owned/used, or being offered a trade for an alternative.",
+      "Observable_Behavior": "Overvaluing a current plan/product/setup relative to how a neutral party would rate it; reluctance to trade even for an objectively comparable alternative.",
+      "Possible_Linguistic_Signals": [
+        "I've had this for years, I'm not giving it up.",
+        "It's mine, why would I trade it for something else?",
+        "My data/settings/history is here, I don't want to lose it."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I don't care about giving it up, it's replaceable.",
+        "I traded it without a second thought."
+      ],
+      "Related_Patterns": ["BM-002", "BM-022", "BM-001"],
+      "Distinguishing_Features": "Endowment Effect is specifically a valuation bias tied to ownership; Loss Aversion (BM-002) is the general gain/loss asymmetry underlying it. Psychological Ownership (BM-022) is the felt sense of 'mine-ness' that can occur even without legal/actual ownership; Endowment Effect requires actual possession.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "A valuation or reluctance-to-part-with statement tied explicitly to already owning/possessing the thing in question.",
+      "Confidence_Notes": "Strong and well-replicated in experimental settings; in comments, requires distinguishing genuine ownership-based attachment from simple satisfaction.",
+      "Source_References": [
+        "Kahneman, D., Knetsch, J. L. & Thaler, R. H. (1990). Experimental Tests of the Endowment Effect and the Coase Theorem. Journal of Political Economy."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-011",
+      "Pattern_Name": "Reciprocity",
+      "Category": "Social Influence",
+      "Simple_Definition": "People feel obligated to return a favor, benefit, or gesture they have received.",
+      "Behavioral_Mechanism": "Receiving something of value (a gift, discount, favor) creates a social/psychological sense of obligation to give something back, which can be satisfied through continued patronage, positive reviews, or advocacy.",
+      "Typical_Trigger": "A free trial, unexpected discount, gift, personalized gesture, or exceptional service recovery.",
+      "Observable_Behavior": "Expressed sense of obligation or gratitude tied to a specific gesture; advocacy or continued use explicitly linked to something the brand gave first.",
+      "Possible_Linguistic_Signals": [
+        "They gave me a refund without me even asking, so I stayed.",
+        "After that free upgrade, I felt like I owed them my loyalty.",
+        "They went out of their way for me, so I recommend them to everyone."
+      ],
+      "Possible_Contradictory_Signals": [
+        "The free gift didn't change how I feel about them at all.",
+        "I don't feel obligated just because they gave me something."
+      ],
+      "Related_Patterns": ["BM-003"],
+      "Distinguishing_Features": "Distinguish from generic Loyalty/Brand Attachment (a future outcome-library concept): Reciprocity specifically requires a traceable gesture the brand made first, which the consumer explicitly frames as the reason for their response.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "A specific brand-initiated gesture, plus an explicit or strongly implied sense of obligation or return behavior tied to it.",
+      "Confidence_Notes": "Clear when a specific triggering gesture is named; otherwise easily confused with general goodwill.",
+      "Source_References": [
+        "Gouldner, A. W. (1960). The Norm of Reciprocity: A Preliminary Statement. American Sociological Review.",
+        "Cialdini, R. B. (1984). Influence: The Psychology of Persuasion. William Morrow."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-012",
+      "Pattern_Name": "Scarcity",
+      "Category": "Value & Reference Evaluation",
+      "Simple_Definition": "Limited availability (of time, quantity, or access) makes an option seem more valuable or desirable.",
+      "Behavioral_Mechanism": "Limited availability is used as a heuristic cue for value ('if it's scarce, it must be worth having') and simultaneously creates urgency by threatening the option's future availability, which loss aversion makes motivating.",
+      "Typical_Trigger": "Limited-time offers, low-stock indicators, waitlists, or exclusive/invite-only access.",
+      "Observable_Behavior": "Urgency-driven purchasing or sign-up behavior, statements emphasizing limited availability as a reason for acting.",
+      "Possible_Linguistic_Signals": [
+        "Only a few left so I bought it immediately.",
+        "It's a limited-time deal, I couldn't pass it up.",
+        "I got in before the waitlist closed."
+      ],
+      "Possible_Contradictory_Signals": [
+        "The 'limited time' pressure didn't affect my decision at all.",
+        "I waited and it was still available later."
+      ],
+      "Related_Patterns": ["BM-002"],
+      "Distinguishing_Features": "Distinguish from general Loss Aversion (BM-002): Scarcity is specifically about availability-driven urgency, not all loss-framed decisions.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Explicit reference to limited availability, time pressure, or exclusivity as a stated reason for a decision.",
+      "Confidence_Notes": "Easy to identify when scarcity language is explicit; weaker as inferred motive without such language.",
+      "Source_References": [
+        "Cialdini, R. B. (1984). Influence: The Psychology of Persuasion. William Morrow.",
+        "Lynn, M. (1991). Scarcity Effects on Value: A Quantitative Review of the Commodity Theory Literature. Psychology & Marketing."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-013",
+      "Pattern_Name": "Anchoring",
+      "Category": "Value & Reference Evaluation",
+      "Simple_Definition": "An initial number or reference point disproportionately influences subsequent judgments, even when the anchor is arbitrary or irrelevant.",
+      "Behavioral_Mechanism": "When estimating an unknown value, people adjust insufficiently away from an initially presented number, so the final judgment stays biased toward that first number.",
+      "Typical_Trigger": "A displayed original/list price, a first-seen competitor price, or an initial quote presented before the final offer.",
+      "Observable_Behavior": "Value judgments expressed relative to a specific earlier number ('compared to the original price...').",
+      "Possible_Linguistic_Signals": [
+        "Compared to the original price, this is a steal.",
+        "It seemed cheap next to what I saw first.",
+        "The first quote I got made everything else look expensive."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I ignored the listed price and judged it on its own merits.",
+        "The discount framing didn't influence me at all."
+      ],
+      "Related_Patterns": ["BM-002", "BM-026"],
+      "Distinguishing_Features": "Anchoring is specifically about a prior number skewing a numeric judgment. It is a narrower, more specific mechanism than the general theoretical idea of evaluating outcomes relative to a reference point; for V1 we do not include a separate general 'Reference Dependence' entry because it would duplicate Anchoring, Loss Aversion (BM-002), and Endowment Effect (BM-010) without adding distinguishable evidence.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "A stated comparison to a specific earlier or alternative number/price that shapes the final judgment.",
+      "Confidence_Notes": "Requires the anchor number to be identifiable in context; otherwise indistinguishable from ordinary price sensitivity.",
+      "Source_References": [
+        "Tversky, A. & Kahneman, D. (1974). Judgment under Uncertainty: Heuristics and Biases. Science."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-014",
+      "Pattern_Name": "Confirmation Bias",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "People tend to notice, favor, and recall information that confirms what they already believe, while discounting information that contradicts it.",
+      "Behavioral_Mechanism": "Existing beliefs act as a filter during information search and evaluation, leading to selective attention toward confirming evidence and skepticism toward disconfirming evidence.",
+      "Typical_Trigger": "Encountering mixed or negative evidence about a brand/product the person already holds a strong opinion about.",
+      "Observable_Behavior": "Dismissing negative reviews as outliers while citing positive reviews as representative, or vice versa for a disliked brand; selectively citing evidence that matches a prior stance.",
+      "Possible_Linguistic_Signals": [
+        "That one bad review is probably fake, everyone else loves it.",
+        "This just proves what I already knew about them.",
+        "I only trust the reviews that match my experience."
+      ],
+      "Possible_Contradictory_Signals": [
+        "That review changed my mind even though I liked the brand before.",
+        "I try to weigh both sides evenly."
+      ],
+      "Related_Patterns": ["BM-015"],
+      "Distinguishing_Features": "Distinguish from Cognitive Dissonance (BM-015): Confirmation Bias is about selective search/interpretation of information; Cognitive Dissonance is about reducing discomfort after an inconsistency has already been noticed (e.g., after a purchase).",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Evidence of selectively accepting or dismissing information based on fit with a pre-existing belief, not on the quality of the evidence itself.",
+      "Confidence_Notes": "Requires visibility into the person's prior stance to identify confidently.",
+      "Source_References": [
+        "Nickerson, R. S. (1998). Confirmation Bias: A Ubiquitous Phenomenon in Many Guises. Review of General Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-015",
+      "Pattern_Name": "Cognitive Dissonance",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "Discomfort caused by holding two conflicting beliefs or by acting in a way that conflicts with a belief, which people are motivated to reduce.",
+      "Behavioral_Mechanism": "When a person's action conflicts with their self-image or beliefs (e.g., 'I made a bad purchase' vs. 'I'm a smart shopper'), they are motivated to reduce the discomfort, often by changing their attitude toward the action rather than reversing it.",
+      "Typical_Trigger": "A purchase or decision that later shows signs of being suboptimal, especially one that is difficult or costly to reverse.",
+      "Observable_Behavior": "Post-purchase rationalization, downplaying negatives after committing, defending a choice more strongly after criticism.",
+      "Possible_Linguistic_Signals": [
+        "It's not perfect, but I'm sure I made the right choice.",
+        "I convinced myself the downsides don't really matter.",
+        "Now that I've bought it, I keep telling people how great it is."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I admit I made a mistake buying this.",
+        "I regret this purchase and I'm not pretending otherwise."
+      ],
+      "Related_Patterns": ["BM-014", "BM-028"],
+      "Distinguishing_Features": "Distinguish from Effort Justification (BM-028), which is a specific, narrower case of dissonance reduction triggered by invested effort/time rather than any conflicting belief in general.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "Evidence of attitude change or rationalization occurring after a commitment, specifically defending or reframing a decision rather than describing it neutrally.",
+      "Confidence_Notes": "Requires before/after context (attitude before vs. after commitment) to confirm confidently from text alone.",
+      "Source_References": [
+        "Festinger, L. (1957). A Theory of Cognitive Dissonance. Stanford University Press."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-016",
+      "Pattern_Name": "Peak-End Rule",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "People judge an overall experience largely by its most intense moment (peak) and its ending, rather than by the average of every moment.",
+      "Behavioral_Mechanism": "Memory of an experience is not a full average of every moment; it is disproportionately constructed from the most emotionally intense point and the final moment, which then dominate the overall evaluation.",
+      "Typical_Trigger": "A single strongly positive or negative moment within an otherwise average experience, or a bad/good ending to an interaction.",
+      "Observable_Behavior": "An overall rating or verdict driven by one specific moment (e.g., checkout, a crash, a support interaction) rather than the whole experience.",
+      "Possible_Linguistic_Signals": [
+        "Everything was fine until the very end, which ruined it.",
+        "That one crash at checkout is all I remember.",
+        "The last thing that happened left a bad taste."
+      ],
+      "Possible_Contradictory_Signals": [
+        "Every single step was consistently good, nothing stood out more than another.",
+        "I judged it evenly across the whole experience."
+      ],
+      "Related_Patterns": ["BM-032"],
+      "Distinguishing_Features": "Distinguish from Negativity Bias (BM-032): Peak-End Rule is specifically about which moments dominate memory of a single experience (peak and ending), whereas Negativity Bias is the broader tendency for negative information in general to be weighted more heavily than positive information.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "An overall judgment that is explicitly or implicitly traceable to one specific moment (peak or ending) rather than the full experience.",
+      "Confidence_Notes": "Requires the commenter to describe multiple moments of an experience to identify which one dominated the verdict.",
+      "Source_References": [
+        "Kahneman, D., Fredrickson, B. L., Schreiber, C. A. & Redelmeier, D. A. (1993). When More Pain Is Preferred to Less: Adding a Better End. Psychological Science."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-017",
+      "Pattern_Name": "Availability Heuristic",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "People judge how likely or common something is based on how easily examples come to mind, rather than on actual frequency.",
+      "Behavioral_Mechanism": "Easily recalled examples (recent, vivid, or emotionally striking) are treated as more representative or frequent than they actually are, biasing risk and frequency judgments.",
+      "Typical_Trigger": "A recent, vivid, or widely publicized incident (a data breach, a viral complaint, a personal bad experience).",
+      "Observable_Behavior": "Overestimating the likelihood of a rare negative event after hearing about one vivid case; generalizing from one's own recent experience to a claim about overall quality/frequency.",
+      "Possible_Linguistic_Signals": [
+        "I heard about that one case, so now I think it happens all the time.",
+        "Ever since that story went around, I assume this is common.",
+        "It happened to me once, so I'm sure it happens to everyone."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I know that was a rare, one-off case, not the norm.",
+        "I checked the actual data before drawing conclusions."
+      ],
+      "Related_Patterns": ["BM-032"],
+      "Distinguishing_Features": "Distinguish from Negativity Bias (BM-032): Availability Heuristic is about ease of recall driving frequency/likelihood judgments (can apply to positive or negative examples); Negativity Bias is specifically the asymmetric weighting of negative vs. positive information.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "A likelihood or frequency claim traceable to a specific vivid or recent example rather than to broad evidence.",
+      "Confidence_Notes": "Requires the commenter to reveal the specific example driving their generalization.",
+      "Source_References": [
+        "Tversky, A. & Kahneman, D. (1973). Availability: A Heuristic for Judging Frequency and Probability. Cognitive Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-018",
+      "Pattern_Name": "Identity Signaling",
+      "Category": "Identity & Self-Concept",
+      "Simple_Definition": "People choose or reject products/brands partly to signal who they are (or aren't) to themselves and others.",
+      "Behavioral_Mechanism": "Consumption choices are used as symbols that communicate identity-relevant traits (values, status, group membership) to an audience, including oneself.",
+      "Typical_Trigger": "A visible/social product category, a brand with strong image associations, or a purchase made in a social context.",
+      "Observable_Behavior": "Justifying a choice in terms of what it says about the person, rejecting a product because 'it's not me' or 'not who I want to be seen as'.",
+      "Possible_Linguistic_Signals": [
+        "This brand just feels like me.",
+        "I wouldn't be caught using that, it's not who I am.",
+        "Using this says something about my values."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I don't care what it says about me, I just want it to work.",
+        "It has nothing to do with my identity, it's purely functional."
+      ],
+      "Related_Patterns": ["BM-019", "BM-022"],
+      "Distinguishing_Features": "Identity Signaling is about the outward/self-directed symbolic meaning of a choice. Self-Consistency (BM-019) is about maintaining alignment between behavior and a pre-existing self-concept over time, rather than the signaling value of a single choice.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "An explicit or strongly implied statement connecting a product choice to identity, values, or self-image rather than to functional performance.",
+      "Confidence_Notes": "Clear when identity language is explicit; otherwise easily confused with simple preference.",
+      "Source_References": [
+        "Berger, J. & Heath, C. (2007). Where Consumers Diverge from Others: Identity Signaling and Product Domains. Journal of Consumer Research."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-019",
+      "Pattern_Name": "Self-Consistency",
+      "Category": "Identity & Self-Concept",
+      "Simple_Definition": "People are motivated to behave in ways that stay consistent with how they see themselves.",
+      "Behavioral_Mechanism": "A behavior that would conflict with a person's existing self-concept creates discomfort, motivating either avoidance of the behavior or reinterpretation of the self-concept/behavior to restore alignment.",
+      "Typical_Trigger": "A choice that would conflict with how the person describes themselves (e.g., a 'budget-conscious' person considering a premium purchase).",
+      "Observable_Behavior": "Explaining a choice (or refusal) in terms of 'the kind of person I am', resisting products that clash with self-description.",
+      "Possible_Linguistic_Signals": [
+        "I'm just not the kind of person who does that.",
+        "That wouldn't fit who I am.",
+        "I stayed because it matches how I see myself."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I surprised myself by doing something totally out of character.",
+        "It doesn't matter to me whether it fits my self-image."
+      ],
+      "Related_Patterns": ["BM-018", "BM-020"],
+      "Distinguishing_Features": "Distinguish from Commitment/Consistency (BM-020): Self-Consistency is driven by alignment with a general, dispositional self-concept ('the kind of person I am'), while Commitment/Consistency is driven by alignment with a specific prior stated or behavioral commitment, regardless of identity language.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "A choice explicitly framed in terms of matching or clashing with a general self-description, not a specific past action.",
+      "Confidence_Notes": "Overlaps conceptually with Identity Signaling and Commitment/Consistency; use Distinguishing_Features carefully before assigning.",
+      "Source_References": [
+        "Bem, D. J. (1972). Self-Perception Theory. Advances in Experimental Social Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-020",
+      "Pattern_Name": "Commitment / Consistency",
+      "Category": "Identity & Self-Concept",
+      "Simple_Definition": "Once people take a stance or action, they feel internal and social pressure to remain consistent with that specific prior commitment.",
+      "Behavioral_Mechanism": "A prior stated or behavioral commitment (a public statement, a signed plan, an initial small action) creates pressure to act consistently with it in future decisions, independent of whether the original choice still makes sense.",
+      "Typical_Trigger": "Having previously made a public statement, signed up for a plan, or taken an initial small step (e.g., a free trial).",
+      "Observable_Behavior": "Continuing a course of action explicitly because of a prior commitment ('I already said I would', 'I already signed up for the year').",
+      "Possible_Linguistic_Signals": [
+        "I already committed to the annual plan, so I'll stick with it.",
+        "I told everyone I was switching, so now I feel I have to.",
+        "I said I'd try it for a year, so I'm sticking to that."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I don't feel bound by what I said before, I'll change my mind if needed.",
+        "My prior commitment doesn't affect this decision at all."
+      ],
+      "Related_Patterns": ["BM-019", "BM-034"],
+      "Distinguishing_Features": "Distinguish from Self-Consistency (BM-019) per that entry's note. Distinguish from Sunk Cost Fallacy (BM-034): Commitment/Consistency is driven by honoring a stated or behavioral commitment; Sunk Cost Fallacy is driven specifically by not wanting to 'waste' already-invested resources (time/money/effort), even without any stated commitment.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Reference to a specific prior statement, signup, or action as the explicit reason for continuing a behavior.",
+      "Confidence_Notes": "Requires the prior commitment to be named or clearly implied.",
+      "Source_References": [
+        "Cialdini, R. B. (1984). Influence: The Psychology of Persuasion. William Morrow.",
+        "Festinger, L. (1957). A Theory of Cognitive Dissonance. Stanford University Press."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-021",
+      "Pattern_Name": "Reactance",
+      "Category": "Adoption & Resistance to Change",
+      "Simple_Definition": "When people feel their freedom to choose is being restricted or pressured, they become motivated to resist, sometimes doing the opposite of what is being pushed.",
+      "Behavioral_Mechanism": "A perceived threat to behavioral freedom (a mandate, forced change, or heavy-handed persuasion attempt) triggers a motivational state aimed at restoring that freedom, which can manifest as resistance or defiance even against a change that might otherwise be neutral or beneficial.",
+      "Typical_Trigger": "A forced update, mandatory change with no opt-out, or a heavy-handed marketing/persuasion push.",
+      "Observable_Behavior": "Explicit resistance framed around loss of choice/control, rejecting a change specifically because it was imposed rather than offered.",
+      "Possible_Linguistic_Signals": [
+        "I don't like being forced into this.",
+        "They didn't give me a choice, so now I refuse to use it.",
+        "The more they push it, the less I want it."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I didn't mind that it was mandatory, it turned out fine.",
+        "I don't feel pressured by this at all."
+      ],
+      "Related_Patterns": ["BM-001", "BM-008"],
+      "Distinguishing_Features": "Distinguish from Status Quo Bias (BM-001) and Habit Disruption (BM-008): Reactance is specifically a response to a perceived loss of choice/control (the framing of being forced), not simply to change itself or to a broken routine.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Language emphasizing lack of choice, being forced, or resisting because of the manner of imposition rather than the content of the change itself.",
+      "Confidence_Notes": "Requires 'forced/no choice' framing to distinguish confidently from ordinary Resistance to Change.",
+      "Source_References": [
+        "Brehm, J. W. (1966). A Theory of Psychological Reactance. Academic Press."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-022",
+      "Pattern_Name": "Psychological Ownership",
+      "Category": "Identity & Self-Concept",
+      "Simple_Definition": "A felt sense that something is 'mine', which can arise even without legal or actual ownership.",
+      "Behavioral_Mechanism": "Investing effort, personalization, time, or control into an object, account, or community can create a subjective sense of possession ('this is part of who I am'), independent of legal ownership.",
+      "Typical_Trigger": "Customization/personalization of a product or account, long-term investment of effort/data, or deep involvement in a community.",
+      "Observable_Behavior": "Referring to a shared or non-owned product/community as 'my' or 'ours', reacting to changes as though a personal possession were affected.",
+      "Possible_Linguistic_Signals": [
+        "This is my community, they can't just change it.",
+        "I've put so much of myself into this account, it feels like mine.",
+        "It feels like they took something of mine away."
+      ],
+      "Possible_Contradictory_Signals": [
+        "It's just a product to me, I don't feel any personal attachment.",
+        "I could switch tomorrow and feel nothing."
+      ],
+      "Related_Patterns": ["BM-010", "BM-018"],
+      "Distinguishing_Features": "Distinguish from Endowment Effect (BM-010): Endowment Effect is a valuation bias requiring actual possession; Psychological Ownership is a felt sense of 'mine-ness' that can occur without legal/actual ownership (e.g., a free community or shared platform).",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Possessive language ('my', 'ours') applied to something not literally owned, plus evidence of personal investment (time, customization, effort).",
+      "Confidence_Notes": "Possessive language alone is weak evidence; look for accompanying investment/effort cues.",
+      "Source_References": [
+        "Pierce, J. L., Kostova, T. & Dirks, K. T. (2003). The State of Psychological Ownership: Integrating and Extending a Century of Research. Review of General Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-023",
+      "Pattern_Name": "Goal Gradient",
+      "Category": "Motivation & Goals",
+      "Simple_Definition": "Motivation to pursue a goal increases as the perceived distance to completing it decreases.",
+      "Behavioral_Mechanism": "As progress toward a goal accumulates, the remaining distance feels smaller and more attainable, which increases effort and engagement the closer the goal appears.",
+      "Typical_Trigger": "Progress indicators, loyalty point thresholds, completion bars, or tiered rewards nearing the next level.",
+      "Observable_Behavior": "Increased activity/spending as a person nears a reward threshold; explicit mention of 'almost there' driving continued effort.",
+      "Possible_Linguistic_Signals": [
+        "I'm so close to the next tier, I kept going.",
+        "Just a few more points and I'll get the reward, so I bought more.",
+        "Seeing the progress bar almost full made me finish it."
+      ],
+      "Possible_Contradictory_Signals": [
+        "The progress bar didn't motivate me at all.",
+        "I stopped even though I was close to a reward."
+      ],
+      "Related_Patterns": [],
+      "Distinguishing_Features": "Distinguishable from generic Motivation by the specific pattern of increasing effort as perceived distance to a defined goal shrinks; requires a visible or implied progress marker.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Explicit reference to proximity to a goal/reward/threshold as the reason for increased effort or continued engagement.",
+      "Confidence_Notes": "Clearest in loyalty-program or gamified-feature contexts; less visible elsewhere.",
+      "Source_References": [
+        "Hull, C. L. (1932). The Goal-Gradient Hypothesis and Maze Learning. Psychological Review.",
+        "Kivetz, R., Urminsky, O. & Zheng, Y. (2006). The Goal-Gradient Hypothesis Resurrected: Purchase Acceleration, Illusionary Goal Progress, and Customer Retention. Journal of Marketing Research."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-024",
+      "Pattern_Name": "Present Bias (Hyperbolic Discounting)",
+      "Category": "Motivation & Goals",
+      "Simple_Definition": "People give disproportionate weight to immediate rewards or costs over future ones, even when the future outcome is objectively larger or more important.",
+      "Behavioral_Mechanism": "The subjective value of a delayed outcome is discounted more steeply in the near term than a consistent (exponential) discounting model would predict, producing a strong preference for immediate gratification that can reverse once both options are equally delayed.",
+      "Typical_Trigger": "A choice between an immediate, smaller benefit and a delayed, larger one (e.g., a cheap short-term plan vs. a better-value long-term commitment).",
+      "Observable_Behavior": "Choosing immediate convenience/reward over a better long-term option, expressed impatience with delayed benefits.",
+      "Possible_Linguistic_Signals": [
+        "I just wanted it now, I didn't think about later.",
+        "The long-term plan is probably smarter but I want the short-term one.",
+        "I'll deal with the consequences later."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I always plan for the long term over quick wins.",
+        "I waited and picked the better long-term option."
+      ],
+      "Related_Patterns": ["BM-023"],
+      "Distinguishing_Features": "This entry merges Present Bias and Hyperbolic Discounting: they describe the same observable consumer pattern (favoring 'now' over 'later') and produce identical linguistic signals, so they are tracked as one mechanism for V1 rather than two separate, practically indistinguishable rows.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "An explicit trade-off between an immediate and a delayed outcome, with the immediate one chosen despite acknowledging the delayed one is better.",
+      "Confidence_Notes": "Requires the trade-off and the acknowledgment of the 'better' delayed option to be visible in the same comment.",
+      "Source_References": [
+        "Laibson, D. (1997). Golden Eggs and Hyperbolic Discounting. Quarterly Journal of Economics.",
+        "O'Donoghue, T. & Rabin, M. (1999). Doing It Now or Later. American Economic Review."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-025",
+      "Pattern_Name": "Default Effect",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "People disproportionately stick with whatever option is pre-selected for them, rather than actively choosing.",
+      "Behavioral_Mechanism": "A pre-set default requires no action to keep and is often interpreted as an implicit recommendation, so people tend to retain it rather than incur the effort and responsibility of actively opting out or choosing an alternative.",
+      "Typical_Trigger": "A pre-selected setting, plan, or subscription tier presented at signup or renewal.",
+      "Observable_Behavior": "Staying on a default plan/setting without evaluating alternatives; surprise upon realizing a default was in effect.",
+      "Possible_Linguistic_Signals": [
+        "I never changed it from the default.",
+        "I just left it as it was set up.",
+        "I didn't realize I could have picked something else."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I always go through and customize every setting.",
+        "I switched away from the default right away."
+      ],
+      "Related_Patterns": ["BM-001", "BM-005"],
+      "Distinguishing_Features": "Distinguish from Status Quo Bias (BM-001): Default Effect is specifically about a pre-selected option set by someone else at a decision point, whereas Status Quo Bias can apply to any previously chosen or long-held state, including ones the person actively chose themselves.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Explicit reference to not changing a pre-set option, or evidence the person was unaware an active choice was available.",
+      "Confidence_Notes": "Requires knowledge of what the actual default setting was.",
+      "Source_References": [
+        "Johnson, E. J. & Goldstein, D. (2003). Do Defaults Save Lives? Science."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-026",
+      "Pattern_Name": "Decoy Effect",
+      "Category": "Value & Reference Evaluation",
+      "Simple_Definition": "Adding a third, clearly inferior option can shift preference toward one of the original two options by changing the comparison.",
+      "Behavioral_Mechanism": "An asymmetrically dominated third option (worse than one option on every dimension, but not clearly worse than the other) makes that other option look more attractive by comparison, even though the original two options haven't changed.",
+      "Typical_Trigger": "A pricing page or plan comparison with three or more tiers, where one tier appears designed mainly to make another look like the best deal.",
+      "Observable_Behavior": "Choosing the option the pricing structure appears to steer toward; explicit comments about a plan 'obviously' being there to make another look better.",
+      "Possible_Linguistic_Signals": [
+        "The middle plan is clearly there just to make the top one look worth it.",
+        "Once I saw the third option, the second one seemed like the obvious choice.",
+        "That plan doesn't make sense unless it's there to push you toward another one."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I compared all the plans purely on their own merits.",
+        "The extra option didn't change my decision at all."
+      ],
+      "Related_Patterns": ["BM-013"],
+      "Distinguishing_Features": "Distinguish from Anchoring (BM-013): Decoy Effect requires a specific three-option comparison structure where one option is asymmetrically dominated, not just any prior reference number.",
+      "Research_Relevance": "Low",
+      "Evidence_Requirements": "Explicit recognition of a multi-option pricing/plan structure and its influence on the final choice.",
+      "Confidence_Notes": "Rarely surfaces explicitly in consumer comments unless the commenter is unusually analytical about pricing structure; include for completeness but expect low observed frequency.",
+      "Source_References": [
+        "Huber, J., Payne, J. W. & Puto, C. (1982). Adding Asymmetrically Dominated Alternatives: Violations of Regularity and the Similarity Hypothesis. Journal of Consumer Research."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-027",
+      "Pattern_Name": "Fairness / Equity Perception",
+      "Category": "Value & Reference Evaluation",
+      "Simple_Definition": "People evaluate outcomes not just on their absolute value but on whether they seem fair relative to what others got, what was promised, or what is expected.",
+      "Behavioral_Mechanism": "An outcome is compared against a fairness reference (what similar others received, what was previously promised, or a social norm of equity), and a perceived mismatch triggers a disproportionately negative reaction even when the absolute outcome is reasonable.",
+      "Typical_Trigger": "Differential pricing/treatment between customers, a broken promise, or an outcome that violates an expected norm of equal treatment.",
+      "Observable_Behavior": "Complaints framed around unfairness or inequity rather than absolute dissatisfaction; comparisons to how other customers were treated.",
+      "Possible_Linguistic_Signals": [
+        "Other customers got a better deal than me for the same thing.",
+        "That's not fair, they promised something different.",
+        "New customers get better treatment than loyal ones, that's unjust."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I don't compare myself to other customers, I just judge the price on its own.",
+        "It felt perfectly fair given what I received."
+      ],
+      "Related_Patterns": ["BM-002"],
+      "Distinguishing_Features": "Distinguish from ordinary Loss Aversion (BM-002): Fairness/Equity Perception specifically requires a comparison to another party, a promise, or a norm, not just an isolated loss.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "An explicit comparison to another customer, a prior promise, or a stated norm/expectation, framed in terms of fairness/justice.",
+      "Confidence_Notes": "Clear when a comparison point is named; weaker when 'unfair' is used loosely as a general complaint.",
+      "Source_References": [
+        "Fehr, E. & Schmidt, K. M. (1999). A Theory of Fairness, Competition, and Cooperation. Quarterly Journal of Economics.",
+        "Kahneman, D., Knetsch, J. L. & Thaler, R. H. (1986). Fairness as a Constraint on Profit Seeking: Entitlements in the Market. American Economic Review."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-028",
+      "Pattern_Name": "Effort Justification",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "People tend to increase how much they value something in proportion to the effort they spent obtaining or setting it up.",
+      "Behavioral_Mechanism": "Investing significant effort to obtain or configure something creates dissonance if the outcome is later judged as low-value ('why did I work so hard for this?'), which is resolved by raising the perceived value of the outcome to match the effort invested.",
+      "Typical_Trigger": "A difficult or lengthy setup, onboarding, or learning process required to use a product.",
+      "Observable_Behavior": "Valuing a product more highly explicitly because of the effort required to learn or set it up, defending a complicated process as 'worth it'.",
+      "Possible_Linguistic_Signals": [
+        "It took me forever to set up, so it better be worth it — and it is.",
+        "I spent so much time learning this, I don't regret it.",
+        "After all that effort, I'm not going to say it wasn't worth it."
+      ],
+      "Possible_Contradictory_Signals": [
+        "It was hard to set up and honestly it wasn't worth the trouble.",
+        "The effort had no effect on how I feel about it."
+      ],
+      "Related_Patterns": ["BM-015", "BM-034"],
+      "Distinguishing_Features": "This is a specific, narrower case of Cognitive Dissonance (BM-015) triggered specifically by invested effort. Distinguish from Sunk Cost Fallacy (BM-034): Effort Justification changes the person's valuation/attitude toward the outcome, while Sunk Cost Fallacy changes their decision to continue a course of action, even without any attitude change.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "An explicit link between effort/difficulty invested and an inflated positive valuation of the outcome.",
+      "Confidence_Notes": "Requires both the effort description and the valuation statement to appear together.",
+      "Source_References": [
+        "Aronson, E. & Mills, J. (1959). The Effect of Severity of Initiation on Liking for a Group. Journal of Abnormal and Social Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-029",
+      "Pattern_Name": "Uncertainty / Ambiguity Aversion",
+      "Category": "Trust, Risk & Uncertainty",
+      "Simple_Definition": "People prefer a known risk over an unknown or ambiguous one, even when the unknown option might objectively be equal or better.",
+      "Behavioral_Mechanism": "When the probability or nature of an outcome is unclear (ambiguous) rather than simply risky-but-known, people apply an extra layer of avoidance beyond ordinary risk aversion, preferring the option whose odds are at least known.",
+      "Typical_Trigger": "A new, unfamiliar product/provider with unclear terms, reviews, or track record, versus a known option with clear (even if imperfect) risk.",
+      "Observable_Behavior": "Preferring an established option specifically because its risks are known, hesitation described in terms of 'not knowing what to expect' rather than a specific named risk.",
+      "Possible_Linguistic_Signals": [
+        "I don't know what I'd be getting into with the new one.",
+        "At least with this one I know what to expect.",
+        "It's too uncertain, I'd rather stick with something predictable."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I don't mind not knowing what to expect, I'll take the chance.",
+        "Uncertainty doesn't bother me."
+      ],
+      "Related_Patterns": ["BM-030"],
+      "Distinguishing_Features": "Distinguish from ordinary risk aversion/Perceived Risk (excluded as a standalone construct in V1, see docs): this mechanism is specifically about aversion to ambiguity/unknown-ness itself, not to a specific, named, quantifiable risk.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Language emphasizing not knowing what to expect or preferring the known/predictable option over a specifically-named risk comparison.",
+      "Confidence_Notes": "Can be hard to distinguish from Status Quo Bias (BM-001) without care; the discriminator is that the reasoning here centers on unknown-ness, not on 'currentness'.",
+      "Source_References": [
+        "Ellsberg, D. (1961). Risk, Ambiguity, and the Savage Axioms. Quarterly Journal of Economics."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-030",
+      "Pattern_Name": "Betrayal Aversion",
+      "Category": "Trust, Risk & Uncertainty",
+      "Simple_Definition": "People react more negatively to a loss caused by a betrayed trust (a broken promise or violated relationship) than to an equivalent loss from an impersonal cause.",
+      "Behavioral_Mechanism": "A loss attributed to another party's broken trust or bad faith is processed differently from an equivalent impersonal loss (e.g., bad luck or a neutral system failure), producing a disproportionately strong negative reaction and lasting distrust.",
+      "Typical_Trigger": "A data breach, a broken promise, a bait-and-switch pricing change, or discovering the company acted against a stated commitment.",
+      "Observable_Behavior": "A reaction to an incident that is disproportionate to its practical/financial impact, explicit language about betrayal or broken trust, lasting distrust after the incident.",
+      "Possible_Linguistic_Signals": [
+        "I feel betrayed, not just inconvenienced.",
+        "It's not the money, it's that they lied to us.",
+        "I'll never trust them again after that."
+      ],
+      "Possible_Contradictory_Signals": [
+        "It was a mistake, not a betrayal, and I still trust them.",
+        "I wasn't upset about the broken promise, just the practical cost."
+      ],
+      "Related_Patterns": ["BM-029"],
+      "Distinguishing_Features": "Distinguish from Uncertainty/Ambiguity Aversion (BM-029): Betrayal Aversion is a reaction to a specific breach of trust that has already occurred, not a general preference for known over unknown risk before any breach.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "Language explicitly framing an incident as a betrayal/broken trust, plus a reaction that appears disproportionate to the incident's practical impact.",
+      "Confidence_Notes": "The word 'betrayed' or equivalent is a strong signal; without explicit trust-violation framing, treat as ordinary dissatisfaction instead.",
+      "Source_References": [
+        "Bohnet, I. & Zeckhauser, R. (2004). Trust, Risk and Betrayal. Journal of Economic Behavior & Organization."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-031",
+      "Pattern_Name": "Halo Effect",
+      "Category": "Trust, Risk & Uncertainty",
+      "Simple_Definition": "A positive overall impression of a brand/product causes unrelated specific attributes to also be judged positively, without independent evaluation.",
+      "Behavioral_Mechanism": "A global positive (or negative) impression formed from one attribute or reputation spreads to color the evaluation of other, logically unrelated attributes, reducing the need for independent evaluation of each one.",
+      "Typical_Trigger": "A strong existing brand reputation being used to evaluate a new, unrelated product or feature from that brand.",
+      "Observable_Behavior": "Assuming a new/unrelated feature is trustworthy or high-quality purely because of overall brand reputation, without evaluating it independently.",
+      "Possible_Linguistic_Signals": [
+        "I trust this new feature because the company has always been reliable.",
+        "If it's from this brand, it must be good.",
+        "I assumed it would be secure since the rest of their products are."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I judged this specific feature on its own, ignoring the brand's reputation.",
+        "Even though I like the brand, this particular feature let me down."
+      ],
+      "Related_Patterns": ["BM-009", "BM-004"],
+      "Distinguishing_Features": "Distinguish from Mere Exposure Effect (BM-009): Halo Effect requires an existing positive impression transferring to a specific unrelated attribute, while Mere Exposure is about liking increasing from repetition alone, without an attribute-transfer step.",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "An evaluation of a specific attribute that is explicitly or implicitly justified by overall brand reputation rather than by direct evidence about that attribute.",
+      "Confidence_Notes": "Requires the specific unevaluated attribute and the general reputation basis to both be identifiable.",
+      "Source_References": [
+        "Thorndike, E. L. (1920). A Constant Error in Psychological Ratings. Journal of Applied Psychology."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-032",
+      "Pattern_Name": "Negativity Bias",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "Negative information or experiences carry more psychological weight than equally sized positive ones.",
+      "Behavioral_Mechanism": "Negative events are processed more thoroughly and given greater weight in overall evaluation than positive events of comparable magnitude, likely reflecting an evolved sensitivity to threats.",
+      "Typical_Trigger": "A single negative experience occurring alongside multiple positive ones, or one bad review among many good ones.",
+      "Observable_Behavior": "An overall judgment dominated by a single negative incident despite a larger number of positive experiences also being present.",
+      "Possible_Linguistic_Signals": [
+        "Sure, most of it was fine, but that one bad experience is what stuck with me.",
+        "One bad interaction and I can't stop thinking about it, even with all the good ones.",
+        "It only takes one mistake to undo all the good will."
+      ],
+      "Possible_Contradictory_Signals": [
+        "One bad experience didn't change my overall positive view at all.",
+        "I weigh the good and bad equally."
+      ],
+      "Related_Patterns": ["BM-016", "BM-017"],
+      "Distinguishing_Features": "Distinguish from Peak-End Rule (BM-016): Negativity Bias is a general weighting asymmetry across an evaluation (not limited to one experience's peak/ending), while Peak-End Rule is specifically about which moments within a single experience are remembered.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "An overall judgment that explicitly weighs a negative instance more heavily than a larger volume of positive instances also present in the same account.",
+      "Confidence_Notes": "Requires both positive and negative evidence to be present in the same account to confirm the asymmetry, not just a negative comment alone.",
+      "Source_References": [
+        "Rozin, P. & Royzman, E. B. (2001). Negativity Bias, Negativity Dominance, and Contagion. Personality and Social Psychology Review."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-033",
+      "Pattern_Name": "Variable Reward / Intermittent Reinforcement",
+      "Category": "Habit & Behavioral Persistence",
+      "Simple_Definition": "A behavior reinforced unpredictably (rather than every time) tends to become more persistent and resistant to stopping than one reinforced predictably.",
+      "Behavioral_Mechanism": "When the reward following a behavior is unpredictable in timing or size, the behavior is repeated more persistently than under a fixed/predictable reward schedule, because the uncertainty itself sustains engagement.",
+      "Typical_Trigger": "Unpredictable content, notifications, deals, or outcomes that vary each time an action is taken (e.g., refreshing a feed, opening an app to 'see what's new').",
+      "Observable_Behavior": "Frequent, repeated checking/engagement behavior explicitly tied to not knowing what will appear; described compulsiveness around an unpredictable feature.",
+      "Possible_Linguistic_Signals": [
+        "I keep checking because you never know what you'll find.",
+        "I can't stop refreshing it, it's unpredictable.",
+        "Sometimes there's something great, sometimes nothing, but I keep looking."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I only check it on a fixed schedule regardless of what's there.",
+        "The unpredictability doesn't make me check more often."
+      ],
+      "Related_Patterns": ["BM-007"],
+      "Distinguishing_Features": "Distinguish from Habit (BM-007): Variable Reward is a specific mechanism that can strengthen habit formation and make it harder to break, driven by unpredictability of outcome; Habit itself is the resulting automatic behavior and can form without any reward variability at all (e.g., purely cue-based routines).",
+      "Research_Relevance": "Medium",
+      "Evidence_Requirements": "Description of repeated engagement explicitly linked to not knowing what outcome/content will appear, rather than to a fixed routine.",
+      "Confidence_Notes": "Requires the 'unpredictability' element specifically, not just general frequent use.",
+      "Source_References": [
+        "Ferster, C. B. & Skinner, B. F. (1957). Schedules of Reinforcement. Appleton-Century-Crofts."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    },
+    {
+      "Pattern_ID": "BM-034",
+      "Pattern_Name": "Sunk Cost Fallacy",
+      "Category": "Decision-Making & Cognitive Biases",
+      "Simple_Definition": "People continue a course of action because of resources (time, money, effort) already invested, even when those resources cannot be recovered and continuing no longer makes sense.",
+      "Behavioral_Mechanism": "Already-spent, irrecoverable resources are treated as relevant to a forward-looking decision (even though rationally only future costs/benefits should matter), driven by an aversion to 'wasting' what has already been invested.",
+      "Typical_Trigger": "A decision about whether to continue or abandon something after significant time/money/effort has already been put into it.",
+      "Observable_Behavior": "Continuing to use or pay for something explicitly because of how much has already been invested, expressed reluctance to 'waste' past investment by stopping.",
+      "Possible_Linguistic_Signals": [
+        "I've put too much time into this to quit now.",
+        "I already paid for the year, so I'll keep using it even though I don't like it.",
+        "It would be a waste to stop now after everything I've invested."
+      ],
+      "Possible_Contradictory_Signals": [
+        "I cut my losses and stopped even though I'd already invested a lot.",
+        "Past investment doesn't factor into my decision at all."
+      ],
+      "Related_Patterns": ["BM-002", "BM-020", "BM-028"],
+      "Distinguishing_Features": "Distinguish from Effort Justification (BM-028): Sunk Cost Fallacy affects the decision to continue, without necessarily any change in attitude/valuation, while Effort Justification specifically raises the perceived value/attitude toward the outcome. Distinguish from Commitment/Consistency (BM-020) per that entry's note.",
+      "Research_Relevance": "High",
+      "Evidence_Requirements": "Explicit reference to past investment (time/money/effort) as the stated reason for continuing, especially when paired with acknowledged dissatisfaction.",
+      "Confidence_Notes": "Clearest when the commenter simultaneously expresses dissatisfaction and a reason to continue tied to past investment.",
+      "Source_References": [
+        "Arkes, H. R. & Blumer, C. (1985). The Psychology of Sunk Cost. Organizational Behavior and Human Decision Processes."
+      ],
+      "Version": "1.0",
+      "Status": "Approved"
+    }
+  ]
+}
