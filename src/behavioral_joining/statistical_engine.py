@@ -30,10 +30,14 @@ class StatisticalResult:
     confidence_interval: str         # "[low, high]" as a string for CSV/DB storage
     test_statistic: float
     p_value: float
+    adjusted_p_value: float          # NaN until multiple_testing_adjustment is actually applied
     multiple_testing_adjustment: str
     covariates_controlled: str
     result_direction: str
     evidence_grade: str
+    validation_dataset: str          # e.g. "discovery+hypothesis_generation" or "held_out_test"
+    run_date: str
+    code_version_reference: str      # e.g. a git commit hash or module version tag
     limitations: str
 
     def as_dict(self):

@@ -1,0 +1,179 @@
+application_id,mechanism_id,mechanism_name,research_split,final_disposition,job_family,client_account_id,recruiter_id
+APP-00004,BM-001,Status Quo Bias,discovery,joined_on_time,Finance/Accounting,CLI-003,REC-018
+APP-00008,BM-006,Friction,discovery,declined_offer,Engineering,CLI-005,REC-010
+APP-00032,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Healthcare,CLI-002,REC-006
+APP-00036,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_late,Light Industrial,CLI-001,REC-018
+APP-00037,BM-029,Uncertainty / Ambiguity Aversion,discovery,accepted_no_show,IT/Technology,CLI-008,REC-010
+APP-00044,BM-013,Anchoring,discovery,joined_on_time,Healthcare,CLI-002,REC-014
+APP-00045,BM-006,Friction,discovery,joined_on_time,Light Industrial,CLI-005,REC-018
+APP-00053,BM-029,Uncertainty / Ambiguity Aversion,discovery,accepted_no_show,IT/Technology,CLI-004,REC-004
+APP-00059,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Healthcare,CLI-007,REC-002
+APP-00063,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,IT/Technology,CLI-004,REC-017
+APP-00070,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Healthcare,CLI-002,REC-017
+APP-00072,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Administrative/Professional,CLI-010,REC-009
+APP-00079,BM-006,Friction,discovery,joined_late,IT/Technology,CLI-004,REC-016
+APP-00095,BM-006,Friction,discovery,rejected_by_client,Healthcare,CLI-007,REC-008
+APP-00100,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Engineering,CLI-009,REC-001
+APP-00105,BM-006,Friction,discovery,rejected_by_client,Light Industrial,CLI-011,REC-018
+APP-00145,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Administrative/Professional,CLI-006,REC-018
+APP-00148,BM-001,Status Quo Bias,discovery,joined_late,Engineering,CLI-009,REC-010
+APP-00155,BM-006,Friction,discovery,joined_on_time,IT/Technology,CLI-008,REC-010
+APP-00173,BM-006,Friction,discovery,joined_late,Light Industrial,CLI-001,REC-004
+APP-00179,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Healthcare,CLI-007,REC-001
+APP-00183,BM-006,Friction,discovery,declined_offer,Healthcare,CLI-002,REC-002
+APP-00243,BM-006,Friction,discovery,joined_on_time,Administrative/Professional,CLI-011,REC-006
+APP-00286,BM-013,Anchoring,discovery,withdrew_post_acceptance,Administrative/Professional,CLI-011,REC-015
+APP-00289,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Light Industrial,CLI-001,REC-012
+APP-00303,BM-001,Status Quo Bias,discovery,joined_late,Engineering,CLI-005,REC-007
+APP-00342,BM-006,Friction,discovery,accepted_no_show,IT/Technology,CLI-008,REC-007
+APP-00348,BM-006,Friction,discovery,joined_late,Light Industrial,CLI-001,REC-009
+APP-00373,BM-006,Friction,discovery,joined_on_time,Light Industrial,CLI-005,REC-018
+APP-00373,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Light Industrial,CLI-005,REC-018
+APP-00389,BM-001,Status Quo Bias,discovery,joined_late,Finance/Accounting,CLI-003,REC-003
+APP-00398,BM-006,Friction,discovery,rejected_by_client,Healthcare,CLI-007,REC-002
+APP-00400,BM-006,Friction,discovery,joined_on_time,Healthcare,CLI-002,REC-005
+APP-00429,BM-006,Friction,discovery,joined_on_time,Light Industrial,CLI-001,REC-018
+APP-00439,BM-006,Friction,discovery,withdrew_post_acceptance,Engineering,CLI-009,REC-013
+APP-00444,BM-006,Friction,discovery,joined_on_time,Administrative/Professional,CLI-010,REC-018
+APP-00461,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Administrative/Professional,CLI-006,REC-012
+APP-00468,BM-013,Anchoring,discovery,rejected_by_client,Administrative/Professional,CLI-010,REC-012
+APP-00496,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Light Industrial,CLI-005,REC-006
+APP-00507,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Finance/Accounting,CLI-006,REC-018
+APP-00524,BM-006,Friction,discovery,joined_on_time,Healthcare,CLI-007,REC-005
+APP-00548,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,IT/Technology,CLI-008,REC-010
+APP-00562,BM-001,Status Quo Bias,discovery,withdrew_post_acceptance,Light Industrial,CLI-005,REC-012
+APP-00562,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Light Industrial,CLI-005,REC-012
+APP-00565,BM-006,Friction,discovery,rejected_by_client,Healthcare,CLI-002,REC-017
+APP-00578,BM-001,Status Quo Bias,discovery,joined_on_time,Administrative/Professional,CLI-006,REC-003
+APP-00595,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-009,REC-013
+APP-00603,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-009,REC-013
+APP-00611,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Light Industrial,CLI-001,REC-009
+APP-00640,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Light Industrial,CLI-005,REC-018
+APP-00645,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Engineering,CLI-005,REC-016
+APP-00652,BM-006,Friction,discovery,joined_on_time,IT/Technology,CLI-008,REC-010
+APP-00698,BM-006,Friction,discovery,joined_late,IT/Technology,CLI-004,REC-004
+APP-00702,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_late,Engineering,CLI-005,REC-013
+APP-00706,BM-006,Friction,discovery,joined_on_time,Light Industrial,CLI-001,REC-018
+APP-00716,BM-029,Uncertainty / Ambiguity Aversion,discovery,accepted_no_show,Engineering,CLI-009,REC-012
+APP-00736,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Engineering,CLI-009,REC-016
+APP-00741,BM-001,Status Quo Bias,discovery,withdrew_post_acceptance,Administrative/Professional,CLI-010,REC-012
+APP-00759,BM-006,Friction,discovery,withdrew_post_acceptance,Engineering,CLI-009,REC-004
+APP-00762,BM-001,Status Quo Bias,discovery,declined_offer,Finance/Accounting,CLI-003,REC-018
+APP-00770,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Finance/Accounting,CLI-003,REC-009
+APP-00789,BM-006,Friction,discovery,joined_on_time,Administrative/Professional,CLI-010,REC-015
+APP-00797,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Administrative/Professional,CLI-006,REC-018
+APP-00828,BM-006,Friction,discovery,joined_late,Administrative/Professional,CLI-010,REC-018
+APP-00889,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Healthcare,CLI-002,REC-014
+APP-00890,BM-001,Status Quo Bias,discovery,declined_offer,Healthcare,CLI-002,REC-017
+APP-00922,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Light Industrial,CLI-001,REC-012
+APP-00953,BM-006,Friction,discovery,declined_offer,Light Industrial,CLI-001,REC-018
+APP-00960,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,IT/Technology,CLI-004,REC-018
+APP-00968,BM-001,Status Quo Bias,discovery,joined_on_time,Light Industrial,CLI-005,REC-012
+APP-00969,BM-010,Endowment Effect,discovery,declined_offer,IT/Technology,CLI-004,REC-001
+APP-00974,BM-006,Friction,discovery,joined_on_time,Administrative/Professional,CLI-006,REC-018
+APP-01017,BM-006,Friction,discovery,joined_late,Light Industrial,CLI-005,REC-012
+APP-01029,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Administrative/Professional,CLI-006,REC-018
+APP-01042,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Finance/Accounting,CLI-003,REC-018
+APP-01088,BM-006,Friction,discovery,rejected_by_client,Light Industrial,CLI-001,REC-008
+APP-01089,BM-006,Friction,discovery,joined_on_time,Administrative/Professional,CLI-006,REC-018
+APP-01093,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Healthcare,CLI-002,REC-009
+APP-01120,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,IT/Technology,CLI-004,REC-007
+APP-01121,BM-006,Friction,discovery,declined_offer,IT/Technology,CLI-008,REC-001
+APP-01132,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-009,REC-013
+APP-01141,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Administrative/Professional,CLI-006,REC-018
+APP-01146,BM-001,Status Quo Bias,discovery,withdrew_post_acceptance,Administrative/Professional,CLI-010,REC-018
+APP-01148,BM-006,Friction,discovery,withdrew_post_acceptance,IT/Technology,CLI-008,REC-007
+APP-01151,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Administrative/Professional,CLI-006,REC-018
+APP-01161,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-009,REC-013
+APP-01171,BM-029,Uncertainty / Ambiguity Aversion,discovery,rejected_by_client,Light Industrial,CLI-001,REC-018
+APP-01204,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Engineering,CLI-005,REC-007
+APP-01209,BM-029,Uncertainty / Ambiguity Aversion,discovery,accepted_no_show,Finance/Accounting,CLI-003,REC-003
+APP-01248,BM-006,Friction,discovery,joined_on_time,IT/Technology,CLI-004,REC-004
+APP-01266,BM-001,Status Quo Bias,discovery,withdrew_post_acceptance,Light Industrial,CLI-001,REC-006
+APP-01270,BM-006,Friction,discovery,withdrew_post_acceptance,IT/Technology,CLI-008,REC-001
+APP-01274,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,IT/Technology,CLI-004,REC-004
+APP-01290,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Administrative/Professional,CLI-010,REC-013
+APP-01295,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Finance/Accounting,CLI-006,REC-012
+APP-01296,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Light Industrial,CLI-001,REC-012
+APP-01303,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,IT/Technology,CLI-008,REC-001
+APP-01305,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Finance/Accounting,CLI-003,REC-018
+APP-01325,BM-016,Peak-End Rule,discovery,withdrew_post_acceptance,Administrative/Professional,CLI-006,REC-015
+APP-01376,BM-001,Status Quo Bias,discovery,joined_on_time,Healthcare,CLI-002,REC-008
+APP-01408,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Finance/Accounting,CLI-003,REC-017
+APP-01433,BM-006,Friction,discovery,joined_on_time,Administrative/Professional,CLI-010,REC-012
+APP-01497,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,Healthcare,CLI-002,REC-005
+APP-01505,BM-006,Friction,discovery,joined_late,Light Industrial,CLI-001,REC-012
+APP-01509,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,IT/Technology,CLI-008,REC-007
+APP-01561,BM-001,Status Quo Bias,discovery,joined_on_time,IT/Technology,CLI-004,REC-001
+APP-01565,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_late,Engineering,CLI-009,REC-010
+APP-01566,BM-006,Friction,discovery,joined_late,IT/Technology,CLI-008,REC-007
+APP-01574,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Administrative/Professional,CLI-010,REC-018
+APP-01631,BM-001,Status Quo Bias,discovery,rejected_by_client,IT/Technology,CLI-008,REC-007
+APP-01657,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Finance/Accounting,CLI-003,REC-006
+APP-01662,BM-001,Status Quo Bias,discovery,accepted_no_show,Finance/Accounting,CLI-006,REC-012
+APP-01672,BM-006,Friction,discovery,joined_on_time,Light Industrial,CLI-001,REC-018
+APP-01687,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Healthcare,CLI-002,REC-001
+APP-01692,BM-001,Status Quo Bias,discovery,joined_on_time,Healthcare,CLI-002,REC-014
+APP-01695,BM-006,Friction,discovery,declined_offer,Light Industrial,CLI-001,REC-009
+APP-01696,BM-001,Status Quo Bias,discovery,declined_offer,Administrative/Professional,CLI-010,REC-015
+APP-01700,BM-029,Uncertainty / Ambiguity Aversion,discovery,accepted_no_show,Light Industrial,CLI-005,REC-018
+APP-01723,BM-006,Friction,discovery,withdrew_post_acceptance,Healthcare,CLI-002,REC-013
+APP-01732,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-009,REC-016
+APP-01797,BM-006,Friction,discovery,joined_on_time,Administrative/Professional,CLI-006,REC-006
+APP-01810,BM-006,Friction,discovery,joined_on_time,IT/Technology,CLI-004,REC-018
+APP-01816,BM-006,Friction,discovery,joined_on_time,Healthcare,CLI-002,REC-004
+APP-01829,BM-013,Anchoring,discovery,joined_late,Engineering,CLI-009,REC-007
+APP-01842,BM-006,Friction,discovery,rejected_by_client,Administrative/Professional,CLI-010,REC-017
+APP-01845,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Engineering,CLI-009,REC-001
+APP-01871,BM-006,Friction,discovery,accepted_no_show,Administrative/Professional,CLI-006,REC-015
+APP-01875,BM-013,Anchoring,discovery,joined_on_time,Finance/Accounting,CLI-006,REC-012
+APP-01879,BM-001,Status Quo Bias,discovery,joined_on_time,IT/Technology,CLI-008,REC-016
+APP-01879,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,IT/Technology,CLI-008,REC-016
+APP-01880,BM-006,Friction,discovery,joined_on_time,Finance/Accounting,CLI-006,REC-003
+APP-01952,BM-013,Anchoring,discovery,withdrew_post_acceptance,IT/Technology,CLI-008,REC-001
+APP-01961,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Engineering,CLI-005,REC-007
+APP-01961,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-005,REC-007
+APP-01985,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Healthcare,CLI-007,REC-011
+APP-01987,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-009,REC-010
+APP-02020,BM-021,Reactance,discovery,declined_offer,Finance/Accounting,CLI-003,REC-006
+APP-02029,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,IT/Technology,CLI-008,REC-013
+APP-02034,BM-006,Friction,discovery,rejected_by_client,Administrative/Professional,CLI-006,REC-018
+APP-02043,BM-006,Friction,discovery,declined_offer,Engineering,CLI-009,REC-001
+APP-02058,BM-013,Anchoring,discovery,withdrew_post_acceptance,Administrative/Professional,CLI-010,REC-003
+APP-02070,BM-013,Anchoring,discovery,joined_late,Administrative/Professional,CLI-010,REC-012
+APP-02077,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-005,REC-001
+APP-02087,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Engineering,CLI-009,REC-007
+APP-02106,BM-006,Friction,discovery,joined_on_time,Finance/Accounting,CLI-003,REC-018
+APP-02111,BM-006,Friction,discovery,withdrew_post_acceptance,Engineering,CLI-005,REC-013
+APP-02113,BM-029,Uncertainty / Ambiguity Aversion,discovery,withdrew_post_acceptance,Engineering,CLI-009,REC-016
+APP-02118,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-005,REC-010
+APP-02129,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Engineering,CLI-009,REC-013
+APP-02130,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_late,Healthcare,CLI-002,REC-011
+APP-02134,BM-001,Status Quo Bias,discovery,declined_offer,Light Industrial,CLI-001,REC-012
+APP-02147,BM-006,Friction,discovery,joined_late,Light Industrial,CLI-005,REC-015
+APP-02153,BM-021,Reactance,discovery,declined_offer,Engineering,CLI-009,REC-013
+APP-02172,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_late,IT/Technology,CLI-008,REC-001
+APP-02176,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_late,Administrative/Professional,CLI-010,REC-003
+APP-02176,BM-006,Friction,discovery,joined_late,Administrative/Professional,CLI-010,REC-003
+APP-02194,BM-029,Uncertainty / Ambiguity Aversion,discovery,declined_offer,IT/Technology,CLI-004,REC-016
+APP-02196,BM-006,Friction,discovery,declined_offer,Engineering,CLI-009,REC-001
+APP-02203,BM-006,Friction,discovery,declined_offer,Healthcare,CLI-007,REC-008
+APP-02218,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Light Industrial,CLI-005,REC-003
+APP-02224,BM-001,Status Quo Bias,discovery,withdrew_post_acceptance,Healthcare,CLI-002,REC-009
+APP-02225,BM-006,Friction,discovery,declined_offer,Administrative/Professional,CLI-010,REC-003
+APP-02249,BM-006,Friction,discovery,joined_on_time,Healthcare,CLI-002,REC-014
+APP-02256,BM-010,Endowment Effect,discovery,joined_on_time,Healthcare,CLI-002,REC-017
+APP-02281,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Light Industrial,CLI-011,REC-012
+APP-02285,BM-001,Status Quo Bias,discovery,declined_offer,Engineering,CLI-009,REC-001
+APP-02306,BM-006,Friction,discovery,accepted_no_show,IT/Technology,CLI-004,REC-014
+APP-02320,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Engineering,CLI-005,REC-004
+APP-02324,BM-006,Friction,discovery,accepted_no_show,IT/Technology,CLI-008,REC-013
+APP-02345,BM-001,Status Quo Bias,discovery,joined_on_time,Finance/Accounting,CLI-006,REC-012
+APP-02372,BM-006,Friction,discovery,joined_on_time,IT/Technology,CLI-004,REC-015
+APP-02415,BM-006,Friction,discovery,rejected_by_client,Healthcare,CLI-002,REC-008
+APP-02429,BM-006,Friction,discovery,joined_late,Light Industrial,CLI-011,REC-016
+APP-02436,BM-006,Friction,discovery,withdrew_post_acceptance,Healthcare,CLI-007,REC-002
+APP-02442,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-009,REC-007
+APP-02460,BM-029,Uncertainty / Ambiguity Aversion,discovery,joined_on_time,Light Industrial,CLI-005,REC-015
+APP-02469,BM-006,Friction,discovery,accepted_no_show,Light Industrial,CLI-011,REC-005
+APP-02475,BM-006,Friction,discovery,joined_on_time,Engineering,CLI-009,REC-007

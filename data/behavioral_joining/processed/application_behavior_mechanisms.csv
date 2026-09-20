@@ -1,0 +1,179 @@
+application_id,mechanism_id,mechanism_name
+APP-00004,BM-001,Status Quo Bias
+APP-00008,BM-006,Friction
+APP-00032,BM-029,Uncertainty / Ambiguity Aversion
+APP-00036,BM-029,Uncertainty / Ambiguity Aversion
+APP-00037,BM-029,Uncertainty / Ambiguity Aversion
+APP-00044,BM-013,Anchoring
+APP-00045,BM-006,Friction
+APP-00053,BM-029,Uncertainty / Ambiguity Aversion
+APP-00059,BM-029,Uncertainty / Ambiguity Aversion
+APP-00063,BM-029,Uncertainty / Ambiguity Aversion
+APP-00070,BM-029,Uncertainty / Ambiguity Aversion
+APP-00072,BM-029,Uncertainty / Ambiguity Aversion
+APP-00079,BM-006,Friction
+APP-00095,BM-006,Friction
+APP-00100,BM-029,Uncertainty / Ambiguity Aversion
+APP-00105,BM-006,Friction
+APP-00145,BM-029,Uncertainty / Ambiguity Aversion
+APP-00148,BM-001,Status Quo Bias
+APP-00155,BM-006,Friction
+APP-00173,BM-006,Friction
+APP-00179,BM-029,Uncertainty / Ambiguity Aversion
+APP-00183,BM-006,Friction
+APP-00243,BM-006,Friction
+APP-00286,BM-013,Anchoring
+APP-00289,BM-029,Uncertainty / Ambiguity Aversion
+APP-00303,BM-001,Status Quo Bias
+APP-00342,BM-006,Friction
+APP-00348,BM-006,Friction
+APP-00373,BM-006,Friction
+APP-00373,BM-029,Uncertainty / Ambiguity Aversion
+APP-00389,BM-001,Status Quo Bias
+APP-00398,BM-006,Friction
+APP-00400,BM-006,Friction
+APP-00429,BM-006,Friction
+APP-00439,BM-006,Friction
+APP-00444,BM-006,Friction
+APP-00461,BM-029,Uncertainty / Ambiguity Aversion
+APP-00468,BM-013,Anchoring
+APP-00496,BM-029,Uncertainty / Ambiguity Aversion
+APP-00507,BM-029,Uncertainty / Ambiguity Aversion
+APP-00524,BM-006,Friction
+APP-00548,BM-029,Uncertainty / Ambiguity Aversion
+APP-00562,BM-001,Status Quo Bias
+APP-00562,BM-029,Uncertainty / Ambiguity Aversion
+APP-00565,BM-006,Friction
+APP-00578,BM-001,Status Quo Bias
+APP-00595,BM-006,Friction
+APP-00603,BM-006,Friction
+APP-00611,BM-029,Uncertainty / Ambiguity Aversion
+APP-00640,BM-029,Uncertainty / Ambiguity Aversion
+APP-00645,BM-029,Uncertainty / Ambiguity Aversion
+APP-00652,BM-006,Friction
+APP-00698,BM-006,Friction
+APP-00702,BM-029,Uncertainty / Ambiguity Aversion
+APP-00706,BM-006,Friction
+APP-00716,BM-029,Uncertainty / Ambiguity Aversion
+APP-00736,BM-029,Uncertainty / Ambiguity Aversion
+APP-00741,BM-001,Status Quo Bias
+APP-00759,BM-006,Friction
+APP-00762,BM-001,Status Quo Bias
+APP-00770,BM-029,Uncertainty / Ambiguity Aversion
+APP-00789,BM-006,Friction
+APP-00797,BM-029,Uncertainty / Ambiguity Aversion
+APP-00828,BM-006,Friction
+APP-00889,BM-029,Uncertainty / Ambiguity Aversion
+APP-00890,BM-001,Status Quo Bias
+APP-00922,BM-029,Uncertainty / Ambiguity Aversion
+APP-00953,BM-006,Friction
+APP-00960,BM-029,Uncertainty / Ambiguity Aversion
+APP-00968,BM-001,Status Quo Bias
+APP-00969,BM-010,Endowment Effect
+APP-00974,BM-006,Friction
+APP-01017,BM-006,Friction
+APP-01029,BM-029,Uncertainty / Ambiguity Aversion
+APP-01042,BM-029,Uncertainty / Ambiguity Aversion
+APP-01088,BM-006,Friction
+APP-01089,BM-006,Friction
+APP-01093,BM-029,Uncertainty / Ambiguity Aversion
+APP-01120,BM-029,Uncertainty / Ambiguity Aversion
+APP-01121,BM-006,Friction
+APP-01132,BM-006,Friction
+APP-01141,BM-029,Uncertainty / Ambiguity Aversion
+APP-01146,BM-001,Status Quo Bias
+APP-01148,BM-006,Friction
+APP-01151,BM-029,Uncertainty / Ambiguity Aversion
+APP-01161,BM-006,Friction
+APP-01171,BM-029,Uncertainty / Ambiguity Aversion
+APP-01204,BM-029,Uncertainty / Ambiguity Aversion
+APP-01209,BM-029,Uncertainty / Ambiguity Aversion
+APP-01248,BM-006,Friction
+APP-01266,BM-001,Status Quo Bias
+APP-01270,BM-006,Friction
+APP-01274,BM-029,Uncertainty / Ambiguity Aversion
+APP-01290,BM-029,Uncertainty / Ambiguity Aversion
+APP-01295,BM-029,Uncertainty / Ambiguity Aversion
+APP-01296,BM-029,Uncertainty / Ambiguity Aversion
+APP-01303,BM-029,Uncertainty / Ambiguity Aversion
+APP-01305,BM-029,Uncertainty / Ambiguity Aversion
+APP-01325,BM-016,Peak-End Rule
+APP-01376,BM-001,Status Quo Bias
+APP-01408,BM-029,Uncertainty / Ambiguity Aversion
+APP-01433,BM-006,Friction
+APP-01497,BM-029,Uncertainty / Ambiguity Aversion
+APP-01505,BM-006,Friction
+APP-01509,BM-029,Uncertainty / Ambiguity Aversion
+APP-01561,BM-001,Status Quo Bias
+APP-01565,BM-029,Uncertainty / Ambiguity Aversion
+APP-01566,BM-006,Friction
+APP-01574,BM-029,Uncertainty / Ambiguity Aversion
+APP-01631,BM-001,Status Quo Bias
+APP-01657,BM-029,Uncertainty / Ambiguity Aversion
+APP-01662,BM-001,Status Quo Bias
+APP-01672,BM-006,Friction
+APP-01687,BM-029,Uncertainty / Ambiguity Aversion
+APP-01692,BM-001,Status Quo Bias
+APP-01695,BM-006,Friction
+APP-01696,BM-001,Status Quo Bias
+APP-01700,BM-029,Uncertainty / Ambiguity Aversion
+APP-01723,BM-006,Friction
+APP-01732,BM-006,Friction
+APP-01797,BM-006,Friction
+APP-01810,BM-006,Friction
+APP-01816,BM-006,Friction
+APP-01829,BM-013,Anchoring
+APP-01842,BM-006,Friction
+APP-01845,BM-029,Uncertainty / Ambiguity Aversion
+APP-01871,BM-006,Friction
+APP-01875,BM-013,Anchoring
+APP-01879,BM-001,Status Quo Bias
+APP-01879,BM-029,Uncertainty / Ambiguity Aversion
+APP-01880,BM-006,Friction
+APP-01952,BM-013,Anchoring
+APP-01961,BM-029,Uncertainty / Ambiguity Aversion
+APP-01961,BM-006,Friction
+APP-01985,BM-029,Uncertainty / Ambiguity Aversion
+APP-01987,BM-006,Friction
+APP-02020,BM-021,Reactance
+APP-02029,BM-029,Uncertainty / Ambiguity Aversion
+APP-02034,BM-006,Friction
+APP-02043,BM-006,Friction
+APP-02058,BM-013,Anchoring
+APP-02070,BM-013,Anchoring
+APP-02077,BM-006,Friction
+APP-02087,BM-029,Uncertainty / Ambiguity Aversion
+APP-02106,BM-006,Friction
+APP-02111,BM-006,Friction
+APP-02113,BM-029,Uncertainty / Ambiguity Aversion
+APP-02118,BM-006,Friction
+APP-02129,BM-029,Uncertainty / Ambiguity Aversion
+APP-02130,BM-029,Uncertainty / Ambiguity Aversion
+APP-02134,BM-001,Status Quo Bias
+APP-02147,BM-006,Friction
+APP-02153,BM-021,Reactance
+APP-02172,BM-029,Uncertainty / Ambiguity Aversion
+APP-02176,BM-029,Uncertainty / Ambiguity Aversion
+APP-02176,BM-006,Friction
+APP-02194,BM-029,Uncertainty / Ambiguity Aversion
+APP-02196,BM-006,Friction
+APP-02203,BM-006,Friction
+APP-02218,BM-029,Uncertainty / Ambiguity Aversion
+APP-02224,BM-001,Status Quo Bias
+APP-02225,BM-006,Friction
+APP-02249,BM-006,Friction
+APP-02256,BM-010,Endowment Effect
+APP-02281,BM-029,Uncertainty / Ambiguity Aversion
+APP-02285,BM-001,Status Quo Bias
+APP-02306,BM-006,Friction
+APP-02320,BM-029,Uncertainty / Ambiguity Aversion
+APP-02324,BM-006,Friction
+APP-02345,BM-001,Status Quo Bias
+APP-02372,BM-006,Friction
+APP-02415,BM-006,Friction
+APP-02429,BM-006,Friction
+APP-02436,BM-006,Friction
+APP-02442,BM-006,Friction
+APP-02460,BM-029,Uncertainty / Ambiguity Aversion
+APP-02469,BM-006,Friction
+APP-02475,BM-006,Friction

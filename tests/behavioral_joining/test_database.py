@@ -14,6 +14,7 @@ EXPECTED_TABLES = {
     "bj_hypotheses", "bj_statistical_results",
     "bj_evidence_quality", "bj_evidence_review_sample", "bj_mechanism_review",
     "bj_calibration_metrics", "bj_hypothesis_readiness",
+    "bj_scenario_library", "bj_application_behavior_mechanisms", "bj_behavior_outcome_dataset",
 }
 
 

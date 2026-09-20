@@ -1,0 +1,10 @@
+journey_stage,mechanisms_observed,scenario_count,evidence_frequency,priority_band,information_gaps_count,tested_mechanisms_at_stage,potential_intervention_point
+submitted,BM-001;BM-002;BM-005;BM-006;BM-011;BM-014;BM-018;BM-020;BM-023;BM-029,1252,1252,METHODOLOGY_PENDING,1252,10,YES -- evidence concentrated here
+background_check,BM-001;BM-002;BM-005;BM-006;BM-011;BM-014;BM-016;BM-018;BM-020;BM-023;BM-029,1024,1024,METHODOLOGY_PENDING,1024,10,YES -- evidence concentrated here
+client_interview_1,BM-001;BM-002;BM-005;BM-006;BM-010;BM-011;BM-013;BM-014;BM-018;BM-020;BM-021;BM-023;BM-029,1018,1018,METHODOLOGY_PENDING,1018,11,YES -- evidence concentrated here
+offer_accepted,BM-001;BM-002;BM-005;BM-006;BM-011;BM-013;BM-014;BM-018;BM-020;BM-023;BM-029,743,743,METHODOLOGY_PENDING,743,11,YES -- evidence concentrated here
+offer_extended,BM-001;BM-002;BM-005;BM-006;BM-011;BM-014;BM-018;BM-020;BM-023;BM-029,424,424,METHODOLOGY_PENDING,424,10,YES -- evidence concentrated here
+screened,BM-001;BM-002;BM-005;BM-006;BM-010;BM-011;BM-014;BM-018;BM-020;BM-023;BM-029,422,422,METHODOLOGY_PENDING,422,10,YES -- evidence concentrated here
+client_interview_2,BM-001;BM-002;BM-005;BM-006;BM-011;BM-014;BM-018;BM-020;BM-023;BM-029,294,294,METHODOLOGY_PENDING,294,10,YES -- evidence concentrated here
+onboarding_docs_sent,BM-001;BM-002;BM-005;BM-006;BM-011;BM-013;BM-014;BM-018;BM-020;BM-023;BM-029,292,292,METHODOLOGY_PENDING,292,11,YES -- evidence concentrated here
+unknown,BM-001;BM-002;BM-005;BM-006;BM-011;BM-013;BM-014;BM-018;BM-020;BM-023;BM-029,280,280,METHODOLOGY_PENDING,280,11,YES -- evidence concentrated here

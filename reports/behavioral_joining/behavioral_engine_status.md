@@ -1,6 +1,6 @@
 # Aaryatech Behavioral Joining Intelligence -- Engine Status
 
-Generated: 2026-08-30T11:02:11.632987+00:00
+Generated: 2026-09-20T14:02:08.058123+00:00
 
 ## Scientific chain position
 ```
@@ -40,7 +40,6 @@ CANDIDATE JOURNEY               [done -- Task 1]
 ## Database
 - Path: database/behavioral_joining.db (separate file from the existing engine's database)
 - Row counts:
-  - bj_hypotheses: 0
   - bj_calibration_metrics: 0
   - bj_statistical_results: 0
   - bj_candidate_journey: 2500
@@ -55,8 +54,12 @@ CANDIDATE JOURNEY               [done -- Task 1]
   - bj_mechanism_mapping_review: 0
   - bj_evidence_quality: 6749
   - bj_evidence_review_sample: 275
-  - bj_mechanism_review: 0
-  - bj_hypothesis_readiness: 0
+  - bj_mechanism_review: 275
+  - bj_hypothesis_readiness: 7
+  - bj_scenario_library: 189
+  - bj_application_behavior_mechanisms: 178
+  - bj_behavior_outcome_dataset: 178
+  - bj_hypotheses: 7
   - bj_mechanism_reference: 34
 
 ## Protected data -- confirmation

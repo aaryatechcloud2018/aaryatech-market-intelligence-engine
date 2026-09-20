@@ -73,11 +73,12 @@ def compute_hypothesis_readiness(mapping_review_df: pd.DataFrame,
         if evidence_quality_df is not None and "evidence_id" in evidence_quality_df.columns:
             q = sub.merge(evidence_quality_df[["evidence_id", "is_high_frequency_template"]],
                            on="evidence_id", how="left")
-            template_share = q["is_high_frequency_template"].fillna(False).mean()
+            template_share = q["is_high_frequency_template"].astype("boolean").fillna(False).astype(bool).mean()
 
         conf_col = "mapping_confidence" if "mapping_confidence" in sub.columns else None
-        high_conf = int((sub[conf_col].apply(_confidence_band) == "high").sum()) if conf_col else 0
-        med_conf = int((sub[conf_col].apply(_confidence_band) == "medium").sum()) if conf_col else 0
+        conf_numeric = pd.to_numeric(sub[conf_col], errors="coerce").fillna(0.0) if conf_col else None
+        high_conf = int((conf_numeric.apply(_confidence_band) == "high").sum()) if conf_col else 0
+        med_conf = int((conf_numeric.apply(_confidence_band) == "medium").sum()) if conf_col else 0
 
         reasons = []
         ready = True

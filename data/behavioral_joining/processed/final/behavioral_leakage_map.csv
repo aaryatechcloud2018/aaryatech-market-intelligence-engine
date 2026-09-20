@@ -1,0 +1,99 @@
+mechanism_id,mechanism_name,journey_stage,evidence_count_at_stage,total_evidence_count,human_reviewed_share,outcome_association_tested,evidence_grade,p_value
+BM-001,Status Quo Bias,submitted,215,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-001,Status Quo Bias,background_check,182,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-001,Status Quo Bias,client_interview_1,166,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-001,Status Quo Bias,offer_accepted,121,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-001,Status Quo Bias,screened,74,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-001,Status Quo Bias,offer_extended,61,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-001,Status Quo Bias,unknown,48,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-001,Status Quo Bias,client_interview_2,37,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-001,Status Quo Bias,onboarding_docs_sent,36,940,0.027,lower_joining_with_mechanism,WEAK,0.0198498785298261
+BM-002,Loss Aversion,submitted,41,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-002,Loss Aversion,client_interview_1,35,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-002,Loss Aversion,background_check,34,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-002,Loss Aversion,offer_accepted,27,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-002,Loss Aversion,offer_extended,25,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-002,Loss Aversion,client_interview_2,15,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-002,Loss Aversion,screened,11,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-002,Loss Aversion,unknown,6,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-002,Loss Aversion,onboarding_docs_sent,5,199,0.0,lower_joining_with_mechanism,SUPPORTED,5.875969700068784e-16
+BM-005,Choice Overload,submitted,66,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-005,Choice Overload,client_interview_1,61,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-005,Choice Overload,background_check,39,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-005,Choice Overload,screened,36,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-005,Choice Overload,offer_accepted,33,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-005,Choice Overload,offer_extended,22,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-005,Choice Overload,client_interview_2,14,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-005,Choice Overload,unknown,11,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-005,Choice Overload,onboarding_docs_sent,4,286,0.0,lower_joining_with_mechanism,INCONCLUSIVE,0.04723574574411
+BM-006,Friction,submitted,361,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-006,Friction,client_interview_1,311,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-006,Friction,background_check,285,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-006,Friction,offer_accepted,221,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-006,Friction,offer_extended,142,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-006,Friction,screened,113,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-006,Friction,onboarding_docs_sent,106,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-006,Friction,client_interview_2,105,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-006,Friction,unknown,92,1736,0.046,higher_joining_with_mechanism,WEAK,0.0001802353777687
+BM-010,Endowment Effect,screened,1,2,1.0,not tested,not tested,
+BM-010,Endowment Effect,client_interview_1,1,2,1.0,not tested,not tested,
+BM-011,Reciprocity,submitted,78,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-011,Reciprocity,background_check,74,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-011,Reciprocity,client_interview_1,72,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-011,Reciprocity,offer_accepted,46,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-011,Reciprocity,offer_extended,28,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-011,Reciprocity,screened,24,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-011,Reciprocity,unknown,16,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-011,Reciprocity,onboarding_docs_sent,13,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-011,Reciprocity,client_interview_2,13,364,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.9006157394669951
+BM-013,Anchoring,client_interview_1,3,8,1.0,lower_joining_with_mechanism,INCONCLUSIVE,0.4590990968604094
+BM-013,Anchoring,offer_accepted,2,8,1.0,lower_joining_with_mechanism,INCONCLUSIVE,0.4590990968604094
+BM-013,Anchoring,unknown,2,8,1.0,lower_joining_with_mechanism,INCONCLUSIVE,0.4590990968604094
+BM-013,Anchoring,onboarding_docs_sent,1,8,1.0,lower_joining_with_mechanism,INCONCLUSIVE,0.4590990968604094
+BM-014,Confirmation Bias,submitted,72,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-014,Confirmation Bias,client_interview_1,52,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-014,Confirmation Bias,background_check,44,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-014,Confirmation Bias,offer_accepted,43,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-014,Confirmation Bias,screened,40,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-014,Confirmation Bias,offer_extended,13,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-014,Confirmation Bias,unknown,13,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-014,Confirmation Bias,onboarding_docs_sent,11,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-014,Confirmation Bias,client_interview_2,10,298,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.6611220640367012
+BM-016,Peak-End Rule,background_check,1,1,1.0,not tested,not tested,
+BM-018,Identity Signaling,background_check,36,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-018,Identity Signaling,submitted,33,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-018,Identity Signaling,offer_accepted,30,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-018,Identity Signaling,client_interview_1,27,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-018,Identity Signaling,offer_extended,11,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-018,Identity Signaling,client_interview_2,8,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-018,Identity Signaling,unknown,6,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-018,Identity Signaling,screened,5,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-018,Identity Signaling,onboarding_docs_sent,4,160,0.0,higher_joining_with_mechanism,SUPPORTED,1.3134243065553432e-06
+BM-020,Commitment / Consistency,background_check,43,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-020,Commitment / Consistency,submitted,42,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-020,Commitment / Consistency,offer_accepted,38,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-020,Commitment / Consistency,client_interview_1,29,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-020,Commitment / Consistency,onboarding_docs_sent,16,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-020,Commitment / Consistency,offer_extended,16,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-020,Commitment / Consistency,unknown,14,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-020,Commitment / Consistency,screened,13,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-020,Commitment / Consistency,client_interview_2,9,220,0.0,higher_joining_with_mechanism,SUPPORTED,1.3312323120996317e-07
+BM-021,Reactance,client_interview_1,2,2,1.0,not tested,not tested,
+BM-023,Goal Gradient,background_check,126,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-023,Goal Gradient,submitted,106,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-023,Goal Gradient,client_interview_1,86,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-023,Goal Gradient,offer_accepted,62,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-023,Goal Gradient,screened,40,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-023,Goal Gradient,onboarding_docs_sent,37,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-023,Goal Gradient,offer_extended,32,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-023,Goal Gradient,client_interview_2,31,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-023,Goal Gradient,unknown,28,548,0.0,higher_joining_with_mechanism,INCONCLUSIVE,0.2605097305526636
+BM-029,Uncertainty / Ambiguity Aversion,submitted,238,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994
+BM-029,Uncertainty / Ambiguity Aversion,client_interview_1,173,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994
+BM-029,Uncertainty / Ambiguity Aversion,background_check,160,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994
+BM-029,Uncertainty / Ambiguity Aversion,offer_accepted,120,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994
+BM-029,Uncertainty / Ambiguity Aversion,offer_extended,74,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994
+BM-029,Uncertainty / Ambiguity Aversion,screened,65,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994
+BM-029,Uncertainty / Ambiguity Aversion,onboarding_docs_sent,59,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994
+BM-029,Uncertainty / Ambiguity Aversion,client_interview_2,52,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994
+BM-029,Uncertainty / Ambiguity Aversion,unknown,44,985,0.072,lower_joining_with_mechanism,INCONCLUSIVE,0.2519984511480994

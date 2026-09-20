@@ -1,6 +1,6 @@
 # Behavioral Evidence Extraction -- QA Report
 
-Generated: 2026-08-30T11:02:11.580625+00:00
+Generated: 2026-09-20T14:02:08.001835+00:00
 
 **Scope:** discovery-split communications only. final_disposition, disposition_date, and actual_start_date were not available to the extractor.
 

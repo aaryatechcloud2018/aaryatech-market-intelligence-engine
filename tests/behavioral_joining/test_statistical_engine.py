@@ -116,3 +116,43 @@ def test_no_default_authorization_token_exists():
     sig = inspect.signature(run_held_out_validation)
     assert sig.parameters["authorized"].default is False
     assert sig.parameters["authorization_token"].default is None
+
+
+# --- Stage 10: StatisticalResult schema extension ---
+
+def test_statistical_result_has_all_required_fields():
+    from src.behavioral_joining.statistical_engine import StatisticalResult
+    required = {
+        "hypothesis_id", "test_name", "sample_size", "group_sizes", "effect_size",
+        "effect_size_metric", "confidence_interval", "test_statistic", "p_value",
+        "adjusted_p_value", "multiple_testing_adjustment", "covariates_controlled",
+        "result_direction", "evidence_grade", "validation_dataset", "run_date",
+        "code_version_reference", "limitations",
+    }
+    assert required <= set(StatisticalResult.__annotations__.keys())
+
+
+def test_statistical_result_constructs_and_serializes():
+    from src.behavioral_joining.statistical_engine import StatisticalResult
+    r = StatisticalResult(
+        hypothesis_id="HYP-1", test_name="chi_square_test", sample_size=100,
+        group_sizes="a=50;b=50", effect_size=0.2, effect_size_metric="Cramer's V",
+        confidence_interval="[0.1, 0.3]", test_statistic=4.2, p_value=0.04,
+        adjusted_p_value=0.08, multiple_testing_adjustment="Benjamini-Hochberg",
+        covariates_controlled="job_family", result_direction="positive",
+        evidence_grade="WEAK", validation_dataset="discovery+hypothesis_generation",
+        run_date="2026-09-20", code_version_reference="bce129c", limitations="small sample",
+    )
+    d = r.as_dict()
+    assert d["adjusted_p_value"] == 0.08
+    assert d["validation_dataset"] == "discovery+hypothesis_generation"
+    assert d["run_date"] == "2026-09-20"
+    assert d["code_version_reference"] == "bce129c"
+
+
+def test_statistical_result_never_marks_significance_alone_as_established():
+    """p < 0.05 with no effect size context must not appear anywhere as a
+    self-sufficient 'established' claim -- grade_evidence already enforces this
+    (tested elsewhere); this just re-confirms the field exists for grading."""
+    from src.behavioral_joining.statistical_engine import grade_evidence
+    assert grade_evidence(0.001, 0.01, "Cramer's V") != "SUPPORTED"

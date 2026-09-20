@@ -1,1 +1,8 @@
 mechanism_id,mechanism_name,approved_mapping_count,unique_application_count,unique_evidence_span_count,template_share,high_confidence_count,medium_confidence_count,ready_for_hypothesis_generation,readiness_reason
+BM-001,Status Quo Bias,25,23,25,0.28,0,0,True,meets all MVP development thresholds (not a scientific determination)
+BM-006,Friction,80,74,80,0.362,0,0,True,meets all MVP development thresholds (not a scientific determination)
+BM-010,Endowment Effect,2,2,2,0.5,0,0,False,only 2 approved/edited mappings (need >= 5); only 2 unique applications (need >= 3)
+BM-013,Anchoring,8,8,8,0.5,0,0,True,meets all MVP development thresholds (not a scientific determination)
+BM-016,Peak-End Rule,1,1,1,0.0,0,0,False,only 1 approved/edited mappings (need >= 5); only 1 unique applications (need >= 3)
+BM-021,Reactance,2,2,2,0.0,0,0,False,only 2 approved/edited mappings (need >= 5); only 2 unique applications (need >= 3)
+BM-029,Uncertainty / Ambiguity Aversion,71,68,71,0.239,0,0,True,meets all MVP development thresholds (not a scientific determination)

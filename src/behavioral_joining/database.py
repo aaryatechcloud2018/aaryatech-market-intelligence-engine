@@ -172,18 +172,55 @@ CREATE TABLE IF NOT EXISTS bj_mechanism_mapping_review (
 CREATE TABLE IF NOT EXISTS bj_hypotheses (
     hypothesis_id TEXT PRIMARY KEY,
     mechanism_id TEXT,
-    mechanism_name TEXT,
+    scenario_id TEXT,
+    journey_stage TEXT,
     population TEXT,
-    comparison_group TEXT,
+    segment TEXT,
     outcome_variable TEXT,
-    hypothesis_statement TEXT,
     null_hypothesis TEXT,
     alternative_hypothesis TEXT,
-    supporting_evidence_count INTEGER,
-    candidate_covariates TEXT,
-    proposed_statistical_test TEXT,
+    comparison_group TEXT,
+    sample_size INTEGER,
+    discovery_dataset_reference TEXT,
     status TEXT,
+    created_date TEXT,
+    tested_date TEXT,
+    validation_status TEXT,
+    mechanism_name TEXT,
+    hypothesis_statement TEXT,
+    proposed_statistical_test TEXT,
     analyst_notes TEXT
+);
+
+CREATE TABLE IF NOT EXISTS bj_scenario_library (
+    scenario_id TEXT PRIMARY KEY,
+    scenario_name TEXT,
+    mechanism_id TEXT,
+    mechanism_name TEXT,
+    observable_evidence TEXT,
+    journey_stage TEXT,
+    alternative_explanation TEXT,
+    information_gap TEXT,
+    outcome_association TEXT
+);
+
+CREATE TABLE IF NOT EXISTS bj_application_behavior_mechanisms (
+    application_id TEXT,
+    mechanism_id TEXT,
+    mechanism_name TEXT,
+    PRIMARY KEY (application_id, mechanism_id)
+);
+
+CREATE TABLE IF NOT EXISTS bj_behavior_outcome_dataset (
+    application_id TEXT,
+    mechanism_id TEXT,
+    mechanism_name TEXT,
+    research_split TEXT,
+    final_disposition TEXT,
+    job_family TEXT,
+    client_account_id TEXT,
+    recruiter_id TEXT,
+    PRIMARY KEY (application_id, mechanism_id)
 );
 
 CREATE TABLE IF NOT EXISTS bj_evidence_quality (
@@ -266,13 +303,18 @@ CREATE TABLE IF NOT EXISTS bj_statistical_results (
     sample_size INTEGER,
     group_sizes TEXT,
     effect_size REAL,
+    effect_size_metric TEXT,
     confidence_interval TEXT,
     test_statistic REAL,
     p_value REAL,
+    adjusted_p_value REAL,
     multiple_testing_adjustment TEXT,
     covariates_controlled TEXT,
     result_direction TEXT,
     evidence_grade TEXT,
+    validation_dataset TEXT,
+    run_date TEXT,
+    code_version_reference TEXT,
     limitations TEXT
 );
 """
@@ -299,6 +341,13 @@ CREATE INDEX IF NOT EXISTS idx_mechanism_review_evidence_id ON bj_mechanism_revi
 CREATE INDEX IF NOT EXISTS idx_mechanism_review_mechanism_id ON bj_mechanism_review(mechanism_id);
 CREATE INDEX IF NOT EXISTS idx_mechanism_review_application ON bj_mechanism_review(application_id);
 CREATE INDEX IF NOT EXISTS idx_hypothesis_readiness_mechanism_id ON bj_hypothesis_readiness(mechanism_id);
+CREATE INDEX IF NOT EXISTS idx_scenario_library_mechanism_id ON bj_scenario_library(mechanism_id);
+CREATE INDEX IF NOT EXISTS idx_app_behavior_application ON bj_application_behavior_mechanisms(application_id);
+CREATE INDEX IF NOT EXISTS idx_app_behavior_mechanism ON bj_application_behavior_mechanisms(mechanism_id);
+CREATE INDEX IF NOT EXISTS idx_behavior_outcome_application ON bj_behavior_outcome_dataset(application_id);
+CREATE INDEX IF NOT EXISTS idx_behavior_outcome_mechanism ON bj_behavior_outcome_dataset(mechanism_id);
+CREATE INDEX IF NOT EXISTS idx_behavior_outcome_split ON bj_behavior_outcome_dataset(research_split);
+CREATE INDEX IF NOT EXISTS idx_hypotheses_scenario_id ON bj_hypotheses(scenario_id);
 """
 
 

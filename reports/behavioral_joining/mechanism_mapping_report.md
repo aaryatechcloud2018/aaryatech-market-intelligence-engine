@@ -1,10 +1,10 @@
 # Behavioral Mechanism Mapping -- QA Report
 
-Generated: 2026-08-30T11:02:11.632064+00:00
+Generated: 2026-09-20T14:02:08.056854+00:00
 
 ## Mechanism library status
 - Status: **LOADED**
-- Source: /tmp/aaryatech-market-intelligence-engine-claude-aaryatech-market-intelligence-mvp-ow9sft/data/behavioral_joining/reference/behavioral_mechanisms.json
+- Source: /home/claude/work/repo/data/behavioral_joining/reference/behavioral_mechanisms.json
 - Mechanisms loaded: 34
 
 ## Mapping candidates

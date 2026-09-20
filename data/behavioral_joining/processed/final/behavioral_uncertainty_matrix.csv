@@ -1,0 +1,15 @@
+mechanism_id,mechanism_name,evidence_count,human_reviewed_count,model_applied_count,records_with_alternative_interpretation,statistical_evidence_stage,evidence_grade,p_value,formal_intelligence_state,missing_information
+BM-001,Status Quo Bias,940,25,915,940,CORRELATION_TESTED,WEAK,0.0198498785298261,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-002,Loss Aversion,199,0,199,199,CORRELATION_TESTED,SUPPORTED,5.875969700068784e-16,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-005,Choice Overload,286,0,286,286,CORRELATION_TESTED,INCONCLUSIVE,0.04723574574411,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-006,Friction,1736,80,1656,1736,CORRELATION_TESTED,WEAK,0.0001802353777687,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-010,Endowment Effect,2,2,0,2,HYPOTHESIS_PROPOSED_NOT_TESTED,not tested,,METHODOLOGY_PENDING,Not yet statistically tested.
+BM-011,Reciprocity,364,0,364,364,CORRELATION_TESTED,INCONCLUSIVE,0.9006157394669951,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-013,Anchoring,8,8,0,8,CORRELATION_TESTED,INCONCLUSIVE,0.4590990968604094,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-014,Confirmation Bias,298,0,298,298,CORRELATION_TESTED,INCONCLUSIVE,0.6611220640367012,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-016,Peak-End Rule,1,1,0,1,HYPOTHESIS_PROPOSED_NOT_TESTED,not tested,,METHODOLOGY_PENDING,Not yet statistically tested.
+BM-018,Identity Signaling,160,0,160,160,CORRELATION_TESTED,SUPPORTED,1.3134243065553432e-06,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-020,Commitment / Consistency,220,0,220,220,CORRELATION_TESTED,SUPPORTED,1.3312323120996317e-07,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-021,Reactance,2,2,0,2,HYPOTHESIS_PROPOSED_NOT_TESTED,not tested,,METHODOLOGY_PENDING,Not yet statistically tested.
+BM-023,Goal Gradient,548,0,548,548,CORRELATION_TESTED,INCONCLUSIVE,0.2605097305526636,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.
+BM-029,Uncertainty / Ambiguity Aversion,985,71,914,985,CORRELATION_TESTED,INCONCLUSIVE,0.2519984511480994,METHODOLOGY_PENDING,Held-out replication not yet run; segment-level stratification not yet performed.

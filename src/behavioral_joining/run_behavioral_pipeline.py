@@ -30,6 +30,10 @@ from .calibration_metrics import (
 )
 from .hypothesis_readiness import compute_hypothesis_readiness, READINESS_COLUMNS
 from .review_progress_report import write_human_review_progress_report
+from .scenario_mapping import build_scenario_library, SCENARIO_COLUMNS
+from .application_behavior_builder import build_application_behavior_bridge, BRIDGE_COLUMNS
+from .behavior_outcome_builder import build_behavior_outcome_dataset, OUTCOME_COLUMNS
+from .hypothesis_engine import generate_hypotheses
 from .database import build_database, populate_database, table_row_counts, DB_PATH
 
 PROCESSED_DIR = Path(__file__).resolve().parents[2] / "data" / "behavioral_joining" / "processed"
@@ -42,7 +46,7 @@ def _print_stage(n, total, message):
 
 
 def run_pipeline():
-    total_steps = 12
+    total_steps = 16
     print("=" * 70)
     print("Aaryatech Behavioral Joining Intelligence -- Pipeline Run")
     print("=" * 70)
@@ -63,12 +67,20 @@ def run_pipeline():
     print("   Outcome fields (final_disposition, disposition_date, actual_start_date) have "
           "been removed from what the extractor can see.")
 
-    # 3. Extracting behavioral evidence
+    # 3. Extracting behavioral evidence (idempotent -- preserves evidence_id
+    # traceability to any already-completed human review; regenerating here
+    # with fresh random IDs would silently orphan reviewed rows on every rerun)
     _print_stage(3, total_steps, "Extracting behavioral evidence from communications...")
-    evidence_candidates = extract_evidence(ctx)
-    print(f"   Proposed {len(evidence_candidates)} evidence candidates across "
-          f"{evidence_candidates.evidence_category.nunique()} categories.")
-    print("   Every item is marked 'pending' -- nothing is auto-approved.")
+    candidates_path = PROCESSED_DIR / "behavioral_evidence_candidates.csv"
+    if candidates_path.exists():
+        evidence_candidates = pd.read_csv(candidates_path, keep_default_na=False)
+        print(f"   behavioral_evidence_candidates.csv already exists ({len(evidence_candidates)} rows) -- "
+              f"NOT regenerated, to preserve evidence_id traceability to any completed human review.")
+    else:
+        evidence_candidates = extract_evidence(ctx)
+        print(f"   Proposed {len(evidence_candidates)} evidence candidates across "
+              f"{evidence_candidates.evidence_category.nunique()} categories.")
+        print("   Every item is marked 'pending' -- nothing is auto-approved.")
 
     signals = compute_objective_signals(ctx)
     print(f"   Also computed {signals.shape[1] - 1} objective communication/process "
@@ -153,8 +165,46 @@ def run_pipeline():
     mapping_candidates.to_csv(PROCESSED_DIR / "mechanism_mapping_candidates.csv", index=False)
     mapping_review.to_csv(PROCESSED_DIR / "mechanism_mapping_review.csv", index=False)
 
-    # 9. Calibration metrics + hypothesis readiness
-    _print_stage(9, total_steps, "Computing calibration metrics and hypothesis readiness...")
+    # 9. Client scenario generation (Stage 6) -- human-approved mappings only
+    _print_stage(9, total_steps, "Generating client-specific behavioral scenarios "
+                                  "(human-approved mechanism mappings only)...")
+    from .data_loader import load_dataset
+    ds = load_dataset(RAW_DIR)
+    scenario_library = build_scenario_library(mapping_review_v2, evidence_candidates, ds.stage_events, master)
+    scenario_library.to_csv(PROCESSED_DIR / "client_behavioral_scenario_library.csv", index=False)
+    print(f"   Saved: {PROCESSED_DIR / 'client_behavioral_scenario_library.csv'} ({len(scenario_library)} rows)")
+    if len(scenario_library) == 0:
+        print("   0 scenarios -- expected, since 0 mechanism mappings are currently approved.")
+
+    # 10. Application x Behavior bridge (Stage 7)
+    _print_stage(10, total_steps, "Building the Application x Behavior bridge table...")
+    bridge = build_application_behavior_bridge(mapping_review_v2, master)
+    bridge.to_csv(PROCESSED_DIR / "application_behavior_mechanisms.csv", index=False)
+    print(f"   Saved: {PROCESSED_DIR / 'application_behavior_mechanisms.csv'} ({len(bridge)} rows, "
+          f"{bridge.application_id.nunique() if len(bridge) else 0} distinct applications)")
+
+    # 11. Behavior x Outcome dataset (Stage 8) -- discovery + hypothesis_generation only
+    _print_stage(11, total_steps, "Building the Behavior x Outcome dataset (held-out protected)...")
+    behavior_outcome = build_behavior_outcome_dataset(bridge, master)
+    behavior_outcome.to_csv(PROCESSED_DIR / "behavior_outcome_dataset.csv", index=False)
+    print(f"   Saved: {PROCESSED_DIR / 'behavior_outcome_dataset.csv'} ({len(behavior_outcome)} rows)")
+    print(f"   held_out_test rows present: "
+          f"{(behavior_outcome.research_split == 'held_out_test').sum() if len(behavior_outcome) else 0} (must be 0)")
+
+    # 12. Hypothesis generation (Stage 9)
+    _print_stage(12, total_steps, "Generating behavioral hypotheses from the Behavior x Outcome dataset...")
+    hypotheses = generate_hypotheses(behavior_outcome, scenario_library)
+    hypotheses.to_csv(PROCESSED_DIR / "behavioral_hypothesis_register.csv", index=False)
+    print(f"   Saved: {PROCESSED_DIR / 'behavioral_hypothesis_register.csv'} ({len(hypotheses)} rows)")
+    if len(hypotheses) == 0:
+        print("   0 hypotheses -- expected, since there is no behavior x outcome data yet.")
+    else:
+        n_eligible = (hypotheses.status == "ELIGIBLE_FOR_TESTING").sum()
+        print(f"   {n_eligible} of {len(hypotheses)} hypotheses currently ELIGIBLE_FOR_TESTING "
+              f"(MVP dev thresholds, not scientific validation).")
+
+    # 13. Calibration metrics + hypothesis readiness
+    _print_stage(13, total_steps, "Computing calibration metrics and hypothesis readiness...")
     evidence_metrics = compute_evidence_agreement_metrics(review_sample)
     mechanism_metrics = compute_mechanism_agreement_metrics(mapping_review_v2)
     write_calibration_report(evidence_metrics, mechanism_metrics)
@@ -174,10 +224,8 @@ def run_pipeline():
 
     write_human_review_progress_report(review_sample)
 
-    # 10. Updating SQLite database
-    _print_stage(10, total_steps, "Updating the SQLite database (database/behavioral_joining.db)...")
-    from .data_loader import load_dataset
-    ds = load_dataset(RAW_DIR)
+    # 14. Updating SQLite database
+    _print_stage(14, total_steps, "Updating the SQLite database (database/behavioral_joining.db)...")
     build_database(DB_PATH)
     populate_database(DB_PATH, {
         "bj_candidate_journey": master.drop(columns=[c for c in master.columns if c not in [
@@ -201,13 +249,17 @@ def run_pipeline():
         "bj_evidence_review_sample": review_sample,
         "bj_mechanism_review": mapping_review_v2,
         "bj_hypothesis_readiness": readiness,
+        "bj_scenario_library": scenario_library,
+        "bj_application_behavior_mechanisms": bridge,
+        "bj_behavior_outcome_dataset": behavior_outcome,
+        "bj_hypotheses": hypotheses,
     }, mechanism_library_result=lib_result)
     counts = table_row_counts(DB_PATH)
     for t, c in counts.items():
         print(f"     {t}: {c} rows")
 
-    # 11. Generating QA reports
-    _print_stage(11, total_steps, "Generating QA reports...")
+    # 15. Generating QA reports
+    _print_stage(15, total_steps, "Generating QA reports...")
     from .generate_validation_report import generate_report
     generate_report()
     from .evidence_extraction_report import write_evidence_extraction_report
@@ -219,8 +271,8 @@ def run_pipeline():
                          lib_result, counts)
     print(f"   Reports saved under: {REPORTS_DIR}")
 
-    # 12. Running tests/safeguards, then stopping
-    _print_stage(12, total_steps, "Running automated tests and safeguards, then stopping...")
+    # 16. Running tests/safeguards, then stopping
+    _print_stage(16, total_steps, "Running automated tests and safeguards, then stopping...")
     import subprocess
     result = subprocess.run([sys.executable, "-m", "pytest", "tests/", "-q"],
                              cwd=str(Path(__file__).resolve().parents[2]),

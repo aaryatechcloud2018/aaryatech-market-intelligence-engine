@@ -1,6 +1,6 @@
 # Behavioral Joining Intelligence -- Data Foundation Validation Report
 
-Generated: 2026-08-30T11:02:11.480220+00:00
+Generated: 2026-09-20T14:02:07.896043+00:00
 
 **Scope:** data foundation only. No behavioral analysis, mechanism mapping, hypothesis generation, statistical testing, or scoring was performed to produce this report.
 
