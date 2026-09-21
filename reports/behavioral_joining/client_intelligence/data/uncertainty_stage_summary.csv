@@ -1,0 +1,9 @@
+journey_stage,dropoff_count,dropoff_rate,evidence_available,information_gap_count,information_gap_rate,uncertainty_score,uncertainty_band,uncertainty_reason
+screened,0,0.0,True,490,1.0,0.0,DIAGNOSABLE,"dropoff_rate=0%, behavior_penetration=19%, information_gap_rate=100%"
+submitted,0,0.0,True,1459,1.0,0.0,DIAGNOSABLE,"dropoff_rate=0%, behavior_penetration=38%, information_gap_rate=100%"
+client_interview_1,0,0.0,True,1200,1.0,0.0,DIAGNOSABLE,"dropoff_rate=0%, behavior_penetration=34%, information_gap_rate=100%"
+offer_extended,244,0.1628,True,490,1.0,0.1628,CRITICAL_INTELLIGENCE_GAP,"dropoff_rate=16%, behavior_penetration=18%, information_gap_rate=100%"
+offer_accepted,201,0.1602,True,863,1.0,0.1602,CRITICAL_INTELLIGENCE_GAP,"dropoff_rate=16%, behavior_penetration=31%, information_gap_rate=100%"
+background_check,504,0.4782,True,1223,1.0,0.4782,CRITICAL_INTELLIGENCE_GAP,"dropoff_rate=48%, behavior_penetration=43%, information_gap_rate=100%"
+onboarding_docs_sent,67,0.1006,True,351,1.0,0.1006,MODERATE_GAP,"dropoff_rate=10%, behavior_penetration=27%, information_gap_rate=100%"
+start_date,0,0.0,False,0,0.0,0.0,DIAGNOSABLE,"dropoff_rate=0%, behavior_penetration=0%, information_gap_rate=0%"

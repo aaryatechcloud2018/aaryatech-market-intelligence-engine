@@ -1,0 +1,99 @@
+journey_stage,mechanism_id,mechanism_name,applications_with_behavior,behavior_share_within_stage,dropoff_count_associated,dropoff_rate_associated
+background_check,BM-001,Status Quo Bias,88,0.1938,27,0.3068
+background_check,BM-002,Loss Aversion,33,0.0727,24,0.7273
+background_check,BM-005,Choice Overload,24,0.0529,6,0.25
+background_check,BM-006,Friction,130,0.2863,25,0.1923
+background_check,BM-011,Reciprocity,51,0.1123,15,0.2941
+background_check,BM-014,Confirmation Bias,23,0.0507,6,0.2609
+background_check,BM-016,Peak-End Rule,1,0.0022,1,1.0
+background_check,BM-018,Identity Signaling,29,0.0639,1,0.0345
+background_check,BM-020,Commitment / Consistency,35,0.0771,3,0.0857
+background_check,BM-023,Goal Gradient,78,0.1718,17,0.2179
+background_check,BM-029,Uncertainty / Ambiguity Aversion,110,0.2423,31,0.2818
+client_interview_1,BM-001,Status Quo Bias,106,0.2078,64,0.6038
+client_interview_1,BM-002,Loss Aversion,34,0.0667,28,0.8235
+client_interview_1,BM-005,Choice Overload,36,0.0706,26,0.7222
+client_interview_1,BM-006,Friction,161,0.3157,74,0.4596
+client_interview_1,BM-010,Endowment Effect,1,0.002,0,0.0
+client_interview_1,BM-011,Reciprocity,52,0.102,26,0.5
+client_interview_1,BM-013,Anchoring,3,0.0059,3,1.0
+client_interview_1,BM-014,Confirmation Bias,36,0.0706,17,0.4722
+client_interview_1,BM-018,Identity Signaling,22,0.0431,4,0.1818
+client_interview_1,BM-020,Commitment / Consistency,26,0.051,5,0.1923
+client_interview_1,BM-021,Reactance,2,0.0039,2,1.0
+client_interview_1,BM-023,Goal Gradient,60,0.1176,23,0.3833
+client_interview_1,BM-029,Uncertainty / Ambiguity Aversion,121,0.2373,66,0.5455
+client_interview_2,BM-001,Status Quo Bias,23,0.1513,12,0.5217
+client_interview_2,BM-002,Loss Aversion,14,0.0921,10,0.7143
+client_interview_2,BM-005,Choice Overload,10,0.0658,9,0.9
+client_interview_2,BM-006,Friction,51,0.3355,18,0.3529
+client_interview_2,BM-011,Reciprocity,10,0.0658,4,0.4
+client_interview_2,BM-014,Confirmation Bias,8,0.0526,4,0.5
+client_interview_2,BM-018,Identity Signaling,6,0.0395,0,0.0
+client_interview_2,BM-020,Commitment / Consistency,9,0.0592,0,0.0
+client_interview_2,BM-023,Goal Gradient,22,0.1447,8,0.3636
+client_interview_2,BM-029,Uncertainty / Ambiguity Aversion,38,0.25,21,0.5526
+offer_accepted,BM-001,Status Quo Bias,75,0.1918,27,0.36
+offer_accepted,BM-002,Loss Aversion,25,0.0639,19,0.76
+offer_accepted,BM-005,Choice Overload,21,0.0537,10,0.4762
+offer_accepted,BM-006,Friction,120,0.3069,37,0.3083
+offer_accepted,BM-011,Reciprocity,37,0.0946,7,0.1892
+offer_accepted,BM-013,Anchoring,2,0.0051,0,0.0
+offer_accepted,BM-014,Confirmation Bias,28,0.0716,6,0.2143
+offer_accepted,BM-018,Identity Signaling,25,0.0639,3,0.12
+offer_accepted,BM-020,Commitment / Consistency,33,0.0844,6,0.1818
+offer_accepted,BM-023,Goal Gradient,45,0.1151,15,0.3333
+offer_accepted,BM-029,Uncertainty / Ambiguity Aversion,77,0.1969,29,0.3766
+offer_extended,BM-001,Status Quo Bias,48,0.1771,30,0.625
+offer_extended,BM-002,Loss Aversion,24,0.0886,24,1.0
+offer_extended,BM-005,Choice Overload,16,0.059,8,0.5
+offer_extended,BM-006,Friction,90,0.3321,40,0.4444
+offer_extended,BM-011,Reciprocity,26,0.0959,14,0.5385
+offer_extended,BM-014,Confirmation Bias,10,0.0369,6,0.6
+offer_extended,BM-018,Identity Signaling,10,0.0369,0,0.0
+offer_extended,BM-020,Commitment / Consistency,16,0.059,4,0.25
+offer_extended,BM-023,Goal Gradient,25,0.0923,11,0.44
+offer_extended,BM-029,Uncertainty / Ambiguity Aversion,60,0.2214,34,0.5667
+onboarding_docs_sent,BM-001,Status Quo Bias,29,0.162,4,0.1379
+onboarding_docs_sent,BM-002,Loss Aversion,5,0.0279,0,0.0
+onboarding_docs_sent,BM-005,Choice Overload,4,0.0223,1,0.25
+onboarding_docs_sent,BM-006,Friction,67,0.3743,2,0.0299
+onboarding_docs_sent,BM-011,Reciprocity,8,0.0447,0,0.0
+onboarding_docs_sent,BM-013,Anchoring,1,0.0056,0,0.0
+onboarding_docs_sent,BM-014,Confirmation Bias,11,0.0615,1,0.0909
+onboarding_docs_sent,BM-018,Identity Signaling,3,0.0168,0,0.0
+onboarding_docs_sent,BM-020,Commitment / Consistency,15,0.0838,1,0.0667
+onboarding_docs_sent,BM-023,Goal Gradient,27,0.1508,4,0.1481
+onboarding_docs_sent,BM-029,Uncertainty / Ambiguity Aversion,41,0.2291,4,0.0976
+screened,BM-001,Status Quo Bias,62,0.216,32,0.5161
+screened,BM-002,Loss Aversion,11,0.0383,8,0.7273
+screened,BM-005,Choice Overload,24,0.0836,16,0.6667
+screened,BM-006,Friction,84,0.2927,42,0.5
+screened,BM-010,Endowment Effect,1,0.0035,1,1.0
+screened,BM-011,Reciprocity,24,0.0836,12,0.5
+screened,BM-014,Confirmation Bias,30,0.1045,16,0.5333
+screened,BM-018,Identity Signaling,5,0.0174,1,0.2
+screened,BM-020,Commitment / Consistency,13,0.0453,2,0.1538
+screened,BM-023,Goal Gradient,32,0.1115,18,0.5625
+screened,BM-029,Uncertainty / Ambiguity Aversion,52,0.1812,30,0.5769
+submitted,BM-001,Status Quo Bias,125,0.2178,70,0.56
+submitted,BM-002,Loss Aversion,32,0.0557,25,0.7812
+submitted,BM-005,Choice Overload,33,0.0575,24,0.7273
+submitted,BM-006,Friction,160,0.2787,67,0.4188
+submitted,BM-011,Reciprocity,58,0.101,33,0.569
+submitted,BM-014,Confirmation Bias,37,0.0645,18,0.4865
+submitted,BM-018,Identity Signaling,30,0.0523,2,0.0667
+submitted,BM-020,Commitment / Consistency,39,0.0679,6,0.1538
+submitted,BM-023,Goal Gradient,77,0.1341,32,0.4156
+submitted,BM-029,Uncertainty / Ambiguity Aversion,161,0.2805,91,0.5652
+unknown,BM-001,Status Quo Bias,42,0.2176,27,0.6429
+unknown,BM-002,Loss Aversion,6,0.0311,6,1.0
+unknown,BM-005,Choice Overload,9,0.0466,8,0.8889
+unknown,BM-006,Friction,61,0.3161,25,0.4098
+unknown,BM-011,Reciprocity,15,0.0777,8,0.5333
+unknown,BM-013,Anchoring,2,0.0104,1,0.5
+unknown,BM-014,Confirmation Bias,11,0.057,7,0.6364
+unknown,BM-018,Identity Signaling,6,0.0311,3,0.5
+unknown,BM-020,Commitment / Consistency,13,0.0674,4,0.3077
+unknown,BM-023,Goal Gradient,24,0.1244,15,0.625
+unknown,BM-029,Uncertainty / Ambiguity Aversion,33,0.171,24,0.7273

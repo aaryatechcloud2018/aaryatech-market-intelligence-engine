@@ -1,0 +1,9 @@
+journey_stage,applications_entering_stage,applications_exiting_stage,dropoff_count,dropoff_rate,behavior_evidence_count,applications_with_behavior,behavior_penetration_rate,scenario_count,information_gap_count,information_gap_rate
+screened,1499,1499,0,0.0,490,287,0.1915,422,490,1.0
+submitted,1499,1499,0,0.0,1459,574,0.3829,1252,1459,1.0
+client_interview_1,1499,1499,0,0.0,1200,510,0.3402,1018,1200,1.0
+offer_extended,1499,1255,244,0.1628,490,271,0.1808,424,490,1.0
+offer_accepted,1255,1054,201,0.1602,863,391,0.3116,743,863,1.0
+background_check,1054,550,504,0.4782,1223,454,0.4307,1024,1223,1.0
+onboarding_docs_sent,666,599,67,0.1006,351,179,0.2688,292,351,1.0
+start_date,821,821,0,0.0,0,0,0.0,0,0,0.0
